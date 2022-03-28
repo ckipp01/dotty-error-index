@@ -1,0 +1,12 @@
+-- [E003] Syntax Deprecation Warning: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0003_DeprecatedWithOperatorID.scala:3:18 
+3 |  type A = Double with Int
+  |                  ^
+  |                with as a type operator has been deprecated; use & instead
+
+Explanation
+===========
+Dotty introduces intersection types - & types. These replace the
+use of the with keyword. There are a few differences in
+semantics between intersection types and using with.
+
+1 warning found

@@ -1,0 +1,13 @@
+-- [E004] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0004_CaseClassMissingParamListID.scala:2:13 
+2 |  case class Foo
+  |             ^^^
+  |             A case class must have at least one parameter list
+
+Explanation
+===========
+Foo must have at least one parameter list, if you would rather
+have a singleton representation of Foo, use a "case object".
+Or, add an explicit () as a parameter list to Foo.
+
+1 error found
+Error: Errors encountered during compilation
