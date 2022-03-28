@@ -1,0 +1,6 @@
+-- [E008] Not Found Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0008_NotAMeberID.scala:3:6 
+3 |  Foo.iDontExist
+  |  ^^^^^^^^^^^^^^
+  |  value iDontExist is not a member of object Foo
+1 error found
+Error: Errors encountered during compilation
