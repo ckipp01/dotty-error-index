@@ -1,0 +1,24 @@
+-- [E015] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0015_RepeatedModifierID.scala:2:14 
+2 |  final final val foo = ???
+  |              ^^^
+  |              Repeated modifier final
+
+Explanation
+===========
+This happens when you accidentally specify the same modifier twice.
+
+Example:
+
+private private val Origin = Point(0, 0)
+
+instead of
+
+private final val Origin = Point(0, 0)
+
+
+-- [E040] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0015_RepeatedModifierID.scala:4:0 
+4 |
+  |^
+  |unindent expected, but eof found
+2 errors found
+Error: Errors encountered during compilation

@@ -1,0 +1,17 @@
+-- [E013] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0013_ObjectMayNotHaveSelfTypeID.scala:3:15 
+3 |  object Foo { self: A => }
+  |               ^^^^^^^
+  |               objects must not have a self type
+
+Explanation
+===========
+objects must not have a self type:
+
+Consider these alternative solutions:
+  - Create a trait or a class instead of an object
+  - Let the object extend a trait containing the self type:
+
+    object Foo extends A
+
+1 error found
+Error: Errors encountered during compilation
