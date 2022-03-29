@@ -1,0 +1,11 @@
+-- [E018] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0018_IllegalStartSimpleExprID.scala:2:10 
+2 |  val x = :  
+  |          ^
+  |          expression expected but [31m:[0m found
+
+Explanation
+===========
+An expression cannot start with [31m:[0m.
+
+1 error found
+Error: Errors encountered during compilation
