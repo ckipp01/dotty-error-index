@@ -55,3 +55,8 @@ with an X.
   - [ ] 0025 IdentifierExpectedID - See the note in this file. I can't reproduce
       but also think it might not be needed at all anymore and we could just use
       E040 instead
+  - [ ] 0027 VarArgsParamMustComeLastID - See the note in the file. Another one
+      I can't reproduced by the check also doesn't seem to make sense in the
+      code.
+  - [ ] 0028 IllegalLiteralID - No idea how to reproduce this one
+

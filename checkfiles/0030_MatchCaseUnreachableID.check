@@ -1,0 +1,5 @@
+-- [E030] Match case Unreachable Warning: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0030_MatchCaseUnreachableID.scala:5:9 
+5 |    case bar => "So I'll never get here"
+  |         ^^^
+  |         Unreachable case
+1 warning found

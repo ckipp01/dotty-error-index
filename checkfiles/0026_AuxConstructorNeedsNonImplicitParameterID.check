@@ -1,0 +1,28 @@
+-- [E026] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0026_AuxConstructorNeedsNonImplicitParameterID.scala:3:27 
+3 |    def this(using a: Int) = this(a)
+  |                           ^
+  |                   Auxiliary constructor needs non-implicit parameter list
+
+Explanation
+===========
+Only the primary constructor is allowed an implicit parameter list;
+auxiliary constructors need non-implicit parameter lists. When a primary
+constructor has an implicit argslist, auxiliary constructors that call the
+primary constructor must specify the implicit value.
+
+To resolve this issue check for:
+ - Forgotten parenthesis on this (def this() = { ... })
+ - Auxiliary constructors specify the implicit value
+
+-- [E120] Naming Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0026_AuxConstructorNeedsNonImplicitParameterID.scala:3:8 
+3 |    def this(using a: Int) = this(a)
+  |        ^
+  |Double definition:
+  |def <init>(a: Int): Foo in class Foo at line 2 and
+  |def <init>()(using a: Int): Foo in class Foo at line 3
+  |have the same type after erasure.
+  |
+  |Consider adding a @targetName annotation to one of the conflicting definitions
+  |for disambiguation.
+2 errors found
+Error: Errors encountered during compilation
