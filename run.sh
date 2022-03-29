@@ -27,7 +27,7 @@ fi
 
 function update_file() {
   NEW_NAME=${1%.scala}.check
-  cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future $1 &> checkfiles/$NEW_NAME
+  cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1 &> checkfiles/$NEW_NAME
   cat checkfiles/$NEW_NAME
 }
 
@@ -49,7 +49,7 @@ function handle_update() {
 
 function check_file() {
   NEW_NAME=${1%.scala}.check
-  cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future $1&> out/$NEW_NAME
+  cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1&> out/$NEW_NAME
   diff out/$NEW_NAME checkfiles/$NEW_NAME && \
     info "$NEW_NAME matches expected output" || \
     error "$NEW_NAME doesn't match expected output"
@@ -75,14 +75,14 @@ function handle_run() {
   if [ $ERROR_MESSAGE_ID ]; then
     TARGET_FILE=$(find . -maxdepth 1 -type f -name $ERROR_MESSAGE_ID*)
     if [ $TARGET_FILE ]; then
-      scala -explain -deprecation -source:future $TARGET_FILE
+      scala -explain -deprecation -source:future -Ycook-docs $TARGET_FILE
     else
       error "Found no file starting with $ERROR_MESSAGE_ID"
     fi
   else
     for TARGET_FILE in $TARGET_FILES
     do
-      cs launch scala:$SCALA_VERSION -- -explain -deprecation -source:future $TARGET_FILE
+      cs launch scala:$SCALA_VERSION -- -explain -deprecation -source:future -Ycook-docs $TARGET_FILE
     done
   fi
 }

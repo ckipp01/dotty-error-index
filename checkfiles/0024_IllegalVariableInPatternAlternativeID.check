@@ -1,0 +1,10 @@
+-- Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0024_IllegalVariableInPatternAlternativeID.scala:5:13 
+5 |    case (1, n) | (n, 1) => "got a one!"
+  |             ^
+  |             Illegal variable n in pattern alternative
+-- Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0024_IllegalVariableInPatternAlternativeID.scala:5:19 
+5 |    case (1, n) | (n, 1) => "got a one!"
+  |                   ^
+  |                   Illegal variable n in pattern alternative
+2 errors found
+Error: Errors encountered during compilation
