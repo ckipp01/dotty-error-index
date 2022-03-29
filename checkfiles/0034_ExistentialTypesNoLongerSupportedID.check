@@ -1,0 +1,28 @@
+-- [E034] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0034_ExistentialTypesNoLongerSupportedID.scala:3:15 
+3 |    type F = A forSome { type B}
+  |               ^^^^^^^
+  |               Existential types are no longer supported -
+  |               use a wildcard or dependent type instead
+
+Explanation
+===========
+The use of existential types is no longer supported.
+
+You should use a wildcard or dependent type instead.
+
+For example:
+
+Instead of using forSome to specify a type variable
+
+List[T forSome { type T }]
+
+Try using a wildcard type variable
+
+List[?]
+
+-- [E040] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0034_ExistentialTypesNoLongerSupportedID.scala:4:0 
+4 |
+  |^
+  |unindent expected, but eof found
+2 errors found
+Error: Errors encountered during compilation

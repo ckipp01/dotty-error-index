@@ -59,4 +59,10 @@ with an X.
       I can't reproduced by the check also doesn't seem to make sense in the
       code.
   - [ ] 0028 IllegalLiteralID - No idea how to reproduce this one
+  - [ ] 0031 SeqWildcardPatternPosID - So I have a reproduction of this, but
+      it's pretty bad and nonsensical. It'd be good to actually get a decent
+      one.
+  - [ ] 0032 IllegalStartOfSimplePattern - I have a reproduction of this, but I
+      feel like it should be 0031 not 0032.
+  - [ ] 0033 PkgDuplicateSymbolID - Need to reproduce this
 
