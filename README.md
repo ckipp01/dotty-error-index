@@ -65,4 +65,6 @@ with an X.
   - [ ] 0032 IllegalStartOfSimplePattern - I have a reproduction of this, but I
       feel like it should be 0031 not 0032.
   - [ ] 0033 PkgDuplicateSymbolID - Need to reproduce this
-
+  - [X] 0036 DanglingThisInPathID - Compiler won't emit this anymore. It's not
+      referenced anywhere in the codebase
+  - [ ] 0038 OverridesNothingButNameExistsID - See notes in the file
