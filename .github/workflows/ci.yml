@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: coursier/cache-action@v6
-      - uses: coursier/setup-action@v1.2.0-M1
+      - uses: coursier/setup-action@v1.2.0-M3
         with:
           jvm: temurin:1.17
           apps: ""
