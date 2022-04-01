@@ -1,8 +1,8 @@
--- [E000] Syntax Warning: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0002_EmptyCatchOrFinallyBlockID.scala:5:2 
-5 |  try {}
-  |  ^^^^^^
-  |  A try without catch or finally is equivalent to putting
-  |  its body in a block; no exceptions are handled.
+-- [E001] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0000_EmptyCatchOrFinallyBlockID.scala:2:9 
+2 |  try {} catch {} finally {}
+  |         ^^^^^^^^
+  |         The catch block does not contain a valid expression, try
+  |         adding a case like - case e: Exception => to the block
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -26,4 +26,5 @@
   | It is recommended to use the NonFatal extractor to catch all exceptions as it
   | correctly handles transfer functions like return.
    -----------------------------------------------------------------------------
-1 warning found
+1 error found
+Error: Errors encountered during compilation

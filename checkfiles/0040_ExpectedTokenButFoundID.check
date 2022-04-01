@@ -2,15 +2,11 @@
 2 |  val foo: = ???
   |           ^
   |           an identifier expected, but '=' found
-
-Explanation
-===========
-
-If you want to use '=' as identifier, you may put it in backticks: `=`.
-
--- [E040] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0040_ExpectedTokenButFoundID.scala:3:0 
-3 |
-  |^
-  |unindent expected, but eof found
-2 errors found
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  |
+  | If you want to use '=' as identifier, you may put it in backticks: `=`.
+   -----------------------------------------------------------------------------
+1 error found
 Error: Errors encountered during compilation

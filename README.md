@@ -46,6 +46,8 @@ the ID you're interested in.
 Want to help? Feel free to try to reproduce any of these that aren't labeled
 with an X.
 
+  - [ ] 0002 EmptyCatchAndFinallyBlockID - See file for more details. I thought
+      this was fixed, but it's not.
   - [X] 0010 TopLevelImplicitClassID - Compiler won't emit this anymore since a
       top level class is treated as a def.
   - [X] 0014 TupleTooLongID - Legacy since tuples were limited to 22 before the

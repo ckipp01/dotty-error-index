@@ -2,17 +2,5 @@
 15 |  def foo(a: Int*, b: Int) = b
    |                 ^
    |                 an identifier expected, but ',' found
--- [E006] Not Found Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0027_VarArgsParamMustComeLastID.scala:15:29 
-15 |  def foo(a: Int*, b: Int) = b
-   |                             ^
-   |                             Not found: b
-
-Explanation
-===========
-The identifier for `b` is not bound, that is,
-no declaration for this identifier can be found.
-That can happen, for example, if `b` or its declaration has either been
-misspelt or if an import is missing.
-
-2 errors found
+1 error found
 Error: Errors encountered during compilation

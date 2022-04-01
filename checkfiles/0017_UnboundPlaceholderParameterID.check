@@ -2,48 +2,48 @@
 2 |  { _ }
   |    ^
   |    Unbound placeholder parameter; incorrect use of _
-
-Explanation
-===========
-The _ placeholder syntax was used where it could not be bound.
-Consider explicitly writing the variable binding.
-
-This can be done by replacing _ with a variable (eg. x)
-and adding x => where applicable.
-
-Example before:
-
-{ _ }
-
-Example after:
-
-x => { x }
-
-Another common occurrence for this error is defining a val with _:
-
-val a = _
-
-But this val definition isn't very useful, it can never be assigned
-another value. And thus will always remain uninitialized.
-Consider replacing the val with var:
-
-var a = _
-
-Note that this use of _ is not placeholder syntax,
-but an uninitialized var definition.
-Only fields can be left uninitialized in this manner; local variables
-must be initialized.
-
-Another occurrence for this error is self type definition.
-The _ can be replaced with this.
-
-Example before:
-
-trait A { _: B => ... 
-
-Example after:
-
-trait A { this: B => ... 
-
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | The _ placeholder syntax was used where it could not be bound.
+  | Consider explicitly writing the variable binding.
+  |
+  | This can be done by replacing _ with a variable (eg. x)
+  | and adding x => where applicable.
+  |
+  | Example before:
+  |
+  | { _ }
+  |
+  | Example after:
+  |
+  | x => { x }
+  |
+  | Another common occurrence for this error is defining a val with _:
+  |
+  | val a = _
+  |
+  | But this val definition isn't very useful, it can never be assigned
+  | another value. And thus will always remain uninitialized.
+  | Consider replacing the val with var:
+  |
+  | var a = _
+  |
+  | Note that this use of _ is not placeholder syntax,
+  | but an uninitialized var definition.
+  | Only fields can be left uninitialized in this manner; local variables
+  | must be initialized.
+  |
+  | Another occurrence for this error is self type definition.
+  | The _ can be replaced with this.
+  |
+  | Example before:
+  |
+  | trait A { _: B => ... 
+  |
+  | Example after:
+  |
+  | trait A { this: B => ... 
+   -----------------------------------------------------------------------------
 1 error found
 Error: Errors encountered during compilation

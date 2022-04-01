@@ -2,13 +2,12 @@
 3 |  implicit case class Foo(a: Int)
   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   |  A case class may not be defined as implicit
-
-Explanation
-===========
-Implicit classes may not be case classes. Instead use a plain class:
-
-implicit class Foo...
-
-
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | Implicit classes may not be case classes. Instead use a plain class:
+  |
+  | implicit class Foo...
+   -----------------------------------------------------------------------------
 1 error found
 Error: Errors encountered during compilation

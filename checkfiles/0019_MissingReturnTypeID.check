@@ -2,14 +2,13 @@
 5 |    def foo
   |           ^
   |           Missing return type
-
-Explanation
-===========
-An abstract declaration must have a return type. For example:
-
-trait Shape {hl(
-  def area: Double // abstract declaration returning a Double
-)}
-
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | An abstract declaration must have a return type. For example:
+  |
+  | trait Shape:
+  |   def area: Double // abstract declaration returning a Double
+   -----------------------------------------------------------------------------
 1 error found
 Error: Errors encountered during compilation

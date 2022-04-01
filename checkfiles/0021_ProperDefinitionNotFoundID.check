@@ -5,33 +5,33 @@
 5 |   */
 6 |  def foo: Unit
 7 |@main def ProperDefinitionNotFoundID = ()
-
-Explanation
-===========
-Usecases are only supported for defs. They exist because with Scala's
-advanced type-system, we sometimes end up with seemingly scary signatures.
-The usage of these methods, however, needs not be - for instance the map
-function
-
-List(1, 2, 3).map(2 * _) // res: List(2, 4, 6)
-
-is easy to understand and use - but has a rather bulky signature:
-
-def map[B, That](f: A => B)(implicit bf: CanBuildFrom[List[A], B, That]): That
-
-to mitigate this and ease the usage of such functions we have the @usecase
-annotation for docstrings. Which can be used like this:
-
-/** Map from List[A] => List[B]
-  *
-  * @usecase def map[B](f: A => B): List[B]
-  */
-def map[B, That](f: A => B)(implicit bf: CanBuildFrom[List[A], B, That]): That
-
-
-When creating the docs, the signature of the method is substituted by the
-usecase and the compiler makes sure that it is valid. Because of this, you're
-only allowed to use defs when defining usecases.
-
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | Usecases are only supported for defs. They exist because with Scala's
+  | advanced type-system, we sometimes end up with seemingly scary signatures.
+  | The usage of these methods, however, needs not be - for instance the map
+  | function
+  |
+  | List(1, 2, 3).map(2 * _) // res: List(2, 4, 6)
+  |
+  | is easy to understand and use - but has a rather bulky signature:
+  |
+  | def map[B, That](f: A => B)(implicit bf: CanBuildFrom[List[A], B, That]): That
+  |
+  | to mitigate this and ease the usage of such functions we have the @usecase
+  | annotation for docstrings. Which can be used like this:
+  |
+  | /** Map from List[A] => List[B]
+  |   *
+  |   * @usecase def map[B](f: A => B): List[B]
+  |   */
+  | def map[B, That](f: A => B)(implicit bf: CanBuildFrom[List[A], B, That]): That
+  |
+  |
+  | When creating the docs, the signature of the method is substituted by the
+  | usecase and the compiler makes sure that it is valid. Because of this, you're
+  | only allowed to use defs when defining usecases.
+   -----------------------------------------------------------------------------
 1 error found
 Error: Errors encountered during compilation

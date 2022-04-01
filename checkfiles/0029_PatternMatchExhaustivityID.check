@@ -4,12 +4,12 @@
   |  match may not be exhaustive.
   |
   |  It would fail on pattern case: b, c
-
-Explanation
-===========
-There are several ways to make the match exhaustive:
- - Add missing cases as shown in the warning
- - If an extractor always return Some(...), write Some[X] for its return type
- - Add a case _ => ... at the end to match all remaining cases
-
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | There are several ways to make the match exhaustive:
+  |  - Add missing cases as shown in the warning
+  |  - If an extractor always return Some(...), write Some[X] for its return type
+  |  - Add a case _ => ... at the end to match all remaining cases
+   -----------------------------------------------------------------------------
 1 warning found

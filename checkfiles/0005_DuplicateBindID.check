@@ -2,16 +2,16 @@
 2 |  List((1, 2)).map { case (num, num) => ??? }
   |                                ^^^
   |                                duplicate pattern variable: num
-
-Explanation
-===========
-For each case bound variable names have to be unique. In:
-
-case (num, num) =>  {
-  ???
-}
-
-num is not unique. Rename one of the bound variables!
-
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | For each case bound variable names have to be unique. In:
+  |
+  | case (num, num) =>  {
+  |   ???
+  | }
+  |
+  | num is not unique. Rename one of the bound variables!
+   -----------------------------------------------------------------------------
 1 error found
 Error: Errors encountered during compilation

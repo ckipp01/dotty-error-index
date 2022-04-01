@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-SCALA_VERSION=3.1.2-RC3
+# Nightlies were published wrong so there are some 3.2.0 that are incorrect for so for now
+# we can't do the below, but after the next release we should be able to so for now we look
+# only for the 3.1.3 ones
+#SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep NIGHTLY | tail -1)
+SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep 3.1.3 | tail -1)
 TARGET_FILES=$(ls ./*.scala)
 COMMAND="$1"
 ERROR_MESSAGE_ID="$2"
@@ -23,6 +27,12 @@ fi
 
 if [ ! -d ./out ]; then
   mkdir -p ./out
+fi
+
+if [ $SCALA_VERSION ]; then
+  info "Running with version $SCALA_VERSION"
+else
+  error "Unable to get Scala nightly"
 fi
 
 function update_file() {
@@ -75,7 +85,7 @@ function handle_run() {
   if [ $ERROR_MESSAGE_ID ]; then
     TARGET_FILE=$(find . -maxdepth 1 -type f -name $ERROR_MESSAGE_ID*)
     if [ $TARGET_FILE ]; then
-      scala -explain -deprecation -source:future -Ycook-docs $TARGET_FILE
+      cs launch scala:$SCALA_VERSION -- -explain -deprecation -source:future -Ycook-docs $TARGET_FILE
     else
       error "Found no file starting with $ERROR_MESSAGE_ID"
     fi

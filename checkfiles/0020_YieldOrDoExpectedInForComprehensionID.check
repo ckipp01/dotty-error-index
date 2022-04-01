@@ -2,34 +2,33 @@
 3 |
   |^
   |yield or do expected
-
-Explanation
-===========
-When the enumerators in a for comprehension are not placed in parentheses or
-braces, a do or yield statement is required after the enumerators
-section of the comprehension.
-
-You can save some keystrokes by omitting the parentheses and writing
-
-val numbers = for i <- 1 to 3 yield i
-
-  instead of
-
-val numbers = for (i <- 1 to 3) yield i
-
-but the yield keyword is still required.
-
-For comprehensions that simply perform a side effect without yielding anything
-can also be written without parentheses but a do keyword has to be
-included. For example,
-
-for (i <- 1 to 3) println(i)
-
-can be written as
-
-for i <- 1 to 3 do println(i) // notice the 'do' keyword
-
-
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | When the enumerators in a for comprehension are not placed in parentheses or
+  | braces, a do or yield statement is required after the enumerators
+  | section of the comprehension.
+  |
+  | You can save some keystrokes by omitting the parentheses and writing
+  |
+  | val numbers = for i <- 1 to 3 yield i
+  |
+  |   instead of
+  |
+  | val numbers = for (i <- 1 to 3) yield i
+  |
+  | but the yield keyword is still required.
+  |
+  | For comprehensions that simply perform a side effect without yielding anything
+  | can also be written without parentheses but a do keyword has to be
+  | included. For example,
+  |
+  | for (i <- 1 to 3) println(i)
+  |
+  | can be written as
+  |
+  | for i <- 1 to 3 do println(i) // notice the 'do' keyword
+   -----------------------------------------------------------------------------
 -- [E008] Not Found Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0020_YieldOrDoExpectedInForComprehensionID.scala:2:18 
 2 |  for i <- 1 to 3 println(i)
   |           ^^^^^^^^^^^^^^
@@ -38,13 +37,13 @@ for i <- 1 to 3 do println(i) // notice the 'do' keyword
 2 |  for i <- 1 to 3 println(i)
   |                          ^
   |                          Not found: i
-
-Explanation
-===========
-The identifier for `i` is not bound, that is,
-no declaration for this identifier can be found.
-That can happen, for example, if `i` or its declaration has either been
-misspelt or if an import is missing.
-
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | The identifier for `i` is not bound, that is,
+  | no declaration for this identifier can be found.
+  | That can happen, for example, if `i` or its declaration has either been
+  | misspelt or if an import is missing.
+   -----------------------------------------------------------------------------
 3 errors found
 Error: Errors encountered during compilation
