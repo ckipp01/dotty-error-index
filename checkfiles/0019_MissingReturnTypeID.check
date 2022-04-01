@@ -1,5 +1,5 @@
--- [E019] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0019_MissingReturnTypeID.scala:5:11 
-5 |    def foo
+-- [E019] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0019_MissingReturnTypeID.scala:3:11 
+3 |    def foo
   |           ^
   |           Missing return type
   |-----------------------------------------------------------------------------

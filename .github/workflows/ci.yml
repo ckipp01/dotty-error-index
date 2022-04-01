@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: Format check and test
+    name: Setup and check errors
     runs-on: ubuntu-latest
 
     steps:

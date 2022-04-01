@@ -62,7 +62,7 @@ function check_file() {
   cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1&> out/$NEW_NAME
   diff out/$NEW_NAME checkfiles/$NEW_NAME && \
     info "$NEW_NAME matches expected output" || \
-    error "$NEW_NAME doesn't match expected output"
+    (error "$NEW_NAME doesn't match expected output" && exit 1)
 }
 
 function handle_check() {
@@ -76,7 +76,7 @@ function handle_check() {
   else
     for TARGET_FILE in $TARGET_FILES
     do
-      check_file $TARGET_FILE
+      check_file $TARGET_FILE || exit 1
     done
   fi
 }
