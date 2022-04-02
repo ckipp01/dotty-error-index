@@ -46,7 +46,7 @@ function check_scala_version() {
 # -- [E001] Syntax Error: ./0001_EmptyCatchBlockID.scala:2:9
 # NOTE: we also use ? instea of / since the PWD has / in it and screws up sed because computers are dumb
 function relativize () {
-  sed -i "" "s?$SOURCE_ROOT/??g" $1
+  sed -i "s?$SOURCE_ROOT/??g" $1
 }
 
 function update_file() {

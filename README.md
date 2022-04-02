@@ -11,10 +11,18 @@ for better structured Diagnostics in Dotty for tooling.
 
 ## Using this script
 
-All you need to run the script is bash and
-[cs](https://get-coursier.io/docs/cli-installation). For your own sanity alias
-`diff` to something modern like [delta](https://github.com/dandavison/delta) so
-you can actually read the diff.
+You'll need the following available on your system:
+  - bash
+  - [cs](https://get-coursier.io/docs/cli-installation).
+
+NOTE: For your own sanity alias `diff` to something modern like
+[delta](https://github.com/dandavison/delta) so you can actually read the diff.
+
+NOTE (for mac users): Ensure that you aren't using the default sed on mac, but
+rather [GNU sed](https://www.gnu.org/software/sed/) as the behavior is
+different. We use GNU sed to ensure it will work both on linux and Mac. You can
+find how to do this
+[here](https://gist.github.com/andre3k1/e3a1a7133fded5de5a9ee99c87c6fa0d?permalink_comment_id=3082272#gistcomment-3082272).
 
 The script is small and crude, but it does what I need it to. You can do the
 following:
