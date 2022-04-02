@@ -8,4 +8,6 @@
 // an error.
 //
 // https://github.com/lampepfl/dotty/blob/616308d34912f1a42bee256bf77b85db3194c46b/compiler/src/dotty/tools/dotc/typer/RefChecks.scala#L901-L908
+// START
 @main def OverridesNothingButNameExistsID = ()
+// END

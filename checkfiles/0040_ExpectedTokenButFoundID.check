@@ -1,5 +1,5 @@
--- [E040] Syntax Error: ./0040_ExpectedTokenButFoundID.scala:2:11 
-2 |  val foo: = ???
+-- [E040] Syntax Error: ./0040_ExpectedTokenButFoundID.scala:3:11 
+3 |  val foo: = ???
   |           ^
   |           an identifier expected, but '=' found
   |-----------------------------------------------------------------------------

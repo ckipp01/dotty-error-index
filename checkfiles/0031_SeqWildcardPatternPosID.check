@@ -1,28 +1,28 @@
--- [E031] Syntax Error: ./0031_SeqWildcardPatternPosID.scala:9:17 
-9 |  val x = mySeq: _*
-  |                 ^
-  |                 * can be used only for last argument
-  |-----------------------------------------------------------------------------
-  | Explanation (enabled by `-explain`)
-  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  | Sequence wildcard pattern is expected at the end of an argument list.
-  | This pattern matches any remaining elements in a sequence.
-  | Consider the following example:
-  |
-  | def sumOfTheFirstTwo(list: List[Int]): Int = list match {
-  |           |  case List(first, second, x*) => first + second
-  |           |  case _ => 0
-  |           |}
-  |
-  | Calling:
-  |
-  | sumOfTheFirstTwo(List(1, 2, 10))
-  |
-  | would give 3 as a result
-   -----------------------------------------------------------------------------
--- Error: ./0031_SeqWildcardPatternPosID.scala:9:6 
-9 |  val x = mySeq: _*
-  |      ^
-  |      Cannot return repeated parameter type Int*
+-- [E031] Syntax Error: ./0031_SeqWildcardPatternPosID.scala:10:17 
+10 |  val x = mySeq: _*
+   |                 ^
+   |                 * can be used only for last argument
+   |----------------------------------------------------------------------------
+   | Explanation (enabled by `-explain`)
+   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   | Sequence wildcard pattern is expected at the end of an argument list.
+   | This pattern matches any remaining elements in a sequence.
+   | Consider the following example:
+   |
+   | def sumOfTheFirstTwo(list: List[Int]): Int = list match {
+   |           |  case List(first, second, x*) => first + second
+   |           |  case _ => 0
+   |           |}
+   |
+   | Calling:
+   |
+   | sumOfTheFirstTwo(List(1, 2, 10))
+   |
+   | would give 3 as a result
+    ----------------------------------------------------------------------------
+-- Error: ./0031_SeqWildcardPatternPosID.scala:10:6 
+10 |  val x = mySeq: _*
+   |      ^
+   |      Cannot return repeated parameter type Int*
 2 errors found
 Error: Errors encountered during compilation

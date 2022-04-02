@@ -3,4 +3,6 @@
 // probably be used for this (ExpectedTokenButFound) and then just pass it
 // IDENTIFIER. That's common the parser and everything I try ends up showng me
 // that anyways.
+// START
 @main def IdentifierExpectedID = ()
+// END

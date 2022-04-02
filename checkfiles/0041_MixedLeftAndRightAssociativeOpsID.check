@@ -1,5 +1,5 @@
--- [E041] Syntax Error: ./0041_MixedLeftAndRightAssociativeOpsID.scala:6:10 
-6 |  I(1) +- I(4) +: I(4)
+-- [E041] Syntax Error: ./0041_MixedLeftAndRightAssociativeOpsID.scala:7:10 
+7 |  I(1) +- I(4) +: I(4)
   |          ^
   |+- (which is left-associative) and +: (which is right-associative) have same precedence and may not be mixed
   |-----------------------------------------------------------------------------

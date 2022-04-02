@@ -1,5 +1,5 @@
--- [E020] Syntax Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:3:0 
-3 |
+-- [E020] Syntax Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:5:0 
+5 |
   |^
   |yield or do expected
   |-----------------------------------------------------------------------------
@@ -29,12 +29,12 @@
   |
   | for i <- 1 to 3 do println(i) // notice the 'do' keyword
    -----------------------------------------------------------------------------
--- [E008] Not Found Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:2:18 
-2 |  for i <- 1 to 3 println(i)
+-- [E008] Not Found Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:3:18 
+3 |  for i <- 1 to 3 println(i)
   |           ^^^^^^^^^^^^^^
   |value println is not a member of scala.collection.immutable.Range.Inclusive
--- [E006] Not Found Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:2:26 
-2 |  for i <- 1 to 3 println(i)
+-- [E006] Not Found Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:3:26 
+3 |  for i <- 1 to 3 println(i)
   |                          ^
   |                          Not found: i
   |-----------------------------------------------------------------------------

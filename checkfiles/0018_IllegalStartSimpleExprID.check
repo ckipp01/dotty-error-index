@@ -1,5 +1,5 @@
--- [E018] Syntax Error: ./0018_IllegalStartSimpleExprID.scala:2:10 
-2 |  val x = :  
+-- [E018] Syntax Error: ./0018_IllegalStartSimpleExprID.scala:3:10 
+3 |  val x = :  
   |          ^
   |          expression expected but [31m:[0m found
   |-----------------------------------------------------------------------------

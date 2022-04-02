@@ -1,5 +1,5 @@
--- [E048] Reference Error: ./0048_SuperQualMustBeParentID.scala:3:14 
-3 |    val foo = Foo.super[Bar].foo
+-- [E048] Reference Error: ./0048_SuperQualMustBeParentID.scala:4:14 
+4 |    val foo = Foo.super[Bar].foo
   |              ^^^^^^^^^^^^^^
   |              Bar does not name a parent of class Foo
   |-----------------------------------------------------------------------------

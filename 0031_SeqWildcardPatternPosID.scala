@@ -4,7 +4,9 @@
 // case List(first*, second)
 //
 // would throw it, but that actually gives you E032 instead.
+// START
 @main def SeqWildcardPatternPosID =
   val mySeq = Seq(1, 2, 3)
   val x = mySeq: _*
   ()
+// END

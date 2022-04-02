@@ -1,5 +1,5 @@
--- [E006] Not Found Error: ./0006_MissingIdentID.scala:2:2 
-2 |  a
+-- [E006] Not Found Error: ./0006_MissingIdentID.scala:3:2 
+3 |  a
   |  ^
   |  Not found: a
   |-----------------------------------------------------------------------------

@@ -1,5 +1,5 @@
--- [E015] Syntax Error: ./0015_RepeatedModifierID.scala:2:14 
-2 |  final final val foo = ???
+-- [E015] Syntax Error: ./0015_RepeatedModifierID.scala:3:14 
+3 |  final final val foo = ???
   |              ^^^
   |              Repeated modifier final
   |-----------------------------------------------------------------------------

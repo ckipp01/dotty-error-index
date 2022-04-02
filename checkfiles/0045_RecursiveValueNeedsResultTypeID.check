@@ -1,5 +1,5 @@
--- [E045] Cyclic Error: ./0045_RecursiveValueNeedsResultTypeID.scala:2:56 
-2 |  val factorial = (x: Int) => if x == 0 then 1 else x * factorial(x - 1)
+-- [E045] Cyclic Error: ./0045_RecursiveValueNeedsResultTypeID.scala:3:56 
+3 |  val factorial = (x: Int) => if x == 0 then 1 else x * factorial(x - 1)
   |                                                        ^
   |                                      Recursive value factorial needs type
   |-----------------------------------------------------------------------------

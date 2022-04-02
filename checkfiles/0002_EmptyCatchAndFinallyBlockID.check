@@ -1,5 +1,5 @@
--- [E001] Syntax Error: ./0002_EmptyCatchAndFinallyBlockID.scala:5:9 
-5 |  try {} catch {}
+-- [E001] Syntax Error: ./0002_EmptyCatchAndFinallyBlockID.scala:6:9 
+6 |  try {} catch {}
   |         ^^^^^^^^
   |         The catch block does not contain a valid expression, try
   |         adding a case like - case e: Exception => to the block

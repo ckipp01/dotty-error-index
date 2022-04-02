@@ -1,5 +1,5 @@
--- [E007] Type Mismatch Error: ./0007_TypeMismatchID.scala:2:20 
-2 |  val foo: String = 1
+-- [E007] Type Mismatch Error: ./0007_TypeMismatchID.scala:3:20 
+3 |  val foo: String = 1
   |                    ^
   |                    Found:    (1 : Int)
   |                    Required: String

@@ -1,5 +1,5 @@
--- [E032] Syntax Error: ./0032_IllegalStartOfSimplePatternID.scala:4:16 
-4 |    case List(a*, b) => ???
+-- [E032] Syntax Error: ./0032_IllegalStartOfSimplePatternID.scala:5:16 
+5 |    case List(a*, b) => ???
   |                ^
   |                pattern expected
   |-----------------------------------------------------------------------------

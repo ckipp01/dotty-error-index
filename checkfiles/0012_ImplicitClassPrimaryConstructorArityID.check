@@ -1,5 +1,5 @@
--- [E012] Syntax Error: ./0012_ImplicitClassPrimaryConstructorArityID.scala:2:17 
-2 |  implicit class Foo
+-- [E012] Syntax Error: ./0012_ImplicitClassPrimaryConstructorArityID.scala:3:17 
+3 |  implicit class Foo
   |  ^^^^^^^^^^^^^^^^^^
   |  Implicit classes must accept exactly one primary constructor parameter
   |-----------------------------------------------------------------------------

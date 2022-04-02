@@ -1,5 +1,5 @@
--- [E035] Syntax Error: ./0035_UnboundWildcardTypeID.scala:2:11 
-2 |  val foo: _ = ???
+-- [E035] Syntax Error: ./0035_UnboundWildcardTypeID.scala:3:11 
+3 |  val foo: _ = ???
   |           ^
   |           Unbound wildcard type
   |-----------------------------------------------------------------------------

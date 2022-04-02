@@ -1,5 +1,5 @@
--- [E017] Syntax Error: ./0017_UnboundPlaceholderParameterID.scala:2:4 
-2 |  { _ }
+-- [E017] Syntax Error: ./0017_UnboundPlaceholderParameterID.scala:3:4 
+3 |  { _ }
   |    ^
   |    Unbound placeholder parameter; incorrect use of _
   |-----------------------------------------------------------------------------

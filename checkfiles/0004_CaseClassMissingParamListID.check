@@ -1,5 +1,5 @@
--- [E004] Syntax Error: ./0004_CaseClassMissingParamListID.scala:2:13 
-2 |  case class Foo
+-- [E004] Syntax Error: ./0004_CaseClassMissingParamListID.scala:3:13 
+3 |  case class Foo
   |             ^^^
   |             A case class must have at least one parameter list
   |-----------------------------------------------------------------------------

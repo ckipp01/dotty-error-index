@@ -1,5 +1,5 @@
--- [E039] Reference Error: ./0039_ForwardReferenceExtendsOverDefinitionID.scala:2:2 
-2 |  foo.toUpperCase
+-- [E039] Reference Error: ./0039_ForwardReferenceExtendsOverDefinitionID.scala:3:2 
+3 |  foo.toUpperCase
   |  ^^^
   |  foo is a forward reference extending over the definition of foo
   |-----------------------------------------------------------------------------

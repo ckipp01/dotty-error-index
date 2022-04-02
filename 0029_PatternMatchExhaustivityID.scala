@@ -1,3 +1,4 @@
+// START
 @main def PatternMatchExhaustivityID =
   enum Foo:
     case a, b, c
@@ -5,3 +6,4 @@
 
   foo match
     case Foo.a => "What about the rest?"
+// END

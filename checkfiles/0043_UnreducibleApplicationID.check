@@ -1,5 +1,5 @@
--- [E043] Type Error: ./0043_UnreducibleApplicationID.scala:5:12 
-5 |  def g(xs: Alias[?]) = xs map { case CC(x) => CC(x) }
+-- [E043] Type Error: ./0043_UnreducibleApplicationID.scala:6:12 
+6 |  def g(xs: Alias[?]) = xs map { case CC(x) => CC(x) }
   |            ^^^^^^^^
   |unreducible application of higher-kinded type [T] =>> Seq[CC[T]] to wildcard arguments
   |-----------------------------------------------------------------------------

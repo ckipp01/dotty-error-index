@@ -1,6 +1,6 @@
-import java.io.File
-
+// START
 @main def EarlyDefinitionsNotSupportedID =
+  import java.io.File
   trait ListFiles:
     val f: File
     def getList(msg: String) = f.listFiles
@@ -9,3 +9,4 @@ import java.io.File
   class A extends {
     val f = new File("iDontExist")
   } with ListFiles
+// END

@@ -1,5 +1,5 @@
--- [E049] Reference Error: ./0049_AmbiguousReferenceID.scala:6:2 
-6 |  foo
+-- [E049] Reference Error: ./0049_AmbiguousReferenceID.scala:4:2 
+4 |  foo
   |  ^^^
   |  Reference to foo is ambiguous,
   |  it is both defined in package <empty>

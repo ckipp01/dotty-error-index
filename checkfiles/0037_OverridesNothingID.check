@@ -1,5 +1,5 @@
--- [E037] Declaration Error: ./0037_OverridesNothingID.scala:3:17 
-3 |    override val foo = ???
+-- [E037] Declaration Error: ./0037_OverridesNothingID.scala:4:17 
+4 |    override val foo = ???
   |                 ^
   |                 value foo overrides nothing
   |-----------------------------------------------------------------------------

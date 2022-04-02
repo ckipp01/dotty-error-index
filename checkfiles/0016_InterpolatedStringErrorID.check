@@ -1,5 +1,5 @@
--- [E016] Syntax Error: ./0016_InterpolatedStringErrorID.scala:2:5 
-2 |  s"$new Point(1, 2)"
+-- [E016] Syntax Error: ./0016_InterpolatedStringErrorID.scala:3:5 
+3 |  s"$new Point(1, 2)"
   |     ^
   |     Error in interpolated string: identifier or block expected
   |-----------------------------------------------------------------------------

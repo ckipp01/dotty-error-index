@@ -11,5 +11,7 @@
 // or issus in the way Scanner / Parser.
 
 //an identifier expected, but ',' found
+// START
 @main def VarArgsParamMustComeLastID =
   def foo(a: Int*, b: Int) = b
+// END
