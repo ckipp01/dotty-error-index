@@ -5,7 +5,7 @@
 # only for the 3.1.3 ones
 #SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep NIGHTLY | tail -1)
 SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep 3.1.3 | tail -1)
-TARGET_FILES=$(ls ./*.scala)
+TARGET_FILES=$(ls *.scala)
 COMMAND="$1"
 ERROR_MESSAGE_ID="$2"
 BLUE='\033[00;34m'
@@ -39,12 +39,13 @@ function check_scala_version() {
   fi
 }
 
-# So this is a bit of a hack because we don't want the full path in here or the check will fail for CI
-# So this command just changes:
-# -- [E001] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0001_EmptyCatchBlockID.scala:2:9
+# So this is a bit of a hack because we don't want the full path in here or the
+# check will fail for CI So this command just changes:
+# -- [E001] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/0001_EmptyCatchBlockID.scala:2:9
 # with
-# -- [E001] Syntax Error: ./0001_EmptyCatchBlockID.scala:2:9
-# NOTE: we also use ? instea of / since the PWD has / in it and screws up sed because computers are dumb
+# -- [E001] Syntax Error: 0001_EmptyCatchBlockID.scala:2:9
+# NOTE: we also use ? instea of / since the PWD has / in it and screws up sed
+# because computers are dumb
 function relativize () {
   sed -i "s?$SOURCE_ROOT/??g" $1
 }

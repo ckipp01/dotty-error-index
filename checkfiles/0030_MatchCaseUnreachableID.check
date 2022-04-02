@@ -1,4 +1,4 @@
--- [E030] Match case Unreachable Warning: ./0030_MatchCaseUnreachableID.scala:6:9 
+-- [E030] Match case Unreachable Warning: 0030_MatchCaseUnreachableID.scala:6:9 
 6 |    case bar => "So I'll never get here"
   |         ^^^
   |         Unreachable case

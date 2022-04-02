@@ -1,4 +1,4 @@
--- [E034] Syntax Error: ./0034_ExistentialTypesNoLongerSupportedID.scala:4:15 
+-- [E034] Syntax Error: 0034_ExistentialTypesNoLongerSupportedID.scala:4:15 
 4 |    type F = A forSome { type B}
   |               ^^^^^^^
   |               Existential types are no longer supported -

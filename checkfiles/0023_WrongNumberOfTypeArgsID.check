@@ -1,4 +1,4 @@
--- [E023] Syntax Error: ./0023_WrongNumberOfTypeArgsID.scala:4:5 
+-- [E023] Syntax Error: 0023_WrongNumberOfTypeArgsID.scala:4:5 
 4 |  foo[String, String]
   |  ^^^^^^^^^^^^^^^^^^^
   |  Too many type arguments for 0023_WrongNumberOfTypeArgsID$package.foo[A]

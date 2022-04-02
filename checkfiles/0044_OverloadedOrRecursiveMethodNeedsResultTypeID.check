@@ -1,4 +1,4 @@
--- [E044] Cyclic Error: ./0044_OverloadedOrRecursiveMethodNeedsResultTypeID.scala:5:22 
+-- [E044] Cyclic Error: 0044_OverloadedOrRecursiveMethodNeedsResultTypeID.scala:5:22 
 5 |    def foo(a: Int) = foo()
   |                      ^
   |                      Overloaded or recursive method foo needs return type

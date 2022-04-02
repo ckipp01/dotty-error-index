@@ -1,8 +1,8 @@
--- Error: ./0009_EarlyDefinitionsNotSupportedID.scala:9:18 
+-- Error: 0009_EarlyDefinitionsNotSupportedID.scala:9:18 
 9 |  class A extends {
   |                  ^
   |                  `extends` must be followed by at least one parent
--- [E009] Syntax Error: ./0009_EarlyDefinitionsNotSupportedID.scala:11:4 
+-- [E009] Syntax Error: 0009_EarlyDefinitionsNotSupportedID.scala:11:4 
 11 |  } with ListFiles
    |    ^^^^
    |    Early definitions are not supported; use trait parameters instead
@@ -40,7 +40,7 @@
    |
    | class C extends Logging(new File("log.data"))
     ----------------------------------------------------------------------------
--- Error: ./0009_EarlyDefinitionsNotSupportedID.scala:11:9 
+-- Error: 0009_EarlyDefinitionsNotSupportedID.scala:11:9 
 11 |  } with ListFiles
    |         ^^^^^^^^^
    |         end of statement expected but identifier found

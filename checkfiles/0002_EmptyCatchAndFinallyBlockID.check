@@ -1,4 +1,4 @@
--- [E001] Syntax Error: ./0002_EmptyCatchAndFinallyBlockID.scala:6:9 
+-- [E001] Syntax Error: 0002_EmptyCatchAndFinallyBlockID.scala:6:9 
 6 |  try {} catch {}
   |         ^^^^^^^^
   |         The catch block does not contain a valid expression, try

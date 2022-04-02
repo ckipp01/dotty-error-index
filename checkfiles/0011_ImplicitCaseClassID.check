@@ -1,4 +1,4 @@
--- [E011] Syntax Error: ./0011_ImplicitCaseClassID.scala:3:22 
+-- [E011] Syntax Error: 0011_ImplicitCaseClassID.scala:3:22 
 3 |  implicit case class Foo(a: Int)
   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   |  A case class may not be defined as implicit

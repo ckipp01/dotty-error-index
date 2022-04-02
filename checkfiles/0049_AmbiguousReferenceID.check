@@ -1,4 +1,4 @@
--- [E049] Reference Error: ./0049_AmbiguousReferenceID.scala:4:2 
+-- [E049] Reference Error: 0049_AmbiguousReferenceID.scala:4:2 
 4 |  foo
   |  ^^^
   |  Reference to foo is ambiguous,
