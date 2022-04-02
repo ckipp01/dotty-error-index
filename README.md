@@ -5,7 +5,7 @@ Rust has with their [Rust Compiler Error
 Index](https://doc.rust-lang.org/error-index.html). Eventually this will
 migrated into the actual Scala docs, but for now it lives here until I can
 correctly reproduce every one with examples. This is a very small part in the
-goal outline
+goal outlined
 [here](https://contributors.scala-lang.org/t/revisiting-dotty-diagnostics-for-tooling/5649/4)
 for better structured Diagnostics in Dotty for tooling.
 
@@ -13,7 +13,7 @@ for better structured Diagnostics in Dotty for tooling.
 
 You'll need the following available on your system:
   - bash
-  - [cs](https://get-coursier.io/docs/cli-installation).
+  - [cs (coursier)](https://get-coursier.io/docs/cli-installation)
 
 NOTE: For your own sanity alias `diff` to something modern like
 [delta](https://github.com/dandavison/delta) so you can actually read the diff.
@@ -23,9 +23,6 @@ rather [GNU sed](https://www.gnu.org/software/sed/) as the behavior is
 different. We use GNU sed to ensure it will work both on linux and Mac. You can
 find how to do this
 [here](https://gist.github.com/andre3k1/e3a1a7133fded5de5a9ee99c87c6fa0d?permalink_comment_id=3082272#gistcomment-3082272).
-
-The script is small and crude, but it does what I need it to. You can do the
-following:
 
 _Run all the examples and see the output_
 ```bash
