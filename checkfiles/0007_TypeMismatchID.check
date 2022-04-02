@@ -1,4 +1,4 @@
--- [E007] Type Mismatch Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0007_TypeMismatchID.scala:2:20 
+-- [E007] Type Mismatch Error: ./0007_TypeMismatchID.scala:2:20 
 2 |  val foo: String = 1
   |                    ^
   |                    Found:    (1 : Int)

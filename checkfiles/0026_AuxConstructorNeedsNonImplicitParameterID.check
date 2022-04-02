@@ -1,4 +1,4 @@
--- [E026] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0026_AuxConstructorNeedsNonImplicitParameterID.scala:3:27 
+-- [E026] Syntax Error: ./0026_AuxConstructorNeedsNonImplicitParameterID.scala:3:27 
 3 |    def this(using a: Int) = this(a)
   |                           ^
   |                   Auxiliary constructor needs non-implicit parameter list
@@ -14,7 +14,7 @@
   |  - Forgotten parenthesis on this (def this() = { ... })
   |  - Auxiliary constructors specify the implicit value
    -----------------------------------------------------------------------------
--- [E120] Naming Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0026_AuxConstructorNeedsNonImplicitParameterID.scala:3:8 
+-- [E120] Naming Error: ./0026_AuxConstructorNeedsNonImplicitParameterID.scala:3:8 
 3 |    def this(using a: Int) = this(a)
   |        ^
   |Double definition:

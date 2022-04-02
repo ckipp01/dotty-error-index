@@ -1,4 +1,4 @@
--- [E040] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0040_ExpectedTokenButFoundID.scala:2:11 
+-- [E040] Syntax Error: ./0040_ExpectedTokenButFoundID.scala:2:11 
 2 |  val foo: = ???
   |           ^
   |           an identifier expected, but '=' found

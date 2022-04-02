@@ -1,4 +1,4 @@
--- [E032] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0032_IllegalStartOfSimplePatternID.scala:4:16 
+-- [E032] Syntax Error: ./0032_IllegalStartOfSimplePatternID.scala:4:16 
 4 |    case List(a*, b) => ???
   |                ^
   |                pattern expected

@@ -1,4 +1,4 @@
--- [E013] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0013_ObjectMayNotHaveSelfTypeID.scala:3:15 
+-- [E013] Syntax Error: ./0013_ObjectMayNotHaveSelfTypeID.scala:3:15 
 3 |  object Foo { self: A => }
   |               ^^^^^^^
   |               objects must not have a self type

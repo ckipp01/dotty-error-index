@@ -1,4 +1,4 @@
--- [E039] Reference Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0039_ForwardReferenceExtendsOverDefinitionID.scala:2:2 
+-- [E039] Reference Error: ./0039_ForwardReferenceExtendsOverDefinitionID.scala:2:2 
 2 |  foo.toUpperCase
   |  ^^^
   |  foo is a forward reference extending over the definition of foo

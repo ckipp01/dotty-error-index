@@ -1,4 +1,4 @@
--- [E003] Syntax Deprecation Warning: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0003_DeprecatedWithOperatorID.scala:3:18 
+-- [E003] Syntax Deprecation Warning: ./0003_DeprecatedWithOperatorID.scala:3:18 
 3 |  type A = Double with Int
   |                  ^
   |                with as a type operator has been deprecated; use & instead

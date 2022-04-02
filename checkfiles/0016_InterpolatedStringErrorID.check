@@ -1,4 +1,4 @@
--- [E016] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0016_InterpolatedStringErrorID.scala:2:5 
+-- [E016] Syntax Error: ./0016_InterpolatedStringErrorID.scala:2:5 
 2 |  s"$new Point(1, 2)"
   |     ^
   |     Error in interpolated string: identifier or block expected

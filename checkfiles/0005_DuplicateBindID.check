@@ -1,4 +1,4 @@
--- [E005] Naming Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0005_DuplicateBindID.scala:2:32 
+-- [E005] Naming Error: ./0005_DuplicateBindID.scala:2:32 
 2 |  List((1, 2)).map { case (num, num) => ??? }
   |                                ^^^
   |                                duplicate pattern variable: num

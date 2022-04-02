@@ -1,4 +1,4 @@
--- [E021] Doc Comment Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0021_ProperDefinitionNotFoundID.scala:4:14 
+-- [E021] Doc Comment Error: ./0021_ProperDefinitionNotFoundID.scala:4:14 
 4 |   * @usecase val foo = ()
   |              ^
   |              Proper definition was not found in @usecase

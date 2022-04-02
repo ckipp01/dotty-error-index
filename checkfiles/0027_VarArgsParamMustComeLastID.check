@@ -1,4 +1,4 @@
--- [E040] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0027_VarArgsParamMustComeLastID.scala:15:17 
+-- [E040] Syntax Error: ./0027_VarArgsParamMustComeLastID.scala:15:17 
 15 |  def foo(a: Int*, b: Int) = b
    |                 ^
    |                 an identifier expected, but ',' found

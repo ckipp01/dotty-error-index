@@ -1,4 +1,4 @@
--- [E031] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0031_SeqWildcardPatternPosID.scala:9:17 
+-- [E031] Syntax Error: ./0031_SeqWildcardPatternPosID.scala:9:17 
 9 |  val x = mySeq: _*
   |                 ^
   |                 * can be used only for last argument
@@ -20,7 +20,7 @@
   |
   | would give 3 as a result
    -----------------------------------------------------------------------------
--- Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0031_SeqWildcardPatternPosID.scala:9:6 
+-- Error: ./0031_SeqWildcardPatternPosID.scala:9:6 
 9 |  val x = mySeq: _*
   |      ^
   |      Cannot return repeated parameter type Int*

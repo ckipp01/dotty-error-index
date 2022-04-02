@@ -1,4 +1,4 @@
--- [E015] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0015_RepeatedModifierID.scala:2:14 
+-- [E015] Syntax Error: ./0015_RepeatedModifierID.scala:2:14 
 2 |  final final val foo = ???
   |              ^^^
   |              Repeated modifier final

@@ -1,4 +1,4 @@
--- [E017] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0017_UnboundPlaceholderParameterID.scala:2:4 
+-- [E017] Syntax Error: ./0017_UnboundPlaceholderParameterID.scala:2:4 
 2 |  { _ }
   |    ^
   |    Unbound placeholder parameter; incorrect use of _

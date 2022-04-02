@@ -1,4 +1,4 @@
--- [E020] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0020_YieldOrDoExpectedInForComprehensionID.scala:3:0 
+-- [E020] Syntax Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:3:0 
 3 |
   |^
   |yield or do expected
@@ -29,11 +29,11 @@
   |
   | for i <- 1 to 3 do println(i) // notice the 'do' keyword
    -----------------------------------------------------------------------------
--- [E008] Not Found Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0020_YieldOrDoExpectedInForComprehensionID.scala:2:18 
+-- [E008] Not Found Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:2:18 
 2 |  for i <- 1 to 3 println(i)
   |           ^^^^^^^^^^^^^^
   |value println is not a member of scala.collection.immutable.Range.Inclusive
--- [E006] Not Found Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0020_YieldOrDoExpectedInForComprehensionID.scala:2:26 
+-- [E006] Not Found Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:2:26 
 2 |  for i <- 1 to 3 println(i)
   |                          ^
   |                          Not found: i

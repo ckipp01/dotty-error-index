@@ -1,4 +1,4 @@
--- [E023] Syntax Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0023_WrongNumberOfTypeArgsID.scala:3:5 
+-- [E023] Syntax Error: ./0023_WrongNumberOfTypeArgsID.scala:3:5 
 3 |  foo[String, String]
   |  ^^^^^^^^^^^^^^^^^^^
   |  Too many type arguments for 0023_WrongNumberOfTypeArgsID$package.foo[A]

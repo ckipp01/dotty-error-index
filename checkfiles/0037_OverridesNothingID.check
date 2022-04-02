@@ -1,4 +1,4 @@
--- [E037] Declaration Error: /Users/ckipp/Documents/scala-workspace/dotty-error-index/./0037_OverridesNothingID.scala:3:17 
+-- [E037] Declaration Error: ./0037_OverridesNothingID.scala:3:17 
 3 |    override val foo = ???
   |                 ^
   |                 value foo overrides nothing
