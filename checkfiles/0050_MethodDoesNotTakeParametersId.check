@@ -1,0 +1,12 @@
+-- [E050] Type Error: ./0050_MethodDoesNotTakeParametersId.scala:3:2 
+3 |  foo(1)
+  |  ^^^
+  |  method foo does not take parameters
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | You have specified more parameter lists than defined in the method definition(s).
+  | Nullary methods may not be called with parenthesis
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

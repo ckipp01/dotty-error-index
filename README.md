@@ -75,3 +75,5 @@ with an X.
   - [X] 0036 DanglingThisInPathID - Compiler won't emit this anymore. It's not
       referenced anywhere in the codebase
   - [ ] 0038 OverridesNothingButNameExistsID - See notes in the file
+  - [ ] 0046 CyclicReferenceInvolvingID - See notes in the file
+  - [ ] 0047 CyclicReferenceInvolvingImplicitID - See notes in the file
