@@ -29,10 +29,10 @@ do
 
   if [[ $START_LINE && $END_LINE ]]; then
     echo "_Erroneous Code Example_" >> $OUTPUT
-    START_STRING=${START_LINE::1}
+    START_STRING=${START_LINE%:*}
     # We + 2 here because we want to start at START but then also remove the @main def
     START=$((START_STRING + 2))
-    END_STRING=${END_LINE::1} 
+    END_STRING=${END_LINE%:*} 
     END=$((END_STRING - 1))
     echo '```scala' >> $OUTPUT
     sed -n "$START,$END p" $TARGET_FILE >> $OUTPUT

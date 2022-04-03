@@ -217,6 +217,14 @@ Error: Errors encountered during compilation
 _Erroneous Code Example_
 ```scala
   import java.io.File
+  trait ListFiles:
+    val f: File
+    def getList(msg: String) = f.listFiles
+  end ListFiles
+
+  class A extends {
+    val f = new File("iDontExist")
+  } with ListFiles
 ```
 _Example Error Output_
 ```
@@ -765,7 +773,7 @@ Error: Errors encountered during compilation
 ## E0027 VarArgsParamMustComeLastID
 _Erroneous Code Example_
 ```scala
-// place in the Parsers.scala that checks this:
+  def foo(a: Int*, b: Int) = b
 ```
 _Example Error Output_
 ```
@@ -833,6 +841,8 @@ _Example Error Output_
 _Erroneous Code Example_
 ```scala
   val mySeq = Seq(1, 2, 3)
+  val x = mySeq: _*
+  ()
 ```
 _Example Error Output_
 ```
@@ -1078,7 +1088,7 @@ Error: Errors encountered during compilation
 ## E0038 OverridesNothingButNameExistsID
 _Erroneous Code Example_
 ```scala
-// getClass in primitive value classes is defined in the standard library as:
+// END
 ```
 _Example Error Output_
 ```
