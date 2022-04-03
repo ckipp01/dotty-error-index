@@ -26,8 +26,8 @@ if [ $ERROR_MESSAGE_ID ] && [ ${#ERROR_MESSAGE_ID} != 4 ]; then
   exit 1
 fi
 
-if [ ! -d ./out ]; then
-  mkdir -p ./out
+if [ ! -d out ]; then
+  mkdir -p out
 fi
 
 function check_scala_version() {
@@ -61,8 +61,10 @@ function handle_update() {
   if [ $ERROR_MESSAGE_ID ]; then
     TARGET_FILE=$(find . -maxdepth 1 -type f -name $ERROR_MESSAGE_ID*)
     if [ $TARGET_FILE ]; then
+      # We remove the ./ in the filename
+      CLEANED=${TARGET_FILE:2}
       check_scala_version
-      update_file $TARGET_FILE
+      update_file $CLEANED
     else
       error "Found no file starting with $ERROR_MESSAGE_ID"
     fi
@@ -88,8 +90,10 @@ function handle_check() {
   if [ $ERROR_MESSAGE_ID ]; then
     TARGET_FILE=$(find . -maxdepth 1 -type f -name $ERROR_MESSAGE_ID*)
     if [ $TARGET_FILE ]; then
+      # We remove the ./ in the filename
+      CLEANED=${TARGET_FILE:2}
       check_scala_version
-      check_file $TARGET_FILE
+      check_file $CLEANED
     else
       error "Found no file starting with $ERROR_MESSAGE_ID"
     fi

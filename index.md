@@ -5,7 +5,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E001] Syntax Error: ./0001_EmptyCatchBlockID.scala:3:9 
+-- [E001] Syntax Error: 0001_EmptyCatchBlockID.scala:3:9 
 3 |  try {} catch {}
   |         ^^^^^^^^
   |         The catch block does not contain a valid expression, try
@@ -43,7 +43,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E001] Syntax Error: ./0002_EmptyCatchAndFinallyBlockID.scala:6:9 
+-- [E001] Syntax Error: 0002_EmptyCatchAndFinallyBlockID.scala:6:9 
 6 |  try {} catch {}
   |         ^^^^^^^^
   |         The catch block does not contain a valid expression, try
@@ -81,7 +81,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E003] Syntax Deprecation Warning: ./0003_DeprecatedWithOperatorID.scala:4:18 
+-- [E003] Syntax Deprecation Warning: 0003_DeprecatedWithOperatorID.scala:4:18 
 4 |  type A = Double with Int
   |                  ^
   |                with as a type operator has been deprecated; use & instead
@@ -101,7 +101,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E004] Syntax Error: ./0004_CaseClassMissingParamListID.scala:3:13 
+-- [E004] Syntax Error: 0004_CaseClassMissingParamListID.scala:3:13 
 3 |  case class Foo
   |             ^^^
   |             A case class must have at least one parameter list
@@ -122,7 +122,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E005] Naming Error: ./0005_DuplicateBindID.scala:3:32 
+-- [E005] Naming Error: 0005_DuplicateBindID.scala:3:32 
 3 |  List((1, 2)).map { case (num, num) => ??? }
   |                                ^^^
   |                                duplicate pattern variable: num
@@ -147,7 +147,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E006] Not Found Error: ./0006_MissingIdentID.scala:3:2 
+-- [E006] Not Found Error: 0006_MissingIdentID.scala:3:2 
 3 |  a
   |  ^
   |  Not found: a
@@ -169,7 +169,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E007] Type Mismatch Error: ./0007_TypeMismatchID.scala:3:20 
+-- [E007] Type Mismatch Error: 0007_TypeMismatchID.scala:3:20 
 3 |  val foo: String = 1
   |                    ^
   |                    Found:    (1 : Int)
@@ -205,7 +205,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E008] Not Found Error: ./0008_NotAMeberID.scala:4:6 
+-- [E008] Not Found Error: 0008_NotAMeberID.scala:4:6 
 4 |  Foo.iDontExist
   |  ^^^^^^^^^^^^^^
   |  value iDontExist is not a member of object Foo
@@ -219,11 +219,11 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- Error: ./0009_EarlyDefinitionsNotSupportedID.scala:9:18 
+-- Error: 0009_EarlyDefinitionsNotSupportedID.scala:9:18 
 9 |  class A extends {
   |                  ^
   |                  `extends` must be followed by at least one parent
--- [E009] Syntax Error: ./0009_EarlyDefinitionsNotSupportedID.scala:11:4 
+-- [E009] Syntax Error: 0009_EarlyDefinitionsNotSupportedID.scala:11:4 
 11 |  } with ListFiles
    |    ^^^^
    |    Early definitions are not supported; use trait parameters instead
@@ -261,7 +261,7 @@ _Error Output_
    |
    | class C extends Logging(new File("log.data"))
     ----------------------------------------------------------------------------
--- Error: ./0009_EarlyDefinitionsNotSupportedID.scala:11:9 
+-- Error: 0009_EarlyDefinitionsNotSupportedID.scala:11:9 
 11 |  } with ListFiles
    |         ^^^^^^^^^
    |         end of statement expected but identifier found
@@ -283,7 +283,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E011] Syntax Error: ./0011_ImplicitCaseClassID.scala:3:22 
+-- [E011] Syntax Error: 0011_ImplicitCaseClassID.scala:3:22 
 3 |  implicit case class Foo(a: Int)
   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   |  A case class may not be defined as implicit
@@ -304,7 +304,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E012] Syntax Error: ./0012_ImplicitClassPrimaryConstructorArityID.scala:3:17 
+-- [E012] Syntax Error: 0012_ImplicitClassPrimaryConstructorArityID.scala:3:17 
 3 |  implicit class Foo
   |  ^^^^^^^^^^^^^^^^^^
   |  Implicit classes must accept exactly one primary constructor parameter
@@ -329,7 +329,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E013] Syntax Error: ./0013_ObjectMayNotHaveSelfTypeID.scala:4:15 
+-- [E013] Syntax Error: 0013_ObjectMayNotHaveSelfTypeID.scala:4:15 
 4 |  object Foo { self: A => }
   |               ^^^^^^^
   |               objects must not have a self type
@@ -362,7 +362,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E015] Syntax Error: ./0015_RepeatedModifierID.scala:3:14 
+-- [E015] Syntax Error: 0015_RepeatedModifierID.scala:3:14 
 3 |  final final val foo = ???
   |              ^^^
   |              Repeated modifier final
@@ -389,7 +389,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E016] Syntax Error: ./0016_InterpolatedStringErrorID.scala:3:5 
+-- [E016] Syntax Error: 0016_InterpolatedStringErrorID.scala:3:5 
 3 |  s"$new Point(1, 2)"
   |     ^
   |     Error in interpolated string: identifier or block expected
@@ -414,7 +414,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E017] Syntax Error: ./0017_UnboundPlaceholderParameterID.scala:3:4 
+-- [E017] Syntax Error: 0017_UnboundPlaceholderParameterID.scala:3:4 
 3 |  { _ }
   |    ^
   |    Unbound placeholder parameter; incorrect use of _
@@ -471,7 +471,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E018] Syntax Error: ./0018_IllegalStartSimpleExprID.scala:3:10 
+-- [E018] Syntax Error: 0018_IllegalStartSimpleExprID.scala:3:10 
 3 |  val x = :  
   |          ^
   |          expression expected but [31m:[0m found
@@ -491,7 +491,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E019] Syntax Error: ./0019_MissingReturnTypeID.scala:4:11 
+-- [E019] Syntax Error: 0019_MissingReturnTypeID.scala:4:11 
 4 |    def foo
   |           ^
   |           Missing return type
@@ -513,7 +513,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E020] Syntax Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:5:0 
+-- [E020] Syntax Error: 0020_YieldOrDoExpectedInForComprehensionID.scala:5:0 
 5 |
   |^
   |yield or do expected
@@ -544,11 +544,11 @@ _Error Output_
   |
   | for i <- 1 to 3 do println(i) // notice the 'do' keyword
    -----------------------------------------------------------------------------
--- [E008] Not Found Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:3:18 
+-- [E008] Not Found Error: 0020_YieldOrDoExpectedInForComprehensionID.scala:3:18 
 3 |  for i <- 1 to 3 println(i)
   |           ^^^^^^^^^^^^^^
   |value println is not a member of scala.collection.immutable.Range.Inclusive
--- [E006] Not Found Error: ./0020_YieldOrDoExpectedInForComprehensionID.scala:3:26 
+-- [E006] Not Found Error: 0020_YieldOrDoExpectedInForComprehensionID.scala:3:26 
 3 |  for i <- 1 to 3 println(i)
   |                          ^
   |                          Not found: i
@@ -574,7 +574,7 @@ trait Foo:
 ```
 _Error Output_
 ```
--- [E021] Doc Comment Error: ./0021_ProperDefinitionNotFoundID.scala:6:14 
+-- [E021] Doc Comment Error: 0021_ProperDefinitionNotFoundID.scala:6:14 
  6 |   * @usecase val foo = ()
    |              ^
    |              Proper definition was not found in @usecase
@@ -628,7 +628,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E023] Syntax Error: ./0023_WrongNumberOfTypeArgsID.scala:4:5 
+-- [E023] Syntax Error: 0023_WrongNumberOfTypeArgsID.scala:4:5 
 4 |  foo[String, String]
   |  ^^^^^^^^^^^^^^^^^^^
   |  Too many type arguments for 0023_WrongNumberOfTypeArgsID$package.foo[A]
@@ -659,7 +659,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E024] Syntax Error: ./0024_IllegalVariableInPatternAlternativeID.scala:4:13 
+-- [E024] Syntax Error: 0024_IllegalVariableInPatternAlternativeID.scala:4:13 
 4 |    case (1, n) | (n, 1) => "got a one!"
   |             ^
   |             Illegal variable n in pattern alternative
@@ -682,7 +682,7 @@ _Error Output_
   |   case _ => 0
   | }
    -----------------------------------------------------------------------------
--- [E024] Syntax Error: ./0024_IllegalVariableInPatternAlternativeID.scala:4:19 
+-- [E024] Syntax Error: 0024_IllegalVariableInPatternAlternativeID.scala:4:19 
 4 |    case (1, n) | (n, 1) => "got a one!"
   |                   ^
   |                   Illegal variable n in pattern alternative
@@ -724,7 +724,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E026] Syntax Error: ./0026_AuxConstructorNeedsNonImplicitParameterID.scala:4:27 
+-- [E026] Syntax Error: 0026_AuxConstructorNeedsNonImplicitParameterID.scala:4:27 
 4 |    def this(using a: Int) = this(a)
   |                           ^
   |                   Auxiliary constructor needs non-implicit parameter list
@@ -740,7 +740,7 @@ _Error Output_
   |  - Forgotten parenthesis on this (def this() = { ... })
   |  - Auxiliary constructors specify the implicit value
    -----------------------------------------------------------------------------
--- [E120] Naming Error: ./0026_AuxConstructorNeedsNonImplicitParameterID.scala:4:8 
+-- [E120] Naming Error: 0026_AuxConstructorNeedsNonImplicitParameterID.scala:4:8 
 4 |    def this(using a: Int) = this(a)
   |        ^
   |Double definition:
@@ -760,7 +760,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E040] Syntax Error: ./0027_VarArgsParamMustComeLastID.scala:16:17 
+-- [E040] Syntax Error: 0027_VarArgsParamMustComeLastID.scala:16:17 
 16 |  def foo(a: Int*, b: Int) = b
    |                 ^
    |                 an identifier expected, but ',' found
@@ -787,7 +787,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E029] Pattern Match Exhaustivity Warning: ./0029_PatternMatchExhaustivityID.scala:7:2 
+-- [E029] Pattern Match Exhaustivity Warning: 0029_PatternMatchExhaustivityID.scala:7:2 
 7 |  foo match
   |  ^^^
   |  match may not be exhaustive.
@@ -814,7 +814,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E030] Match case Unreachable Warning: ./0030_MatchCaseUnreachableID.scala:6:9 
+-- [E030] Match case Unreachable Warning: 0030_MatchCaseUnreachableID.scala:6:9 
 6 |    case bar => "So I'll never get here"
   |         ^^^
   |         Unreachable case
@@ -827,7 +827,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E031] Syntax Error: ./0031_SeqWildcardPatternPosID.scala:10:17 
+-- [E031] Syntax Error: 0031_SeqWildcardPatternPosID.scala:10:17 
 10 |  val x = mySeq: _*
    |                 ^
    |                 * can be used only for last argument
@@ -849,7 +849,7 @@ _Error Output_
    |
    | would give 3 as a result
     ----------------------------------------------------------------------------
--- Error: ./0031_SeqWildcardPatternPosID.scala:10:6 
+-- Error: 0031_SeqWildcardPatternPosID.scala:10:6 
 10 |  val x = mySeq: _*
    |      ^
    |      Cannot return repeated parameter type Int*
@@ -864,7 +864,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E032] Syntax Error: ./0032_IllegalStartOfSimplePatternID.scala:5:16 
+-- [E032] Syntax Error: 0032_IllegalStartOfSimplePatternID.scala:5:16 
 5 |    case List(a*, b) => ???
   |                ^
   |                pattern expected
@@ -954,7 +954,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E034] Syntax Error: ./0034_ExistentialTypesNoLongerSupportedID.scala:4:15 
+-- [E034] Syntax Error: 0034_ExistentialTypesNoLongerSupportedID.scala:4:15 
 4 |    type F = A forSome { type B}
   |               ^^^^^^^
   |               Existential types are no longer supported -
@@ -986,7 +986,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E035] Syntax Error: ./0035_UnboundWildcardTypeID.scala:3:11 
+-- [E035] Syntax Error: 0035_UnboundWildcardTypeID.scala:3:11 
 3 |  val foo: _ = ???
   |           ^
   |           Unbound wildcard type
@@ -1050,7 +1050,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E037] Declaration Error: ./0037_OverridesNothingID.scala:4:17 
+-- [E037] Declaration Error: 0037_OverridesNothingID.scala:4:17 
 4 |    override val foo = ???
   |                 ^
   |                 value foo overrides nothing
@@ -1080,7 +1080,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E039] Reference Error: ./0039_ForwardReferenceExtendsOverDefinitionID.scala:3:2 
+-- [E039] Reference Error: 0039_ForwardReferenceExtendsOverDefinitionID.scala:3:2 
 3 |  foo.toUpperCase
   |  ^^^
   |  foo is a forward reference extending over the definition of foo
@@ -1108,7 +1108,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E040] Syntax Error: ./0040_ExpectedTokenButFoundID.scala:3:11 
+-- [E040] Syntax Error: 0040_ExpectedTokenButFoundID.scala:3:11 
 3 |  val foo: = ???
   |           ^
   |           an identifier expected, but '=' found
@@ -1132,7 +1132,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E041] Syntax Error: ./0041_MixedLeftAndRightAssociativeOpsID.scala:7:10 
+-- [E041] Syntax Error: 0041_MixedLeftAndRightAssociativeOpsID.scala:7:10 
 7 |  I(1) +- I(4) +: I(4)
   |          ^
   |+- (which is left-associative) and +: (which is right-associative) have same precedence and may not be mixed
@@ -1175,7 +1175,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E042] Type Error: ./0042_CantInstantiateAbstractClassOrTraitID.scala:4:6 
+-- [E042] Type Error: 0042_CantInstantiateAbstractClassOrTraitID.scala:4:6 
 4 |  new Foo
   |      ^^^
   |      Foo is a trait; it cannot be instantiated
@@ -1206,7 +1206,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E043] Type Error: ./0043_UnreducibleApplicationID.scala:6:12 
+-- [E043] Type Error: 0043_UnreducibleApplicationID.scala:6:12 
 6 |  def g(xs: Alias[?]) = xs map { case CC(x) => CC(x) }
   |            ^^^^^^^^
   |unreducible application of higher-kinded type [T] =>> Seq[CC[T]] to wildcard arguments
@@ -1229,7 +1229,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E044] Cyclic Error: ./0044_OverloadedOrRecursiveMethodNeedsResultTypeID.scala:5:22 
+-- [E044] Cyclic Error: 0044_OverloadedOrRecursiveMethodNeedsResultTypeID.scala:5:22 
 5 |    def foo(a: Int) = foo()
   |                      ^
   |                      Overloaded or recursive method foo needs return type
@@ -1254,7 +1254,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E045] Cyclic Error: ./0045_RecursiveValueNeedsResultTypeID.scala:3:56 
+-- [E045] Cyclic Error: 0045_RecursiveValueNeedsResultTypeID.scala:3:56 
 3 |  val factorial = (x: Int) => if x == 0 then 1 else x * factorial(x - 1)
   |                                                        ^
   |                                      Recursive value factorial needs type
@@ -1290,7 +1290,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E048] Reference Error: ./0048_SuperQualMustBeParentID.scala:4:14 
+-- [E048] Reference Error: 0048_SuperQualMustBeParentID.scala:4:14 
 4 |    val foo = Foo.super[Bar].foo
   |              ^^^^^^^^^^^^^^
   |              Bar does not name a parent of class Foo
@@ -1317,7 +1317,7 @@ object foo:
 ```
 _Error Output_
 ```
--- [E049] Reference Error: ./0049_AmbiguousReferenceID.scala:4:2 
+-- [E049] Reference Error: 0049_AmbiguousReferenceID.scala:4:2 
 4 |  foo
   |  ^^^
   |  Reference to foo is ambiguous,
@@ -1348,7 +1348,7 @@ _Erroneous Code Example_
 ```
 _Error Output_
 ```
--- [E050] Type Error: ./0050_MethodDoesNotTakeParametersId.scala:4:2 
+-- [E050] Type Error: 0050_MethodDoesNotTakeParametersId.scala:4:2 
 4 |  foo(1)
   |  ^^^
   |  method foo does not take parameters
