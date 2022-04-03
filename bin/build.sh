@@ -2,10 +2,12 @@
 
 TARGET_FILES=$(ls examples/*.scala)
 OUTPUT=README.md
+SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep 3.1.3 | tail -1)
 
 rm -f -- $OUTPUT
 
-echo "# Dotty Error Index" >> $OUTPUT
+echo -e "# Dotty Error Index\n" >> $OUTPUT
+echo "*For Scala $SCALA_VERSION*" >> $OUTPUT
 
 for TARGET_FILE in $TARGET_FILES
 do

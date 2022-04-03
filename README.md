@@ -1,4 +1,6 @@
 # Dotty Error Index
+
+*For Scala 3.1.3-RC1-bin-20220401-4a96ce7-NIGHTLY*
 ## E0001 EmptyCatchBlockID
 _Erroneous Code Example_
 ```scala

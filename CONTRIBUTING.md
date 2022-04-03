@@ -135,5 +135,7 @@ check all the existing example files.
 The manually re-build the index you run:
 
 ```bash
-make build
+make check build
 ```
+
+This ensures that the full check passes and then re-builds the index.
