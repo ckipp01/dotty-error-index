@@ -1,4 +1,4 @@
--- [E021] Doc Comment Error: 0021_ProperDefinitionNotFoundID.scala:6:14 
+-- [E021] Doc Comment Error: examples/0021_ProperDefinitionNotFoundID.scala:6:14 
  6 |   * @usecase val foo = ()
    |              ^
    |              Proper definition was not found in @usecase

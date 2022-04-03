@@ -5,7 +5,7 @@
 # only for the 3.1.3 ones
 #SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep NIGHTLY | tail -1)
 SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep 3.1.3 | tail -1)
-TARGET_FILES=$(ls *.scala)
+TARGET_FILES=$(ls examples/*.scala)
 COMMAND="$1"
 ERROR_MESSAGE_ID="$2"
 BLUE='\033[00;34m'
@@ -51,7 +51,8 @@ function relativize () {
 }
 
 function update_file() {
-  NEW_NAME=${1%.scala}.check
+  BASE=$(basename $1)
+  NEW_NAME=${BASE%.scala}.check
   cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1 &> checkfiles/$NEW_NAME
   relativize checkfiles/$NEW_NAME
   info "Updated checkfiles/$NEW_NAME"
@@ -59,12 +60,10 @@ function update_file() {
 
 function handle_update() {
   if [ $ERROR_MESSAGE_ID ]; then
-    TARGET_FILE=$(find . -maxdepth 1 -type f -name $ERROR_MESSAGE_ID*)
+    TARGET_FILE=$(find examples -type f -name $ERROR_MESSAGE_ID*)
     if [ $TARGET_FILE ]; then
-      # We remove the ./ in the filename
-      CLEANED=${TARGET_FILE:2}
       check_scala_version
-      update_file $CLEANED
+      update_file $TARGET_FILE
     else
       error "Found no file starting with $ERROR_MESSAGE_ID"
     fi
@@ -78,7 +77,8 @@ function handle_update() {
 }
 
 function check_file() {
-  NEW_NAME=${1%.scala}.check
+  BASE=$(basename $1)
+  NEW_NAME=${BASE%.scala}.check
   cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1&> out/$NEW_NAME
   relativize out/$NEW_NAME
   diff out/$NEW_NAME checkfiles/$NEW_NAME && \
@@ -88,12 +88,11 @@ function check_file() {
 
 function handle_check() {
   if [ $ERROR_MESSAGE_ID ]; then
-    TARGET_FILE=$(find . -maxdepth 1 -type f -name $ERROR_MESSAGE_ID*)
+    TARGET_FILE=$(find examples -type f -name $ERROR_MESSAGE_ID*)
     if [ $TARGET_FILE ]; then
-      # We remove the ./ in the filename
-      CLEANED=${TARGET_FILE:2}
+      echo $TARGET_FILE
       check_scala_version
-      check_file $CLEANED
+      check_file $TARGET_FILE
     else
       error "Found no file starting with $ERROR_MESSAGE_ID"
     fi
@@ -112,7 +111,7 @@ function run_file() {
 
 function handle_run() {
   if [ $ERROR_MESSAGE_ID ]; then
-    TARGET_FILE=$(find . -maxdepth 1 -type f -name $ERROR_MESSAGE_ID*)
+    TARGET_FILE=$(find examples -type f -name $ERROR_MESSAGE_ID*)
     if [ $TARGET_FILE ]; then
       check_scala_version
       run_file $TARGET_FILE
@@ -142,4 +141,3 @@ case $COMMAND in
     info "Usage: Use check, run or, update-checkfiles with an optional ID"
     ;; 
 esac
-

@@ -1,4 +1,4 @@
--- [E029] Pattern Match Exhaustivity Warning: 0029_PatternMatchExhaustivityID.scala:7:2 
+-- [E029] Pattern Match Exhaustivity Warning: examples/0029_PatternMatchExhaustivityID.scala:7:2 
 7 |  foo match
   |  ^^^
   |  match may not be exhaustive.

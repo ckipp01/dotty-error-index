@@ -1,4 +1,4 @@
--- [E001] Syntax Error: 0001_EmptyCatchBlockID.scala:3:9 
+-- [E001] Syntax Error: examples/0001_EmptyCatchBlockID.scala:3:9 
 3 |  try {} catch {}
   |         ^^^^^^^^
   |         The catch block does not contain a valid expression, try

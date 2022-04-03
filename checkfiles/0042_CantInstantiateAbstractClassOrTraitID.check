@@ -1,4 +1,4 @@
--- [E042] Type Error: 0042_CantInstantiateAbstractClassOrTraitID.scala:4:6 
+-- [E042] Type Error: examples/0042_CantInstantiateAbstractClassOrTraitID.scala:4:6 
 4 |  new Foo
   |      ^^^
   |      Foo is a trait; it cannot be instantiated

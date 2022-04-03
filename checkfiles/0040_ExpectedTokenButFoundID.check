@@ -1,4 +1,4 @@
--- [E040] Syntax Error: 0040_ExpectedTokenButFoundID.scala:3:11 
+-- [E040] Syntax Error: examples/0040_ExpectedTokenButFoundID.scala:3:11 
 3 |  val foo: = ???
   |           ^
   |           an identifier expected, but '=' found

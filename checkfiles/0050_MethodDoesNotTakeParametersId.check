@@ -1,4 +1,4 @@
--- [E050] Type Error: 0050_MethodDoesNotTakeParametersId.scala:4:2 
+-- [E050] Type Error: examples/0050_MethodDoesNotTakeParametersId.scala:4:2 
 4 |  foo(1)
   |  ^^^
   |  method foo does not take parameters

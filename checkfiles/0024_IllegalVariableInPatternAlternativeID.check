@@ -1,4 +1,4 @@
--- [E024] Syntax Error: 0024_IllegalVariableInPatternAlternativeID.scala:4:13 
+-- [E024] Syntax Error: examples/0024_IllegalVariableInPatternAlternativeID.scala:4:13 
 4 |    case (1, n) | (n, 1) => "got a one!"
   |             ^
   |             Illegal variable n in pattern alternative
@@ -21,7 +21,7 @@
   |   case _ => 0
   | }
    -----------------------------------------------------------------------------
--- [E024] Syntax Error: 0024_IllegalVariableInPatternAlternativeID.scala:4:19 
+-- [E024] Syntax Error: examples/0024_IllegalVariableInPatternAlternativeID.scala:4:19 
 4 |    case (1, n) | (n, 1) => "got a one!"
   |                   ^
   |                   Illegal variable n in pattern alternative

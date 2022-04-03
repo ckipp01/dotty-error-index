@@ -1,4 +1,4 @@
--- [E019] Syntax Error: 0019_MissingReturnTypeID.scala:4:11 
+-- [E019] Syntax Error: examples/0019_MissingReturnTypeID.scala:4:11 
 4 |    def foo
   |           ^
   |           Missing return type

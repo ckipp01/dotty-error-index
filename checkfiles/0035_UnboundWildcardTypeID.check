@@ -1,4 +1,4 @@
--- [E035] Syntax Error: 0035_UnboundWildcardTypeID.scala:3:11 
+-- [E035] Syntax Error: examples/0035_UnboundWildcardTypeID.scala:3:11 
 3 |  val foo: _ = ???
   |           ^
   |           Unbound wildcard type
