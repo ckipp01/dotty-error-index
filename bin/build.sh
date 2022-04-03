@@ -17,6 +17,7 @@ do
 
   INCOMPLETE=$(grep -n INCOMPLETE $TARGET_FILE)
 
+  # If we find incomplete in the file, just add a message and move on to the next file.
   if [[ $INCOMPLETE ]]; then
     echo  "*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*" >> $OUTPUT
   else
@@ -45,10 +46,14 @@ do
       echo '```' >> $OUTPUT
     fi
 
-    echo "_Example Error Output_" >> $OUTPUT
-    echo '```' >> $OUTPUT
-    cat checkfiles/$BASE.check >> $OUTPUT
-    echo '```' >> $OUTPUT
+    # For files that are marked LEGACY we don't include the error output
+    # example because we can no longer get that output.
+    if [[ ! $LEGACY_LINE ]]; then
+      echo "_Example Error Output_" >> $OUTPUT
+      echo '```' >> $OUTPUT
+      cat checkfiles/$BASE.check >> $OUTPUT
+      echo '```' >> $OUTPUT
+    fi
 
   fi
 done

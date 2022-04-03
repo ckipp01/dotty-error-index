@@ -250,9 +250,6 @@ _Erroneous Code Example_
 ```scala
 implicit class Foo(a: Int)
 ```
-_Example Error Output_
-```
-```
 ## E0011 ImplicitCaseClassID
 _Erroneous Code Example_
 ```scala
@@ -332,9 +329,6 @@ Error: Errors encountered during compilation
 _Erroneous Code Example_
 ```scala
   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
-```
-_Example Error Output_
-```
 ```
 ## E0015 RepeatedModifierID
 _Erroneous Code Example_
@@ -871,9 +865,6 @@ Error: Errors encountered during compilation
 _Erroneous Code Example_
 ```scala
 // END
-```
-_Example Error Output_
-```
 ```
 ## E0037 OverridesNothingID
 _Erroneous Code Example_
