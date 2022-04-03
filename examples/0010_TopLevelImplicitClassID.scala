@@ -1,6 +1,4 @@
-// This is no longer emitted by the compiler
-// It used to be that the top level implicit class here would
-// fail, but it no longer does and this error will not be emitted
+// LEGACY In the past top level implicit classes were not allowed. This is however no longer the case.
 // START
 @main def TopLevelImplicitClassID = ()
 implicit class Foo(a: Int)

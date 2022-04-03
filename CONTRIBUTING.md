@@ -99,6 +99,9 @@ file.
   - The code snippet *must* start with a `@main def <ErrorMessageID =`. If there
       is extra code required to illustrate the error, put it underneath the main
       method, not above.
+  - If the `ErrorMessageID` is no longer used by the compiler put a comment in
+      the file, `// LEGACY`. This can optionally be followed (on the same line)
+      with a short comment about it.
 
 Once the file exists, the process is the same as if you were working on an
 existing file. Since running everything does take a bit, it's recommended to

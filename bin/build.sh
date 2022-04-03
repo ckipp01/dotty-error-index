@@ -17,6 +17,16 @@ do
   START_LINE=$(grep -n START $TARGET_FILE)
   END_LINE=$(grep -n END $TARGET_FILE)
 
+  LEGACY_LINE=$(grep -n LEGACY $TARGET_FILE)
+
+  if [[ $LEGACY_LINE ]]; then
+    echo "**NOTE:** This error is no longer emitted by the compiler." >> $OUTPUT
+    MSG=${LEGACY_LINE#*LEGACY}
+    if [[ $MSG ]]; then
+      echo $MSG >> $OUTPUT
+    fi
+  fi
+
   if [[ $START_LINE && $END_LINE ]]; then
     echo "_Erroneous Code Example_" >> $OUTPUT
     START_STRING=${START_LINE::1}
@@ -29,7 +39,7 @@ do
     echo '```' >> $OUTPUT
   fi
 
-  echo "_Error Output_" >> $OUTPUT
+  echo "_Example Error Output_" >> $OUTPUT
   echo '```' >> $OUTPUT
   cat checkfiles/$BASE.check >> $OUTPUT
   echo '```' >> $OUTPUT
