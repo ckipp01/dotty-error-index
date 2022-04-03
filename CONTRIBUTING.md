@@ -37,10 +37,6 @@ hasn't been figure out, or is it because the code that references the specific
 
   - [ ] 0002 EmptyCatchAndFinallyBlockID - See file for more details. I thought
       this was fixed, but it's not.
-  - [X] 0010 TopLevelImplicitClassID - Compiler won't emit this anymore since a
-      top level class is treated as a def.
-  - [X] 0014 TupleTooLongID - Legacy since tuples were limited to 22 before the
-      changes in https://github.com/lampepfl/dotty/pull/4938
   - [ ] 0022 ByNameParameterNotSupportedID - I honestly just can't figure out
       how to reproduce this
   - [ ] 0025 IdentifierExpectedID - See the note in this file. I can't reproduce
@@ -56,8 +52,6 @@ hasn't been figure out, or is it because the code that references the specific
   - [ ] 0032 IllegalStartOfSimplePattern - I have a reproduction of this, but I
       feel like it should be 0031 not 0032.
   - [ ] 0033 PkgDuplicateSymbolID - Need to reproduce this
-  - [X] 0036 DanglingThisInPathID - Compiler won't emit this anymore. It's not
-      referenced anywhere in the codebase
   - [ ] 0038 OverridesNothingButNameExistsID - See notes in the file
   - [ ] 0046 CyclicReferenceInvolvingID - See notes in the file
   - [ ] 0047 CyclicReferenceInvolvingImplicitID - See notes in the file
@@ -102,6 +96,9 @@ file.
   - If the `ErrorMessageID` is no longer used by the compiler put a comment in
       the file, `// LEGACY`. This can optionally be followed (on the same line)
       with a short comment about it.
+  - If you create a file that you can't get a reproduction for, no worries. Just
+      put a comment that says `// INCOMPLETE` in the file so it's skipped in the
+      index.
 
 Once the file exists, the process is the same as if you were working on an
 existing file. Since running everything does take a bit, it's recommended to

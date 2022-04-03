@@ -38,43 +38,7 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E0002 EmptyCatchAndFinallyBlockID
-_Erroneous Code Example_
-```scala
-  try {} catch {}
-```
-_Example Error Output_
-```
--- [E001] Syntax Error: examples/0002_EmptyCatchAndFinallyBlockID.scala:6:9 
-6 |  try {} catch {}
-  |         ^^^^^^^^
-  |         The catch block does not contain a valid expression, try
-  |         adding a case like - case e: Exception => to the block
-  |-----------------------------------------------------------------------------
-  | Explanation (enabled by `-explain`)
-  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  | A try expression should be followed by some mechanism to handle any exceptions
-  | thrown. Typically a catch expression follows the try and pattern matches
-  | on any expected exceptions. For example:
-  |
-  | import scala.util.control.NonFatal
-  |
-  | try {} catch {
-  |   case NonFatal(e) => ???
-  | }
-  |
-  | It is also possible to follow a try immediately by a finally - letting the
-  | exception propagate - but still allowing for some clean up in finally:
-  |
-  | try {} finally {
-  |   // perform your cleanup here!
-  | }
-  |
-  | It is recommended to use the NonFatal extractor to catch all exceptions as it
-  | correctly handles transfer functions like return.
-   -----------------------------------------------------------------------------
-1 error found
-Error: Errors encountered during compilation
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0003 DeprecatedWithOperatorID
 _Erroneous Code Example_
 ```scala
@@ -630,13 +594,7 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E0022 ByNameParameterNotSupportedID
-_Erroneous Code Example_
-```scala
-// END
-```
-_Example Error Output_
-```
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0023 WrongNumberOfTypeArgsID
 _Erroneous Code Example_
 ```scala
@@ -726,13 +684,7 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E0025 IdentifierExpectedID
-_Erroneous Code Example_
-```scala
-// END
-```
-_Example Error Output_
-```
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0026 AuxConstructorNeedsNonImplicitParameterID
 _Erroneous Code Example_
 ```scala
@@ -771,27 +723,9 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E0027 VarArgsParamMustComeLastID
-_Erroneous Code Example_
-```scala
-  def foo(a: Int*, b: Int) = b
-```
-_Example Error Output_
-```
--- [E040] Syntax Error: examples/0027_VarArgsParamMustComeLastID.scala:16:17 
-16 |  def foo(a: Int*, b: Int) = b
-   |                 ^
-   |                 an identifier expected, but ',' found
-1 error found
-Error: Errors encountered during compilation
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0028 IllegalLiteralID
-_Erroneous Code Example_
-```scala
-// END
-```
-_Example Error Output_
-```
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0029 PatternMatchExhaustivityID
 _Erroneous Code Example_
 ```scala
@@ -838,133 +772,11 @@ _Example Error Output_
 1 warning found
 ```
 ## E0031 SeqWildcardPatternPosID
-_Erroneous Code Example_
-```scala
-  val mySeq = Seq(1, 2, 3)
-  val x = mySeq: _*
-  ()
-```
-_Example Error Output_
-```
--- [E031] Syntax Error: examples/0031_SeqWildcardPatternPosID.scala:10:17 
-10 |  val x = mySeq: _*
-   |                 ^
-   |                 * can be used only for last argument
-   |----------------------------------------------------------------------------
-   | Explanation (enabled by `-explain`)
-   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-   | Sequence wildcard pattern is expected at the end of an argument list.
-   | This pattern matches any remaining elements in a sequence.
-   | Consider the following example:
-   |
-   | def sumOfTheFirstTwo(list: List[Int]): Int = list match {
-   |           |  case List(first, second, x*) => first + second
-   |           |  case _ => 0
-   |           |}
-   |
-   | Calling:
-   |
-   | sumOfTheFirstTwo(List(1, 2, 10))
-   |
-   | would give 3 as a result
-    ----------------------------------------------------------------------------
--- Error: examples/0031_SeqWildcardPatternPosID.scala:10:6 
-10 |  val x = mySeq: _*
-   |      ^
-   |      Cannot return repeated parameter type Int*
-2 errors found
-Error: Errors encountered during compilation
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0032 IllegalStartOfSimplePatternID
-_Erroneous Code Example_
-```scala
-  List(1, 2, 3) match
-    case List(a*, b) => ???
-```
-_Example Error Output_
-```
--- [E032] Syntax Error: examples/0032_IllegalStartOfSimplePatternID.scala:5:16 
-5 |    case List(a*, b) => ???
-  |                ^
-  |                pattern expected
-  |-----------------------------------------------------------------------------
-  | Explanation (enabled by `-explain`)
-  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  | Simple patterns can be divided into several groups:
-  | - Variable Patterns: case x => ....
-  |   It matches any value, and binds the variable name to that value.
-  |   A special case is the wild-card pattern _ which is treated as if it was a fresh
-  |   variable on each occurrence.
-  |
-  | - Typed Patterns: case x: Int => ... or case _: Int => ....
-  |   This pattern matches any value matched by the specified type; it binds the variable
-  |   name to that value.
-  |
-  | - Literal Patterns: case 123 => ... or case 'A' => ....
-  |   This type of pattern matches any value that is equal to the specified literal.
-  |
-  | - Stable Identifier Patterns:
-  |
-  |   def f(x: Int, y: Int) = x match {
-  |           |  case `y` => ...
-  |           |}
-  |         
-  |
-  |   the match succeeds only if the x argument and the y argument of f are equal.
-  |
-  | - Constructor Patterns:
-  |
-  |   case class Person(name: String, age: Int)
-  |           |
-  |           |def test(p: Person) = p match {
-  |           |  case Person(name, age) => ...
-  |           |}
-  |         
-  |
-  |   The pattern binds all object's fields to the variable names (name and age, in this
-  |   case).
-  |
-  | - Tuple Patterns:
-  |
-  |   def swap(tuple: (String, Int)): (Int, String) = tuple match {
-  |           |  case (text, number) => (number, text)
-  |           |}
-  |         
-  |
-  |   Calling:
-  |
-  |   swap(("Luftballons", 99)
-  |
-  |   would give (99, "Luftballons") as a result.
-  |
-  | - Pattern Sequences:
-  |
-  |   def getSecondValue(list: List[Int]): Int = list match {
-  |           |  case List(_, second, x:_*) => second
-  |           |  case _ => 0
-  |           |}
-  |
-  |   Calling:
-  |
-  |   getSecondValue(List(1, 10, 2))
-  |
-  |   would give 10 as a result.
-  |   This pattern is possible because a companion object for the List class has a method
-  |   with the following signature:
-  |
-  |   def unapplySeq[A](x: List[A]): Some[List[A]]
-   -----------------------------------------------------------------------------
-1 error found
-Error: Errors encountered during compilation
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0033 PkgDuplicateSymbolID
-_Erroneous Code Example_
-```scala
-// END
-```
-_Example Error Output_
-```
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0034 ExistentialTypesNoLongerSupportedID
 _Erroneous Code Example_
 ```scala
@@ -1086,13 +898,7 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E0038 OverridesNothingButNameExistsID
-_Erroneous Code Example_
-```scala
-// END
-```
-_Example Error Output_
-```
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0039 ForwardReferenceExtendsOverDefinitionID
 _Erroneous Code Example_
 ```scala
@@ -1288,21 +1094,9 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E0046 CyclicReferenceInvolvingID
-_Erroneous Code Example_
-```scala
-// END
-```
-_Example Error Output_
-```
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0047 CyclicReferenceInvolvingImplicitID
-_Erroneous Code Example_
-```scala
-// END
-```
-_Example Error Output_
-```
-```
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
 ## E0048 SuperQualMustBeParentID
 _Erroneous Code Example_
 ```scala

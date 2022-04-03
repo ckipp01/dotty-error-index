@@ -4,6 +4,8 @@
 // case List(first*, second)
 //
 // would throw it, but that actually gives you E032 instead.
+
+// INCOMPLETE
 // START
 @main def SeqWildcardPatternPosID =
   val mySeq = Seq(1, 2, 3)

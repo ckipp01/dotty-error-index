@@ -1,5 +1,5 @@
--- [E031] Syntax Error: examples/0031_SeqWildcardPatternPosID.scala:10:17 
-10 |  val x = mySeq: _*
+-- [E031] Syntax Error: examples/0031_SeqWildcardPatternPosID.scala:12:17 
+12 |  val x = mySeq: _*
    |                 ^
    |                 * can be used only for last argument
    |----------------------------------------------------------------------------
@@ -20,8 +20,8 @@
    |
    | would give 3 as a result
     ----------------------------------------------------------------------------
--- Error: examples/0031_SeqWildcardPatternPosID.scala:10:6 
-10 |  val x = mySeq: _*
+-- Error: examples/0031_SeqWildcardPatternPosID.scala:12:6 
+12 |  val x = mySeq: _*
    |      ^
    |      Cannot return repeated parameter type Int*
 2 errors found
