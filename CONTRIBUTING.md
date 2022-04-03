@@ -80,12 +80,11 @@ find how to do this
 ### Project Structure
 
 ```
- build.sh     <- What builds the index
- checker.sh   <- What handles the checkfiles, running, and checking
- checkfiles   <- All the checkfiles generated (don't manually update these)
- examples     <- All the example code snippets
+ bin/         <- Has the scripts that build and run everything
+ checkfiles/  <- All the checkfiles generated (don't manually update these)
+ examples/    <- All the example code snippets
  Makefile     <- Where all the commands you need are located
- out          <- Temp dir that is used to compare with checkfiles
+ out/         <- Temp dir that is used to compare with checkfiles
  README.md    <- The actual error index
 ```
 

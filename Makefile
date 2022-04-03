@@ -1,14 +1,14 @@
 build:
-	./build.sh
+	./bin/build.sh
 
 check:
-	./checker.sh check $(id)
+	./bin/checker.sh check $(id)
 
 clean:
 	rm -rf out/
 
 run:
-	./checker.sh run $(id)
+	./bin/checker.sh run $(id)
 
 update:
-	./checker.sh update-checkfiles $(id)
+	./bin/checker.sh update-checkfiles $(id)
