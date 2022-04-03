@@ -20,10 +20,10 @@ do
   LEGACY_LINE=$(grep -n LEGACY $TARGET_FILE)
 
   if [[ $LEGACY_LINE ]]; then
-    echo "**NOTE:** This error is no longer emitted by the compiler." >> $OUTPUT
+    echo -e "**NOTE:** This error is no longer emitted by the compiler.\n" >> $OUTPUT
     MSG=${LEGACY_LINE#*LEGACY}
     if [[ $MSG ]]; then
-      echo $MSG >> $OUTPUT
+      echo -e "$MSG\n" >> $OUTPUT
     fi
   fi
 

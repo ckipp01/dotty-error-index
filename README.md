@@ -271,7 +271,9 @@ Error: Errors encountered during compilation
 ```
 ## E0010 TopLevelImplicitClassID
 **NOTE:** This error is no longer emitted by the compiler.
-In the past top level implicit classes were not allowed. This is however no longer the case.
+
+ In the past top level implicit classes were not allowed. This is however no longer the case.
+
 _Erroneous Code Example_
 ```scala
 implicit class Foo(a: Int)
@@ -352,7 +354,9 @@ Error: Errors encountered during compilation
 ```
 ## E0014 TupleTooLongID
 **NOTE:** This error is no longer emitted by the compiler.
-Before https://github.com/lampepfl/dotty/pull/4938 tuples were limited in length to 22
+
+ Before https://github.com/lampepfl/dotty/pull/4938 tuples were limited in length to 22
+
 _Erroneous Code Example_
 ```scala
   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
@@ -1041,6 +1045,7 @@ Error: Errors encountered during compilation
 ```
 ## E0036 DanglingThisInPathID
 **NOTE:** This error is no longer emitted by the compiler.
+
 _Erroneous Code Example_
 ```scala
 // END
