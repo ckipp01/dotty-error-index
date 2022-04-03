@@ -864,10 +864,6 @@ Error: Errors encountered during compilation
 ## E0036 DanglingThisInPathID
 **NOTE:** This error is no longer emitted by the compiler.
 
-_Erroneous Code Example_
-```scala
-// END
-```
 ## E0037 OverridesNothingID
 _Erroneous Code Example_
 ```scala

@@ -37,15 +37,23 @@ do
     fi
 
     if [[ $START_LINE && $END_LINE ]]; then
-      echo "_Erroneous Code Example_" >> $OUTPUT
       START_STRING=${START_LINE%:*}
       # We + 2 here because we want to start at START but then also remove the @main def
       START=$((START_STRING + 2))
       END_STRING=${END_LINE%:*} 
       END=$((END_STRING - 1))
-      echo '```scala' >> $OUTPUT
-      sed -n "$START,$END p" $TARGET_FILE >> $OUTPUT
-      echo '```' >> $OUTPUT
+
+      # We make sure START is either before of the same line as END, if not
+      # skip it since it's probably just a code snippet that isn't doing
+      # anything and is just a placeholder.
+      if [[ $START -lt $END || $START -eq $END ]]; then
+        echo "_Erroneous Code Example_" >> $OUTPUT
+        echo '```scala' >> $OUTPUT
+        sed -n "$START,$END p" $TARGET_FILE >> $OUTPUT
+        echo '```' >> $OUTPUT
+      else
+        echo "skipping code snippet for $BASE since END [$END] is less than START [$START]"
+      fi
     fi
 
     # For files that are marked LEGACY we don't include the error output
