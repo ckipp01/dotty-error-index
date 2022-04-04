@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source bin/colors.sh
+
 TARGET_FILES=$(ls examples/*.scala)
 OUTPUT=README.md
 SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep 3.1.3 | tail -1)
@@ -21,6 +23,7 @@ do
 
   # If we find incomplete in the file, just add a message and move on to the next file.
   if [[ $INCOMPLETE ]]; then
+    echo -e "${BLUE}$BASE${RESET} is incomplete, so marking it as such in the index"
     echo  "*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*" >> $OUTPUT
   else
     START_LINE=$(grep -n START $TARGET_FILE)
@@ -52,7 +55,7 @@ do
         sed -n "$START,$END p" $TARGET_FILE >> $OUTPUT
         echo '```' >> $OUTPUT
       else
-        echo "skipping code snippet for $BASE since END [$END] is less than START [$START]"
+        echo -e "skipping code snippet for ${BLUE}$BASE${RESET} since END ${BOLD}[$END]${RESET} is less than or the same as START ${BOLD}[$START]${RESET}"
       fi
     fi
 
