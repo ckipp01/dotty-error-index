@@ -131,6 +131,15 @@ make check id=001
 For all 3 commands, if you don't pass in an `id=<id>` it will run, update, or
 check all the existing example files.
 
+If you're unsure how to reproduce something a good order to follow is:
+
+  - Start at the [`ErrorMessageID`](https://github.com/lampepfl/dotty/blob/main/compiler/src/dotty/tools/dotc/reporting/ErrorMessageID.scala)
+  - Find what [`Message`](https://github.com/lampepfl/dotty/blob/main/compiler/src/dotty/tools/dotc/reporting/messages.scala) uses it
+  - Search to see if this message can be found in any tests that you could use
+      as an example
+  - Search to find where that `Message` is used and try to piece some code
+      together that would hit that part of the code.
+
 ### Building the index
 
 The manually re-build the index you run:
