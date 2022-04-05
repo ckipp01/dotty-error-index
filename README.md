@@ -1,6 +1,6 @@
 # Dotty Error Index
 
-*For Scala 3.1.3-RC1-bin-20220401-4a96ce7-NIGHTLY*
+*For Scala 3.1.3-RC1-bin-20220404-ad2553d-NIGHTLY*
 ## E0001 EmptyCatchBlockID
 _Erroneous Code Example_
 ```scala
@@ -1161,6 +1161,109 @@ _Example Error Output_
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   | You have specified more parameter lists than defined in the method definition(s).
   | Nullary methods may not be called with parenthesis
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
+## E0051 AmbiguousOverloadID
+_Erroneous Code Example_
+```scala
+  object Test:
+    extension [A](a: A) def render: String = "Hi"
+    extension [B](b: B) def render(using DummyImplicit): Char = 'x'
+
+  Test.render(1)
+```
+_Example Error Output_
+```
+-- [E051] Reference Error: examples/0051_AmbiguousOverloadID.scala:7:7 
+7 |  Test.render(1)
+  |  ^^^^^^^^^^^
+  |Ambiguous overload. The overloaded alternatives of method render in object Test with types
+  | [B](b: B)(using x$2: DummyImplicit): Char
+  | [A](a: A): String
+  |both match arguments ((1 : Int))
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | There are 2 methods that could be referenced as the compiler knows too little
+  | about the expected type.
+  | You may specify the expected type e.g. by
+  | - assigning it to a value with a specified type, or
+  | - adding a type ascription as in instance.myMethod: String => Int
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
+## E0052 ReassignmentToValID
+_Erroneous Code Example_
+```scala
+  object Foo:
+    val a = 1
+
+  Foo.a = 2
+```
+_Example Error Output_
+```
+-- [E052] Type Error: examples/0052_ReassignmentToValID.scala:13:8 
+13 |  Foo.a = 2
+   |  ^^^^^^^^^
+   |  Reassignment to val a
+   |----------------------------------------------------------------------------
+   | Explanation (enabled by `-explain`)
+   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   | You can not assign a new value to a as values can't be changed.
+   | Keep in mind that every statement has a value, so you may e.g. use
+   |   val a = if (condition) 2 else 5
+   | In case you need a reassignable name, you can declare it as
+   | variable
+   |   var a = ...
+    ----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
+## E0053 TypeDoesNotTakeParametersID
+_Erroneous Code Example_
+```scala
+  val hello: String[String] = ???
+```
+_Example Error Output_
+```
+-- [E053] Type Error: examples/0053_TypeDoesNotTakeParametersID.scala:3:13 
+3 |  val hello: String[String] = ???
+  |             ^^^^^^^^^^^^^^
+  |             String does not take type parameters
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | You specified [0ma type parameter Ident(String)[0m for String, which is not
+  | declared to take any.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
+## E0054 ParameterizedTypeLacksArgumentsID
+*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+## E0055 VarValParametersMayNotBeCallByNameID
+_Erroneous Code Example_
+```scala
+  class Foo(val a: => Boolean)
+```
+_Example Error Output_
+```
+-- [E055] Syntax Error: examples/0055_VarValParametersMayNotBeCallByNameID.scala:3:19 
+3 |  class Foo(val a: => Boolean)
+  |                   ^^
+  |                   val parameters may not be call-by-name
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | var and val parameters of classes and traits may no be call-by-name. In case you
+  | want the parameter to be evaluated on demand, consider making it just a parameter
+  | and a def in the class such as
+  |   class MyClass(aTick: => String) {
+  |     def a() = aTick
+  |   }
    -----------------------------------------------------------------------------
 1 error found
 Error: Errors encountered during compilation
