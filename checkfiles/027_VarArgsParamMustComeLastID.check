@@ -1,0 +1,6 @@
+-- [E040] Syntax Error: examples/027_VarArgsParamMustComeLastID.scala:18:17 
+18 |  def foo(a: Int*, b: Int) = b
+   |                 ^
+   |                 an identifier expected, but ',' found
+1 error found
+Error: Errors encountered during compilation

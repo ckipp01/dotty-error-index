@@ -1,0 +1,19 @@
+-- [E015] Syntax Error: examples/015_RepeatedModifierID.scala:3:14 
+3 |  final final val foo = ???
+  |              ^^^
+  |              Repeated modifier final
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | This happens when you accidentally specify the same modifier twice.
+  |
+  | Example:
+  |
+  | private private val Origin = Point(0, 0)
+  |
+  | instead of
+  |
+  | private final val Origin = Point(0, 0)
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

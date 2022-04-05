@@ -1,0 +1,13 @@
+-- [E011] Syntax Error: examples/011_ImplicitCaseClassID.scala:3:22 
+3 |  implicit case class Foo(a: Int)
+  |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |  A case class may not be defined as implicit
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | Implicit classes may not be case classes. Instead use a plain class:
+  |
+  | implicit class Foo...
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

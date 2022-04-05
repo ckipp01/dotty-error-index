@@ -1,0 +1,11 @@
+-- [E018] Syntax Error: examples/018_IllegalStartSimpleExprID.scala:3:10 
+3 |  val x = :  
+  |          ^
+  |          expression expected but [31m:[0m found
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | An expression cannot start with [31m:[0m.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

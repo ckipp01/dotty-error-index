@@ -1,0 +1,27 @@
+-- [E007] Type Mismatch Error: examples/007_TypeMismatchID.scala:3:20 
+3 |  val foo: String = 1
+  |                    ^
+  |                    Found:    (1 : Int)
+  |                    Required: String
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  |
+  | Tree: 1
+  | I tried to show that
+  |   (1 : Int)
+  | conforms to
+  |   String
+  | but the comparison trace ended with `false`:
+  |
+  |   ==> (1 : Int)  <:  String
+  |     ==> (1 : Int)  <:  String
+  |       ==> Int  <:  String (left is approximated)
+  |       <== Int  <:  String (left is approximated) = false
+  |     <== (1 : Int)  <:  String = false
+  |   <== (1 : Int)  <:  String = false
+  |
+  | The tests were made under the empty constraint
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

@@ -1,0 +1,16 @@
+-- [E012] Syntax Error: examples/012_ImplicitClassPrimaryConstructorArityID.scala:3:17 
+3 |  implicit class Foo
+  |  ^^^^^^^^^^^^^^^^^^
+  |  Implicit classes must accept exactly one primary constructor parameter
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | Implicit classes may only take one non-implicit argument in their constructor. For example:
+  |
+  |  implicit class RichDate(date: java.util.Date)
+  |
+  | While it’s possible to create an implicit class with more than one non-implicit argument,
+  | such classes aren’t used during implicit lookup.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

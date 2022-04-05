@@ -1,0 +1,48 @@
+-- Error: examples/009_EarlyDefinitionsNotSupportedID.scala:9:18 
+9 |  class A extends {
+  |                  ^
+  |                  `extends` must be followed by at least one parent
+-- [E009] Syntax Error: examples/009_EarlyDefinitionsNotSupportedID.scala:11:4 
+11 |  } with ListFiles
+   |    ^^^^
+   |    Early definitions are not supported; use trait parameters instead
+   |----------------------------------------------------------------------------
+   | Explanation (enabled by `-explain`)
+   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   | Earlier versions of Scala did not support trait parameters and "early
+   | definitions" (also known as "early initializers") were used as an alternative.
+   |
+   | Example of old syntax:
+   |
+   | trait Logging {
+   |   val f: File
+   |   f.open()
+   |   onExit(f.close())
+   |   def log(msg: String) = f.write(msg)
+   | }
+   |
+   | class B extends Logging {
+   |   val f = new File("log.data") // triggers a NullPointerException
+   | }
+   |
+   | // early definition gets around the NullPointerException
+   | class C extends {
+   |   val f = new File("log.data")
+   | } with Logging
+   |
+   | The above code can now be written as:
+   |
+   | trait Logging(f: File) {
+   |   f.open()
+   |   onExit(f.close())
+   |   def log(msg: String) = f.write(msg)
+   | }
+   |
+   | class C extends Logging(new File("log.data"))
+    ----------------------------------------------------------------------------
+-- Error: examples/009_EarlyDefinitionsNotSupportedID.scala:11:9 
+11 |  } with ListFiles
+   |         ^^^^^^^^^
+   |         end of statement expected but identifier found
+3 errors found
+Error: Errors encountered during compilation

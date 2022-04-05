@@ -1,0 +1,13 @@
+-- [E037] Declaration Error: examples/037_OverridesNothingID.scala:4:17 
+4 |    override val foo = ???
+  |                 ^
+  |                 value foo overrides nothing
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | There must be a field or method with the name foo in a super
+  | class of class Foo to override it. Did you misspell it?
+  | Are you extending the right classes?
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

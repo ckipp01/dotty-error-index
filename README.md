@@ -1,14 +1,14 @@
 # Dotty Error Index
 
 *For Scala 3.1.3-RC1-bin-20220404-ad2553d-NIGHTLY*
-## E0001 EmptyCatchBlockID
+## E001 EmptyCatchBlockID
 _Erroneous Code Example_
 ```scala
   try {} catch {}
 ```
 _Example Error Output_
 ```
--- [E001] Syntax Error: examples/0001_EmptyCatchBlockID.scala:3:9 
+-- [E001] Syntax Error: examples/001_EmptyCatchBlockID.scala:3:9 
 3 |  try {} catch {}
   |         ^^^^^^^^
   |         The catch block does not contain a valid expression, try
@@ -39,16 +39,16 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0002 EmptyCatchAndFinallyBlockID
+## E002 EmptyCatchAndFinallyBlockID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0003 DeprecatedWithOperatorID
+## E003 DeprecatedWithOperatorID
 _Erroneous Code Example_
 ```scala
   type A = Double with Int
 ```
 _Example Error Output_
 ```
--- [E003] Syntax Deprecation Warning: examples/0003_DeprecatedWithOperatorID.scala:4:18 
+-- [E003] Syntax Deprecation Warning: examples/003_DeprecatedWithOperatorID.scala:4:18 
 4 |  type A = Double with Int
   |                  ^
   |                with as a type operator has been deprecated; use & instead
@@ -61,14 +61,14 @@ _Example Error Output_
    -----------------------------------------------------------------------------
 1 warning found
 ```
-## E0004 CaseClassMissingParamListID
+## E004 CaseClassMissingParamListID
 _Erroneous Code Example_
 ```scala
   case class Foo
 ```
 _Example Error Output_
 ```
--- [E004] Syntax Error: examples/0004_CaseClassMissingParamListID.scala:3:13 
+-- [E004] Syntax Error: examples/004_CaseClassMissingParamListID.scala:3:13 
 3 |  case class Foo
   |             ^^^
   |             A case class must have at least one parameter list
@@ -82,14 +82,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0005 DuplicateBindID
+## E005 DuplicateBindID
 _Erroneous Code Example_
 ```scala
   List((1, 2)).map { case (num, num) => ??? }
 ```
 _Example Error Output_
 ```
--- [E005] Naming Error: examples/0005_DuplicateBindID.scala:3:32 
+-- [E005] Naming Error: examples/005_DuplicateBindID.scala:3:32 
 3 |  List((1, 2)).map { case (num, num) => ??? }
   |                                ^^^
   |                                duplicate pattern variable: num
@@ -107,14 +107,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0006 MissingIdentID
+## E006 MissingIdentID
 _Erroneous Code Example_
 ```scala
   a
 ```
 _Example Error Output_
 ```
--- [E006] Not Found Error: examples/0006_MissingIdentID.scala:3:2 
+-- [E006] Not Found Error: examples/006_MissingIdentID.scala:3:2 
 3 |  a
   |  ^
   |  Not found: a
@@ -129,14 +129,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0007 TypeMismatchID
+## E007 TypeMismatchID
 _Erroneous Code Example_
 ```scala
   val foo: String = 1
 ```
 _Example Error Output_
 ```
--- [E007] Type Mismatch Error: examples/0007_TypeMismatchID.scala:3:20 
+-- [E007] Type Mismatch Error: examples/007_TypeMismatchID.scala:3:20 
 3 |  val foo: String = 1
   |                    ^
   |                    Found:    (1 : Int)
@@ -164,7 +164,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0008 NotAMeberID
+## E008 NotAMeberID
 _Erroneous Code Example_
 ```scala
   object Foo
@@ -172,14 +172,14 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E008] Not Found Error: examples/0008_NotAMeberID.scala:4:6 
+-- [E008] Not Found Error: examples/008_NotAMeberID.scala:4:6 
 4 |  Foo.iDontExist
   |  ^^^^^^^^^^^^^^
   |  value iDontExist is not a member of object Foo
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0009 EarlyDefinitionsNotSupportedID
+## E009 EarlyDefinitionsNotSupportedID
 _Erroneous Code Example_
 ```scala
   import java.io.File
@@ -194,11 +194,11 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- Error: examples/0009_EarlyDefinitionsNotSupportedID.scala:9:18 
+-- Error: examples/009_EarlyDefinitionsNotSupportedID.scala:9:18 
 9 |  class A extends {
   |                  ^
   |                  `extends` must be followed by at least one parent
--- [E009] Syntax Error: examples/0009_EarlyDefinitionsNotSupportedID.scala:11:4 
+-- [E009] Syntax Error: examples/009_EarlyDefinitionsNotSupportedID.scala:11:4 
 11 |  } with ListFiles
    |    ^^^^
    |    Early definitions are not supported; use trait parameters instead
@@ -236,14 +236,14 @@ _Example Error Output_
    |
    | class C extends Logging(new File("log.data"))
     ----------------------------------------------------------------------------
--- Error: examples/0009_EarlyDefinitionsNotSupportedID.scala:11:9 
+-- Error: examples/009_EarlyDefinitionsNotSupportedID.scala:11:9 
 11 |  } with ListFiles
    |         ^^^^^^^^^
    |         end of statement expected but identifier found
 3 errors found
 Error: Errors encountered during compilation
 ```
-## E0010 TopLevelImplicitClassID
+## E010 TopLevelImplicitClassID
 **NOTE:** This error is no longer emitted by the compiler.
 
  In the past top level implicit classes were not allowed. This is however no longer the case.
@@ -252,14 +252,14 @@ _Erroneous Code Example_
 ```scala
 implicit class Foo(a: Int)
 ```
-## E0011 ImplicitCaseClassID
+## E011 ImplicitCaseClassID
 _Erroneous Code Example_
 ```scala
   implicit case class Foo(a: Int)
 ```
 _Example Error Output_
 ```
--- [E011] Syntax Error: examples/0011_ImplicitCaseClassID.scala:3:22 
+-- [E011] Syntax Error: examples/011_ImplicitCaseClassID.scala:3:22 
 3 |  implicit case class Foo(a: Int)
   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   |  A case class may not be defined as implicit
@@ -273,14 +273,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0012 ImplicitClassPrimaryConstructorArityID
+## E012 ImplicitClassPrimaryConstructorArityID
 _Erroneous Code Example_
 ```scala
   implicit class Foo
 ```
 _Example Error Output_
 ```
--- [E012] Syntax Error: examples/0012_ImplicitClassPrimaryConstructorArityID.scala:3:17 
+-- [E012] Syntax Error: examples/012_ImplicitClassPrimaryConstructorArityID.scala:3:17 
 3 |  implicit class Foo
   |  ^^^^^^^^^^^^^^^^^^
   |  Implicit classes must accept exactly one primary constructor parameter
@@ -297,7 +297,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0013 ObjectMayNotHaveSelfTypeID
+## E013 ObjectMayNotHaveSelfTypeID
 _Erroneous Code Example_
 ```scala
   trait A
@@ -305,7 +305,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E013] Syntax Error: examples/0013_ObjectMayNotHaveSelfTypeID.scala:4:15 
+-- [E013] Syntax Error: examples/013_ObjectMayNotHaveSelfTypeID.scala:4:15 
 4 |  object Foo { self: A => }
   |               ^^^^^^^
   |               objects must not have a self type
@@ -323,7 +323,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0014 TupleTooLongID
+## E014 TupleTooLongID
 **NOTE:** This error is no longer emitted by the compiler.
 
  Before https://github.com/lampepfl/dotty/pull/4938 tuples were limited in length to 22
@@ -332,14 +332,14 @@ _Erroneous Code Example_
 ```scala
   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
 ```
-## E0015 RepeatedModifierID
+## E015 RepeatedModifierID
 _Erroneous Code Example_
 ```scala
   final final val foo = ???
 ```
 _Example Error Output_
 ```
--- [E015] Syntax Error: examples/0015_RepeatedModifierID.scala:3:14 
+-- [E015] Syntax Error: examples/015_RepeatedModifierID.scala:3:14 
 3 |  final final val foo = ???
   |              ^^^
   |              Repeated modifier final
@@ -359,14 +359,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0016 InterpolatedStringErrorID
+## E016 InterpolatedStringErrorID
 _Erroneous Code Example_
 ```scala
   s"$new Point(1, 2)"
 ```
 _Example Error Output_
 ```
--- [E016] Syntax Error: examples/0016_InterpolatedStringErrorID.scala:3:5 
+-- [E016] Syntax Error: examples/016_InterpolatedStringErrorID.scala:3:5 
 3 |  s"$new Point(1, 2)"
   |     ^
   |     Error in interpolated string: identifier or block expected
@@ -384,14 +384,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0017 UnboundPlaceholderParameterID
+## E017 UnboundPlaceholderParameterID
 _Erroneous Code Example_
 ```scala
   { _ }
 ```
 _Example Error Output_
 ```
--- [E017] Syntax Error: examples/0017_UnboundPlaceholderParameterID.scala:3:4 
+-- [E017] Syntax Error: examples/017_UnboundPlaceholderParameterID.scala:3:4 
 3 |  { _ }
   |    ^
   |    Unbound placeholder parameter; incorrect use of _
@@ -441,14 +441,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0018 IllegalStartSimpleExprID
+## E018 IllegalStartSimpleExprID
 _Erroneous Code Example_
 ```scala
   val x = :  
 ```
 _Example Error Output_
 ```
--- [E018] Syntax Error: examples/0018_IllegalStartSimpleExprID.scala:3:10 
+-- [E018] Syntax Error: examples/018_IllegalStartSimpleExprID.scala:3:10 
 3 |  val x = :  
   |          ^
   |          expression expected but [31m:[0m found
@@ -460,7 +460,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0019 MissingReturnTypeID
+## E019 MissingReturnTypeID
 _Erroneous Code Example_
 ```scala
   trait Foo:
@@ -468,7 +468,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E019] Syntax Error: examples/0019_MissingReturnTypeID.scala:4:11 
+-- [E019] Syntax Error: examples/019_MissingReturnTypeID.scala:4:11 
 4 |    def foo
   |           ^
   |           Missing return type
@@ -483,14 +483,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0020 YieldOrDoExpectedInForComprehensionID
+## E020 YieldOrDoExpectedInForComprehensionID
 _Erroneous Code Example_
 ```scala
   for i <- 1 to 3 println(i)
 ```
 _Example Error Output_
 ```
--- [E020] Syntax Error: examples/0020_YieldOrDoExpectedInForComprehensionID.scala:5:0 
+-- [E020] Syntax Error: examples/020_YieldOrDoExpectedInForComprehensionID.scala:5:0 
 5 |
   |^
   |yield or do expected
@@ -521,11 +521,11 @@ _Example Error Output_
   |
   | for i <- 1 to 3 do println(i) // notice the 'do' keyword
    -----------------------------------------------------------------------------
--- [E008] Not Found Error: examples/0020_YieldOrDoExpectedInForComprehensionID.scala:3:18 
+-- [E008] Not Found Error: examples/020_YieldOrDoExpectedInForComprehensionID.scala:3:18 
 3 |  for i <- 1 to 3 println(i)
   |           ^^^^^^^^^^^^^^
   |value println is not a member of scala.collection.immutable.Range.Inclusive
--- [E006] Not Found Error: examples/0020_YieldOrDoExpectedInForComprehensionID.scala:3:26 
+-- [E006] Not Found Error: examples/020_YieldOrDoExpectedInForComprehensionID.scala:3:26 
 3 |  for i <- 1 to 3 println(i)
   |                          ^
   |                          Not found: i
@@ -540,7 +540,7 @@ _Example Error Output_
 3 errors found
 Error: Errors encountered during compilation
 ```
-## E0021 ProperDefinitionNotFoundID
+## E021 ProperDefinitionNotFoundID
 _Erroneous Code Example_
 ```scala
 trait Foo:
@@ -551,7 +551,7 @@ trait Foo:
 ```
 _Example Error Output_
 ```
--- [E021] Doc Comment Error: examples/0021_ProperDefinitionNotFoundID.scala:6:14 
+-- [E021] Doc Comment Error: examples/021_ProperDefinitionNotFoundID.scala:6:14 
  6 |   * @usecase val foo = ()
    |              ^
    |              Proper definition was not found in @usecase
@@ -589,9 +589,9 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0022 ByNameParameterNotSupportedID
+## E022 ByNameParameterNotSupportedID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0023 WrongNumberOfTypeArgsID
+## E023 WrongNumberOfTypeArgsID
 _Erroneous Code Example_
 ```scala
   def foo[A] = ()
@@ -599,10 +599,10 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E023] Syntax Error: examples/0023_WrongNumberOfTypeArgsID.scala:4:5 
+-- [E023] Syntax Error: examples/023_WrongNumberOfTypeArgsID.scala:4:5 
 4 |  foo[String, String]
   |  ^^^^^^^^^^^^^^^^^^^
-  |  Too many type arguments for 0023_WrongNumberOfTypeArgsID$package.foo[A]
+  |  Too many type arguments for 023_WrongNumberOfTypeArgsID$package.foo[A]
   |  expected: [A]
   |  actual:   [String, String]
   |-----------------------------------------------------------------------------
@@ -621,7 +621,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0024 IllegalVariableInPatternAlternativeID
+## E024 IllegalVariableInPatternAlternativeID
 _Erroneous Code Example_
 ```scala
   Option((1, 2)) match
@@ -630,7 +630,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E024] Syntax Error: examples/0024_IllegalVariableInPatternAlternativeID.scala:4:13 
+-- [E024] Syntax Error: examples/024_IllegalVariableInPatternAlternativeID.scala:4:13 
 4 |    case (1, n) | (n, 1) => "got a one!"
   |             ^
   |             Illegal variable n in pattern alternative
@@ -653,7 +653,7 @@ _Example Error Output_
   |   case _ => 0
   | }
    -----------------------------------------------------------------------------
--- [E024] Syntax Error: examples/0024_IllegalVariableInPatternAlternativeID.scala:4:19 
+-- [E024] Syntax Error: examples/024_IllegalVariableInPatternAlternativeID.scala:4:19 
 4 |    case (1, n) | (n, 1) => "got a one!"
   |                   ^
   |                   Illegal variable n in pattern alternative
@@ -679,9 +679,9 @@ _Example Error Output_
 2 errors found
 Error: Errors encountered during compilation
 ```
-## E0025 IdentifierExpectedID
+## E025 IdentifierExpectedID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0026 AuxConstructorNeedsNonImplicitParameterID
+## E026 AuxConstructorNeedsNonImplicitParameterID
 _Erroneous Code Example_
 ```scala
   class Foo(a: Int):
@@ -689,7 +689,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E026] Syntax Error: examples/0026_AuxConstructorNeedsNonImplicitParameterID.scala:4:27 
+-- [E026] Syntax Error: examples/026_AuxConstructorNeedsNonImplicitParameterID.scala:4:27 
 4 |    def this(using a: Int) = this(a)
   |                           ^
   |                   Auxiliary constructor needs non-implicit parameter list
@@ -705,7 +705,7 @@ _Example Error Output_
   |  - Forgotten parenthesis on this (def this() = { ... })
   |  - Auxiliary constructors specify the implicit value
    -----------------------------------------------------------------------------
--- [E120] Naming Error: examples/0026_AuxConstructorNeedsNonImplicitParameterID.scala:4:8 
+-- [E120] Naming Error: examples/026_AuxConstructorNeedsNonImplicitParameterID.scala:4:8 
 4 |    def this(using a: Int) = this(a)
   |        ^
   |Double definition:
@@ -718,11 +718,11 @@ _Example Error Output_
 2 errors found
 Error: Errors encountered during compilation
 ```
-## E0027 VarArgsParamMustComeLastID
+## E027 VarArgsParamMustComeLastID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0028 IllegalLiteralID
+## E028 IllegalLiteralID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0029 PatternMatchExhaustivityID
+## E029 PatternMatchExhaustivityID
 _Erroneous Code Example_
 ```scala
   enum Foo:
@@ -734,7 +734,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E029] Pattern Match Exhaustivity Warning: examples/0029_PatternMatchExhaustivityID.scala:7:2 
+-- [E029] Pattern Match Exhaustivity Warning: examples/029_PatternMatchExhaustivityID.scala:7:2 
 7 |  foo match
   |  ^^^
   |  match may not be exhaustive.
@@ -750,7 +750,7 @@ _Example Error Output_
    -----------------------------------------------------------------------------
 1 warning found
 ```
-## E0030 MatchCaseUnreachableID
+## E030 MatchCaseUnreachableID
 _Erroneous Code Example_
 ```scala
   val myList = List(1, 2, 3)
@@ -761,19 +761,19 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E030] Match case Unreachable Warning: examples/0030_MatchCaseUnreachableID.scala:6:9 
+-- [E030] Match case Unreachable Warning: examples/030_MatchCaseUnreachableID.scala:6:9 
 6 |    case bar => "So I'll never get here"
   |         ^^^
   |         Unreachable case
 1 warning found
 ```
-## E0031 SeqWildcardPatternPosID
+## E031 SeqWildcardPatternPosID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0032 IllegalStartOfSimplePatternID
+## E032 IllegalStartOfSimplePatternID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0033 PkgDuplicateSymbolID
+## E033 PkgDuplicateSymbolID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0034 ExistentialTypesNoLongerSupportedID
+## E034 ExistentialTypesNoLongerSupportedID
 _Erroneous Code Example_
 ```scala
   trait Foo[A, B]:
@@ -781,7 +781,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E034] Syntax Error: examples/0034_ExistentialTypesNoLongerSupportedID.scala:4:15 
+-- [E034] Syntax Error: examples/034_ExistentialTypesNoLongerSupportedID.scala:4:15 
 4 |    type F = A forSome { type B}
   |               ^^^^^^^
   |               Existential types are no longer supported -
@@ -806,14 +806,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0035 UnboundWildcardTypeID
+## E035 UnboundWildcardTypeID
 _Erroneous Code Example_
 ```scala
   val foo: _ = ???
 ```
 _Example Error Output_
 ```
--- [E035] Syntax Error: examples/0035_UnboundWildcardTypeID.scala:3:11 
+-- [E035] Syntax Error: examples/035_UnboundWildcardTypeID.scala:3:11 
 3 |  val foo: _ = ???
   |           ^
   |           Unbound wildcard type
@@ -861,10 +861,10 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0036 DanglingThisInPathID
+## E036 DanglingThisInPathID
 **NOTE:** This error is no longer emitted by the compiler.
 
-## E0037 OverridesNothingID
+## E037 OverridesNothingID
 _Erroneous Code Example_
 ```scala
   class Foo:
@@ -872,7 +872,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E037] Declaration Error: examples/0037_OverridesNothingID.scala:4:17 
+-- [E037] Declaration Error: examples/037_OverridesNothingID.scala:4:17 
 4 |    override val foo = ???
   |                 ^
   |                 value foo overrides nothing
@@ -886,9 +886,9 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0038 OverridesNothingButNameExistsID
+## E038 OverridesNothingButNameExistsID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0039 ForwardReferenceExtendsOverDefinitionID
+## E039 ForwardReferenceExtendsOverDefinitionID
 _Erroneous Code Example_
 ```scala
   foo.toUpperCase
@@ -896,7 +896,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E039] Reference Error: examples/0039_ForwardReferenceExtendsOverDefinitionID.scala:3:2 
+-- [E039] Reference Error: examples/039_ForwardReferenceExtendsOverDefinitionID.scala:3:2 
 3 |  foo.toUpperCase
   |  ^^^
   |  foo is a forward reference extending over the definition of foo
@@ -917,14 +917,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0040 ExpectedTokenButFoundID
+## E040 ExpectedTokenButFoundID
 _Erroneous Code Example_
 ```scala
   val foo: = ???
 ```
 _Example Error Output_
 ```
--- [E040] Syntax Error: examples/0040_ExpectedTokenButFoundID.scala:3:11 
+-- [E040] Syntax Error: examples/040_ExpectedTokenButFoundID.scala:3:11 
 3 |  val foo: = ???
   |           ^
   |           an identifier expected, but '=' found
@@ -937,7 +937,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0041 MixedLeftAndRightAssociativeOpsID
+## E041 MixedLeftAndRightAssociativeOpsID
 _Erroneous Code Example_
 ```scala
   case class I(j: Int):
@@ -948,7 +948,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E041] Syntax Error: examples/0041_MixedLeftAndRightAssociativeOpsID.scala:7:10 
+-- [E041] Syntax Error: examples/041_MixedLeftAndRightAssociativeOpsID.scala:7:10 
 7 |  I(1) +- I(4) +: I(4)
   |          ^
   |+- (which is left-associative) and +: (which is right-associative) have same precedence and may not be mixed
@@ -983,7 +983,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0042 CantInstantiateAbstractClassOrTraitID
+## E042 CantInstantiateAbstractClassOrTraitID
 _Erroneous Code Example_
 ```scala
   trait Foo
@@ -991,7 +991,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E042] Type Error: examples/0042_CantInstantiateAbstractClassOrTraitID.scala:4:6 
+-- [E042] Type Error: examples/042_CantInstantiateAbstractClassOrTraitID.scala:4:6 
 4 |  new Foo
   |      ^^^
   |      Foo is a trait; it cannot be instantiated
@@ -1012,7 +1012,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0043 UnreducibleApplicationID
+## E043 UnreducibleApplicationID
 _Erroneous Code Example_
 ```scala
   case class CC[T](key: T)
@@ -1022,7 +1022,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E043] Type Error: examples/0043_UnreducibleApplicationID.scala:6:12 
+-- [E043] Type Error: examples/043_UnreducibleApplicationID.scala:6:12 
 6 |  def g(xs: Alias[?]) = xs map { case CC(x) => CC(x) }
   |            ^^^^^^^^
   |unreducible application of higher-kinded type [T] =>> Seq[CC[T]] to wildcard arguments
@@ -1036,7 +1036,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0044 OverloadedOrRecursiveMethodNeedsResultTypeID
+## E044 OverloadedOrRecursiveMethodNeedsResultTypeID
 _Erroneous Code Example_
 ```scala
   class Foo:
@@ -1045,7 +1045,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E044] Cyclic Error: examples/0044_OverloadedOrRecursiveMethodNeedsResultTypeID.scala:5:22 
+-- [E044] Cyclic Error: examples/044_OverloadedOrRecursiveMethodNeedsResultTypeID.scala:5:22 
 5 |    def foo(a: Int) = foo()
   |                      ^
   |                      Overloaded or recursive method foo needs return type
@@ -1063,14 +1063,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0045 RecursiveValueNeedsResultTypeID
+## E045 RecursiveValueNeedsResultTypeID
 _Erroneous Code Example_
 ```scala
   val factorial = (x: Int) => if x == 0 then 1 else x * factorial(x - 1)
 ```
 _Example Error Output_
 ```
--- [E045] Cyclic Error: examples/0045_RecursiveValueNeedsResultTypeID.scala:3:56 
+-- [E045] Cyclic Error: examples/045_RecursiveValueNeedsResultTypeID.scala:3:56 
 3 |  val factorial = (x: Int) => if x == 0 then 1 else x * factorial(x - 1)
   |                                                        ^
   |                                      Recursive value factorial needs type
@@ -1082,11 +1082,11 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0046 CyclicReferenceInvolvingID
+## E046 CyclicReferenceInvolvingID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0047 CyclicReferenceInvolvingImplicitID
+## E047 CyclicReferenceInvolvingImplicitID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0048 SuperQualMustBeParentID
+## E048 SuperQualMustBeParentID
 _Erroneous Code Example_
 ```scala
   class Foo:
@@ -1094,7 +1094,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E048] Reference Error: examples/0048_SuperQualMustBeParentID.scala:4:14 
+-- [E048] Reference Error: examples/048_SuperQualMustBeParentID.scala:4:14 
 4 |    val foo = Foo.super[Bar].foo
   |              ^^^^^^^^^^^^^^
   |              Bar does not name a parent of class Foo
@@ -1110,7 +1110,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0049 AmbiguousReferenceID
+## E049 AmbiguousReferenceID
 _Erroneous Code Example_
 ```scala
   import foo.*
@@ -1121,7 +1121,7 @@ object foo:
 ```
 _Example Error Output_
 ```
--- [E049] Reference Error: examples/0049_AmbiguousReferenceID.scala:4:2 
+-- [E049] Reference Error: examples/049_AmbiguousReferenceID.scala:4:2 
 4 |  foo
   |  ^^^
   |  Reference to foo is ambiguous,
@@ -1144,7 +1144,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0050 MethodDoesNotTakeParametersId
+## E050 MethodDoesNotTakeParametersId
 _Erroneous Code Example_
 ```scala
   def foo = 1
@@ -1152,7 +1152,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E050] Type Error: examples/0050_MethodDoesNotTakeParametersId.scala:4:2 
+-- [E050] Type Error: examples/050_MethodDoesNotTakeParametersId.scala:4:2 
 4 |  foo(1)
   |  ^^^
   |  method foo does not take parameters
@@ -1165,7 +1165,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0051 AmbiguousOverloadID
+## E051 AmbiguousOverloadID
 _Erroneous Code Example_
 ```scala
   object Test:
@@ -1176,7 +1176,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E051] Reference Error: examples/0051_AmbiguousOverloadID.scala:7:7 
+-- [E051] Reference Error: examples/051_AmbiguousOverloadID.scala:7:7 
 7 |  Test.render(1)
   |  ^^^^^^^^^^^
   |Ambiguous overload. The overloaded alternatives of method render in object Test with types
@@ -1195,7 +1195,7 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0052 ReassignmentToValID
+## E052 ReassignmentToValID
 _Erroneous Code Example_
 ```scala
   object Foo:
@@ -1205,7 +1205,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E052] Type Error: examples/0052_ReassignmentToValID.scala:13:8 
+-- [E052] Type Error: examples/052_ReassignmentToValID.scala:13:8 
 13 |  Foo.a = 2
    |  ^^^^^^^^^
    |  Reassignment to val a
@@ -1222,14 +1222,14 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0053 TypeDoesNotTakeParametersID
+## E053 TypeDoesNotTakeParametersID
 _Erroneous Code Example_
 ```scala
   val hello: String[String] = ???
 ```
 _Example Error Output_
 ```
--- [E053] Type Error: examples/0053_TypeDoesNotTakeParametersID.scala:3:13 
+-- [E053] Type Error: examples/053_TypeDoesNotTakeParametersID.scala:3:13 
 3 |  val hello: String[String] = ???
   |             ^^^^^^^^^^^^^^
   |             String does not take type parameters
@@ -1242,16 +1242,16 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
-## E0054 ParameterizedTypeLacksArgumentsID
+## E054 ParameterizedTypeLacksArgumentsID
 *This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
-## E0055 VarValParametersMayNotBeCallByNameID
+## E055 VarValParametersMayNotBeCallByNameID
 _Erroneous Code Example_
 ```scala
   class Foo(val a: => Boolean)
 ```
 _Example Error Output_
 ```
--- [E055] Syntax Error: examples/0055_VarValParametersMayNotBeCallByNameID.scala:3:19 
+-- [E055] Syntax Error: examples/055_VarValParametersMayNotBeCallByNameID.scala:3:19 
 3 |  class Foo(val a: => Boolean)
   |                   ^^
   |                   val parameters may not be call-by-name

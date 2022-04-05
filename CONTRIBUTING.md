@@ -35,27 +35,27 @@ hasn't been figure out, or is it because the code that references the specific
 
 ### Here is a list of `ErrormessageID`s that aren't yet reproduced.
 
-  - [ ] 0002 EmptyCatchAndFinallyBlockID - See file for more details. I thought
+  - [ ] 002 EmptyCatchAndFinallyBlockID - See file for more details. I thought
       this was fixed, but it's not.
-  - [ ] 0022 ByNameParameterNotSupportedID - I honestly just can't figure out
+  - [ ] 022 ByNameParameterNotSupportedID - I honestly just can't figure out
       how to reproduce this
-  - [ ] 0025 IdentifierExpectedID - See the note in this file. I can't reproduce
+  - [ ] 025 IdentifierExpectedID - See the note in this file. I can't reproduce
       but also think it might not be needed at all anymore and we could just use
       E040 instead
-  - [ ] 0027 VarArgsParamMustComeLastID - See the note in the file. Another one
+  - [ ] 027 VarArgsParamMustComeLastID - See the note in the file. Another one
       I can't reproduced by the check also doesn't seem to make sense in the
       code.
-  - [ ] 0028 IllegalLiteralID - No idea how to reproduce this one
-  - [ ] 0031 SeqWildcardPatternPosID - So I have a reproduction of this, but
+  - [ ] 028 IllegalLiteralID - No idea how to reproduce this one
+  - [ ] 031 SeqWildcardPatternPosID - So I have a reproduction of this, but
       it's pretty bad and nonsensical. It'd be good to actually get a decent
       one.
-  - [ ] 0032 IllegalStartOfSimplePattern - I have a reproduction of this, but I
+  - [ ] 032 IllegalStartOfSimplePattern - I have a reproduction of this, but I
       feel like it should be 0031 not 0032.
-  - [ ] 0033 PkgDuplicateSymbolID - Need to reproduce this
-  - [ ] 0038 OverridesNothingButNameExistsID - See notes in the file
-  - [ ] 0046 CyclicReferenceInvolvingID - See notes in the file
-  - [ ] 0047 CyclicReferenceInvolvingImplicitID - See notes in the file
-  - [ ] 0054 ParameterizedTypeLacksArgumentsID
+  - [ ] 033 PkgDuplicateSymbolID - Need to reproduce this
+  - [ ] 038 OverridesNothingButNameExistsID - See notes in the file
+  - [ ] 046 CyclicReferenceInvolvingID - See notes in the file
+  - [ ] 047 CyclicReferenceInvolvingImplicitID - See notes in the file
+  - [ ] 054 ParameterizedTypeLacksArgumentsID
 
 ## Getting Started
 
@@ -75,12 +75,12 @@ find how to do this
 ### Project Structure
 
 ```
- bin/         <- Has the scripts that build and run everything
- checkfiles/  <- All the checkfiles generated (don't manually update these)
- examples/    <- All the example code snippets
- Makefile     <- Where all the commands you need are located
- out/         <- Temp dir that is used to compare with checkfiles
- README.md    <- The actual error index
+bin/         <- Has the scripts that build and run everything
+checkfiles/  <- All the checkfiles generated (don't manually update these)
+examples/    <- All the example code snippets
+Makefile     <- Where all the commands you need are located
+out/         <- Temp dir that is used to compare with checkfiles
+README.md    <- The actual error index
 ```
 
 ### Workflow
@@ -91,7 +91,7 @@ file.
   - Name the file `<ErrorMessageIDNumber>_<ErrorMesssageIDName>.scala`
   - Put the code snippet you want to be included in the index between a `//
       START` and `// END` comment
-  - The code snippet *must* start with a `@main def <ErrorMessageID =`. If there
+  - The code snippet *must* start with a `@main def <ErrorMessageID> =`. If there
       is extra code required to illustrate the error, put it underneath the main
       method, not above.
   - If the `ErrorMessageID` is no longer used by the compiler put a comment in
@@ -108,7 +108,7 @@ specify the id that you're working on for any of the commands.
 _Run the specific snippet_
 
 ```bash
-make run id=0001
+make run id=001
 ```
 
 Keep playing around and running the snippet until you are able to see that it's
@@ -117,7 +117,7 @@ can then create a checkfile for it.
 
 _Create a checkfile for the id_
 ```bash
-make update id=0001
+make update id=001
 ```
 
 Once you have the new checkfile created you're able to run a check against it to
@@ -125,7 +125,7 @@ ensure that the output matches the checkfile.
 
 _Check the output against the checkfile_
 ```bash
-make check id=0001
+make check id=001
 ```
 
 For all 3 commands, if you don't pass in an `id=<id>` it will run, update, or

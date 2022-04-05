@@ -1,5 +1,0 @@
--- [E030] Match case Unreachable Warning: examples/0030_MatchCaseUnreachableID.scala:6:9 
-6 |    case bar => "So I'll never get here"
-  |         ^^^
-  |         Unreachable case
-1 warning found

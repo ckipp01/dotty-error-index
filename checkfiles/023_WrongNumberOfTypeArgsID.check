@@ -1,0 +1,21 @@
+-- [E023] Syntax Error: examples/023_WrongNumberOfTypeArgsID.scala:4:5 
+4 |  foo[String, String]
+  |  ^^^^^^^^^^^^^^^^^^^
+  |  Too many type arguments for 023_WrongNumberOfTypeArgsID$package.foo[A]
+  |  expected: [A]
+  |  actual:   [String, String]
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | You have supplied too many type parameters
+  |
+  | For example List takes a single type parameter (List[A])
+  | If you need to hold more types in a list then you need to combine them
+  | into another data type that can contain the number of types you need,
+  | In this example one solution would be to use a Tuple:
+  |
+  | val tuple2: (Int, String) = (1, "one")
+  | val list: List[(Int, String)] = List(tuple2)
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

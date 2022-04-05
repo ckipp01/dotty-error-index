@@ -1,0 +1,13 @@
+-- [E043] Type Error: examples/043_UnreducibleApplicationID.scala:6:12 
+6 |  def g(xs: Alias[?]) = xs map { case CC(x) => CC(x) }
+  |            ^^^^^^^^
+  |unreducible application of higher-kinded type [T] =>> Seq[CC[T]] to wildcard arguments
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | An abstract type constructor cannot be applied to wildcard arguments.
+  | Such applications are equivalent to existential types, which are not
+  | supported in Scala 3.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

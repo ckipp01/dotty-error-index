@@ -1,0 +1,15 @@
+-- [E048] Reference Error: examples/048_SuperQualMustBeParentID.scala:4:14 
+4 |    val foo = Foo.super[Bar].foo
+  |              ^^^^^^^^^^^^^^
+  |              Bar does not name a parent of class Foo
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | When a qualifier T is used in a super prefix of the form C.super[T],
+  | T must be a parent type of C.
+  |
+  | In this case, the parents of class Foo are:
+  |   - Object
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

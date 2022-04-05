@@ -1,0 +1,13 @@
+-- [E004] Syntax Error: examples/004_CaseClassMissingParamListID.scala:3:13 
+3 |  case class Foo
+  |             ^^^
+  |             A case class must have at least one parameter list
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | Foo must have at least one parameter list, if you would rather
+  | have a singleton representation of Foo, use a "case object".
+  | Or, add an explicit () as a parameter list to Foo.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
