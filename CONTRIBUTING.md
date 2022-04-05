@@ -55,6 +55,7 @@ hasn't been figure out, or is it because the code that references the specific
   - [ ] 0038 OverridesNothingButNameExistsID - See notes in the file
   - [ ] 0046 CyclicReferenceInvolvingID - See notes in the file
   - [ ] 0047 CyclicReferenceInvolvingImplicitID - See notes in the file
+  - [ ] 0054 ParameterizedTypeLacksArgumentsID
 
 ## Getting Started
 

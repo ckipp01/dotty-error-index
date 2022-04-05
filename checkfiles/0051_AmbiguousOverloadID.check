@@ -1,0 +1,18 @@
+-- [E051] Reference Error: examples/0051_AmbiguousOverloadID.scala:7:7 
+7 |  Test.render(1)
+  |  ^^^^^^^^^^^
+  |Ambiguous overload. The overloaded alternatives of method render in object Test with types
+  | [B](b: B)(using x$2: DummyImplicit): Char
+  | [A](a: A): String
+  |both match arguments ((1 : Int))
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | There are 2 methods that could be referenced as the compiler knows too little
+  | about the expected type.
+  | You may specify the expected type e.g. by
+  | - assigning it to a value with a specified type, or
+  | - adding a type ascription as in instance.myMethod: String => Int
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

@@ -1,0 +1,16 @@
+-- [E055] Syntax Error: examples/0055_VarValParametersMayNotBeCallByNameID.scala:3:19 
+3 |  class Foo(val a: => Boolean)
+  |                   ^^
+  |                   val parameters may not be call-by-name
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | var and val parameters of classes and traits may no be call-by-name. In case you
+  | want the parameter to be evaluated on demand, consider making it just a parameter
+  | and a def in the class such as
+  |   class MyClass(aTick: => String) {
+  |     def a() = aTick
+  |   }
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

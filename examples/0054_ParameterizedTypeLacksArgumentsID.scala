@@ -1,0 +1,2 @@
+//INCOMPLETE
+@main def ParameterizedTypeLacksArgumentsID = ()
