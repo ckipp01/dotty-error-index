@@ -1,8 +1,8 @@
--- [E001] Syntax Error: examples/002_EmptyCatchAndFinallyBlockID.scala:8:9 
-8 |  try {} catch {}
-  |         ^^^^^^^^
-  |         The catch block does not contain a valid expression, try
-  |         adding a case like - case e: Exception => to the block
+-- [E002] Syntax Warning: examples/002_EmptyCatchAndFinallyBlockID.scala:3:2 
+3 |  try {}
+  |  ^^^^^^
+  |  A try without catch or finally is equivalent to putting
+  |  its body in a block; no exceptions are handled.
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -26,5 +26,4 @@
   | It is recommended to use the NonFatal extractor to catch all exceptions as it
   | correctly handles transfer functions like return.
    -----------------------------------------------------------------------------
-1 error found
-Error: Errors encountered during compilation
+1 warning found

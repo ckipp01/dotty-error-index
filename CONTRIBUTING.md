@@ -35,8 +35,6 @@ hasn't been figure out, or is it because the code that references the specific
 
 ### Here is a list of `ErrormessageID`s that aren't yet reproduced.
 
-  - [ ] 002 EmptyCatchAndFinallyBlockID - See file for more details. I thought
-      this was fixed, but it's not.
   - [ ] 022 ByNameParameterNotSupportedID - I honestly just can't figure out
       how to reproduce this
   - [ ] 025 IdentifierExpectedID - See the note in this file. I can't reproduce

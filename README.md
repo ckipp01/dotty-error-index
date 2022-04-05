@@ -40,7 +40,42 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E002 EmptyCatchAndFinallyBlockID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+_Erroneous Code Example_
+```scala
+  try {}
+```
+_Example Error Output_
+```
+-- [E002] Syntax Warning: examples/002_EmptyCatchAndFinallyBlockID.scala:3:2 
+3 |  try {}
+  |  ^^^^^^
+  |  A try without catch or finally is equivalent to putting
+  |  its body in a block; no exceptions are handled.
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | A try expression should be followed by some mechanism to handle any exceptions
+  | thrown. Typically a catch expression follows the try and pattern matches
+  | on any expected exceptions. For example:
+  |
+  | import scala.util.control.NonFatal
+  |
+  | try {} catch {
+  |   case NonFatal(e) => ???
+  | }
+  |
+  | It is also possible to follow a try immediately by a finally - letting the
+  | exception propagate - but still allowing for some clean up in finally:
+  |
+  | try {} finally {
+  |   // perform your cleanup here!
+  | }
+  |
+  | It is recommended to use the NonFatal extractor to catch all exceptions as it
+  | correctly handles transfer functions like return.
+   -----------------------------------------------------------------------------
+1 warning found
+```
 ## E003 DeprecatedWithOperatorID
 _Erroneous Code Example_
 ```scala
