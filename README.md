@@ -1,6 +1,9 @@
 # Dotty Error Index
 
-*For Scala 3.1.3-RC1-bin-20220404-ad2553d-NIGHTLY*
+*NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
+
+*Generated with Scala 3.1.3-RC1-bin-20220407-31f871c-NIGHTLY*
+
 ## E001 EmptyCatchBlockID
 _Erroneous Code Example_
 ```scala
@@ -625,7 +628,7 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E022 ByNameParameterNotSupportedID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E023 WrongNumberOfTypeArgsID
 _Erroneous Code Example_
 ```scala
@@ -715,7 +718,7 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E025 IdentifierExpectedID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E026 AuxConstructorNeedsNonImplicitParameterID
 _Erroneous Code Example_
 ```scala
@@ -754,9 +757,9 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E027 VarArgsParamMustComeLastID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E028 IllegalLiteralID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E029 PatternMatchExhaustivityID
 _Erroneous Code Example_
 ```scala
@@ -803,11 +806,11 @@ _Example Error Output_
 1 warning found
 ```
 ## E031 SeqWildcardPatternPosID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E032 IllegalStartOfSimplePatternID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E033 PkgDuplicateSymbolID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E034 ExistentialTypesNoLongerSupportedID
 _Erroneous Code Example_
 ```scala
@@ -922,7 +925,7 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E038 OverridesNothingButNameExistsID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E039 ForwardReferenceExtendsOverDefinitionID
 _Erroneous Code Example_
 ```scala
@@ -1118,9 +1121,9 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E046 CyclicReferenceInvolvingID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E047 CyclicReferenceInvolvingImplicitID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E048 SuperQualMustBeParentID
 _Erroneous Code Example_
 ```scala
@@ -1278,7 +1281,7 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E054 ParameterizedTypeLacksArgumentsID
-*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E055 VarValParametersMayNotBeCallByNameID
 _Erroneous Code Example_
 ```scala
@@ -1300,6 +1303,20 @@ _Example Error Output_
   |     def a() = aTick
   |   }
    -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
+## E056 MissingTypeParameterForID
+_Erroneous Code Example_
+```scala
+  trait X[F[_] <: AnyKind] { type L = F[Int]; def a: L = ??? } // error: cannot be used as a value type
+```
+_Example Error Output_
+```
+-- [E056] Syntax Error: examples/056_MissingTypeParameterForID.scala:3:53 
+3 |  trait X[F[_] <: AnyKind] { type L = F[Int]; def a: L = ??? } // error: cannot be used as a value type
+  |                                                     ^
+  |                                   X.this.L cannot be used as a value type
 1 error found
 Error: Errors encountered during compilation
 ```

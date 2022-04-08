@@ -9,7 +9,8 @@ SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep 3.1.3 |
 rm -f -- $OUTPUT
 
 echo -e "# Dotty Error Index\n" >> $OUTPUT
-echo "*For Scala $SCALA_VERSION*" >> $OUTPUT
+echo -e "*NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.\n" >> $OUTPUT
+echo -e "*Generated with Scala $SCALA_VERSION*\n" >> $OUTPUT
 
 for TARGET_FILE in $TARGET_FILES
 do
@@ -24,7 +25,7 @@ do
   # If we find incomplete in the file, just add a message and move on to the next file.
   if [[ $INCOMPLETE ]]; then
     echo -e "${BLUE}$BASE${RESET} is incomplete, so marking it as such in the index"
-    echo  "*This ErrorMessageID has no valid example yet. See the [contributing guide](https://github.com/ckipp01/dotty-error-index/blob/main/CONTRIBUTING.md) to see how you can help.*" >> $OUTPUT
+    echo  "*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*" >> $OUTPUT
   else
     START_LINE=$(grep -n START $TARGET_FILE)
     END_LINE=$(grep -n END $TARGET_FILE)

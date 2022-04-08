@@ -13,7 +13,7 @@ ERROR_MESSAGE_ID="$2"
 SOURCE_ROOT=$PWD
 
 if [ $ERROR_MESSAGE_ID ] && [ ${#ERROR_MESSAGE_ID} != 3 ]; then
-  echo -e "${RED}MessgaeIDs must be 4 letters long${RESET}
+  echo -e "${RED}MessgaeIDs must be 3 letters long${RESET}
 
   Try again with something like this ${BLUE}001${RESET}"
   exit 1

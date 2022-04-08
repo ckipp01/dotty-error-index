@@ -23,3 +23,12 @@ jobs:
 
       - name: Check all errors
         run: make check
+
+      - name: Regenerate index
+        run: make build
+
+      - uses: stefanzweifel/git-auto-commit-action@v4.14.0
+        with:
+          file_pattern: README.md
+          commit_message: "chore: auto update error index"
+          commit_author: Github Actions <actions@github.com>

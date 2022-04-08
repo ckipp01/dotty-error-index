@@ -140,10 +140,9 @@ If you're unsure how to reproduce something a good order to follow is:
 
 ### Building the index
 
-The manually re-build the index you run:
+The index will automatically build in CI, so you don't manually need to build
+it. However if you'd like to you can run the following command to rebuild it:
 
 ```bash
 make check build
 ```
-
-This ensures that the full check passes and then re-builds the index.
