@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.1.3-RC1-bin-20220407-31f871c-NIGHTLY*
+*Generated with Scala 3.1.3-RC1-bin-20220408-f3cca47-NIGHTLY*
 
 ## E001 EmptyCatchBlockID
 _Erroneous Code Example_
