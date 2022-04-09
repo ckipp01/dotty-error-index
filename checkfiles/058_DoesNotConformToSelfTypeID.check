@@ -1,0 +1,21 @@
+-- [E058] Type Mismatch Error: examples/058_DoesNotConformToSelfTypeID.scala:6:8 
+6 |  class Brand extends Phone
+  |        ^
+  |illegal inheritance: self type Brand of class Brand does not conform to self type User
+  |of parent trait Phone
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | I tried to show that
+  |   Brand
+  | conforms to
+  |   User
+  | but the comparison trace ended with `false`:
+  |
+  |   ==> Brand  <:  User
+  |   <== Brand  <:  User = false
+  |
+  | The tests were made under the empty constraint
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

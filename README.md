@@ -4,6 +4,9 @@
 
 *Generated with Scala 3.1.3-RC1-bin-20220408-f3cca47-NIGHTLY*
 
+## E000 EmptyCatchOrFinallyBlockID
+**NOTE:** This error is no longer emitted by the compiler.
+
 ## E001 EmptyCatchBlockID
 _Erroneous Code Example_
 ```scala
