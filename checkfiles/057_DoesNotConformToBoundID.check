@@ -1,0 +1,20 @@
+-- [E057] Type Mismatch Error: examples/057_DoesNotConformToBoundID.scala:8:6 
+8 |  Foo[Cup]
+  |      ^
+  |      Type argument Cup does not conform to upper bound Animal
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | I tried to show that
+  |   Cup
+  | conforms to
+  |   Animal
+  | but the comparison trace ended with `false`:
+  |
+  |   ==> Cup  <:  Animal
+  |   <== Cup  <:  Animal = false
+  |
+  | The tests were made under the empty constraint
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

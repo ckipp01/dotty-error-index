@@ -4,6 +4,13 @@
 
 *Generated with Scala 3.1.3-RC1-bin-20220408-f3cca47-NIGHTLY*
 
+## E000 EmptyCatchOrFinallyBlockID
+**NOTE:** This error is no longer emitted by the compiler.
+
+_Erroneous Code Example_
+```scala
+  try {} catch {}
+```
 ## E001 EmptyCatchBlockID
 _Erroneous Code Example_
 ```scala
@@ -1317,6 +1324,88 @@ _Example Error Output_
 3 |  trait X[F[_] <: AnyKind] { type L = F[Int]; def a: L = ??? } // error: cannot be used as a value type
   |                                                     ^
   |                                   X.this.L cannot be used as a value type
+1 error found
+Error: Errors encountered during compilation
+```
+## E057 DoesNotConformToBoundID
+_Erroneous Code Example_
+```scala
+  trait Animal
+  class Dog extends Animal
+  class Cup
+  class Foo[A <: Animal]
+
+  Foo[Cup]
+```
+_Example Error Output_
+```
+-- [E057] Type Mismatch Error: examples/057_DoesNotConformToBoundID.scala:8:6 
+8 |  Foo[Cup]
+  |      ^
+  |      Type argument Cup does not conform to upper bound Animal
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | I tried to show that
+  |   Cup
+  | conforms to
+  |   Animal
+  | but the comparison trace ended with `false`:
+  |
+  |   ==> Cup  <:  Animal
+  |   <== Cup  <:  Animal = false
+  |
+  | The tests were made under the empty constraint
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
+## E058 DoesNotConformToSelfTypeID
+_Erroneous Code Example_
+```scala
+  trait User
+  trait Phone:
+    this: User =>
+  class Brand extends Phone
+```
+_Example Error Output_
+```
+-- [E058] Type Mismatch Error: examples/058_DoesNotConformToSelfTypeID.scala:6:8 
+6 |  class Brand extends Phone
+  |        ^
+  |illegal inheritance: self type Brand of class Brand does not conform to self type User
+  |of parent trait Phone
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | I tried to show that
+  |   Brand
+  | conforms to
+  |   User
+  | but the comparison trace ended with `false`:
+  |
+  |   ==> Brand  <:  User
+  |   <== Brand  <:  User = false
+  |
+  | The tests were made under the empty constraint
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
+## E059 DoesNotConformToSelfTypeCantBeInstantiated
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
+## E060 AbstractMemberMayNotHaveModifierID
+_Erroneous Code Example_
+```scala
+    trait Foo:
+      final def bar: String
+```
+_Example Error Output_
+```
+-- [E060] Syntax Error: examples/060_AbstractMemberMayNotHaveModifierID.scala:4:16 
+4 |      final def bar: String
+  |                ^
+  |                abstract method bar may not have `final` modifier
 1 error found
 Error: Errors encountered during compilation
 ```

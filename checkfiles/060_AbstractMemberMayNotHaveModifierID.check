@@ -1,0 +1,6 @@
+-- [E060] Syntax Error: examples/060_AbstractMemberMayNotHaveModifierID.scala:4:16 
+4 |      final def bar: String
+  |                ^
+  |                abstract method bar may not have `final` modifier
+1 error found
+Error: Errors encountered during compilation

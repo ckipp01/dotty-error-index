@@ -54,6 +54,7 @@ hasn't been figure out, or is it because the code that references the specific
   - [ ] 046 CyclicReferenceInvolvingID - See notes in the file
   - [ ] 047 CyclicReferenceInvolvingImplicitID - See notes in the file
   - [ ] 054 ParameterizedTypeLacksArgumentsID
+  - [ ] 059 DoesNotConformToSelfTypeCantBeInstantiated
 
 ## Getting Started
 
