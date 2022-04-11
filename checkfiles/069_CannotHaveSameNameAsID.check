@@ -1,0 +1,6 @@
+-- [E069] Syntax Error: examples/069_CannotHaveSameNameAsID.scala:7:10 
+7 |    class Inner
+  |          ^
+  |class Inner cannot have the same name as class Inner in class Base -- class definitions cannot be overridden
+1 error found
+Error: Errors encountered during compilation

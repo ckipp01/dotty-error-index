@@ -1,0 +1,6 @@
+-- [E070] Syntax Error: examples/070_ValueClassesMayNotDefineInnerID.scala:5:8 
+5 |  class Inner
+  |  ^^^^^^^^^^^
+  |  Value classes may not define an inner class
+1 error found
+Error: Errors encountered during compilation

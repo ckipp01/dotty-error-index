@@ -1,0 +1,6 @@
+-- [E067] Syntax Error: examples/067_OnlyClassesCanHaveDeclaredButUndefinedMembersID.scala:4:8 
+4 |    def foo: Unit
+  |        ^
+  |Declaration of method foo not allowed here: only classes can have declared but undefined members
+1 error found
+Error: Errors encountered during compilation

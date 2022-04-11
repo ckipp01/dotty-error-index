@@ -1,0 +1,6 @@
+-- [E066] Syntax Error: examples/066_NativeMembersMayNotHaveImplementationID.scala:4:16 
+4 |    @native def foo: Unit = ()
+  |                ^
+  |                @native members may not have an implementation
+1 error found
+Error: Errors encountered during compilation
