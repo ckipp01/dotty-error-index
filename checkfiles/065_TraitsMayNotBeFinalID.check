@@ -1,0 +1,11 @@
+-- [E065] Syntax Error: examples/065_TraitsMayNotBeFinalID.scala:3:14 
+3 |  final trait Foo
+  |              ^
+  |              trait Foo may not be final
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | A trait can never be final since it is abstract and must be extended to be useful.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation

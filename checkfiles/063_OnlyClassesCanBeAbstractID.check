@@ -1,0 +1,6 @@
+-- [E063] Syntax Error: examples/063_OnlyClassesCanBeAbstractID.scala:4:15 
+4 |  abstract def foo: Unit
+  |               ^
+  |abstract modifier can be used only for classes; it should be omitted for abstract members
+1 error found
+Error: Errors encountered during compilation

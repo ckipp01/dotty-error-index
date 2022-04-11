@@ -1409,3 +1409,71 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
+## E061 TopLevelCantBeImplicitID
+*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
+## E062 TypesAndTraitsCantBeImplicitID
+_Erroneous Code Example_
+```scala
+implicit trait Foo
+```
+_Example Error Output_
+```
+-- [E062] Syntax Error: examples/062_TypesAndTraitsCantBeImplicitID.scala:3:15 
+3 |implicit trait Foo
+  |^^^^^^^^^^^^^^^^^^
+  |implicit modifier cannot be used for types or traits
+1 error found
+Error: Errors encountered during compilation
+```
+## E063 OnlyClassesCanBeAbstractID
+_Erroneous Code Example_
+```scala
+class Foo:
+  abstract def foo: Unit
+```
+_Example Error Output_
+```
+-- [E063] Syntax Error: examples/063_OnlyClassesCanBeAbstractID.scala:4:15 
+4 |  abstract def foo: Unit
+  |               ^
+  |abstract modifier can be used only for classes; it should be omitted for abstract members
+1 error found
+Error: Errors encountered during compilation
+```
+## E064 AbstractOverrideOnlyInTraitsID
+_Erroneous Code Example_
+```scala
+  trait Foo:
+    def foo: Unit
+
+  abstract class Bar extends Foo:
+    abstract override def foo: Unit
+```
+_Example Error Output_
+```
+-- [E064] Syntax Error: examples/064_AbstractOverrideOnlyInTraitsID.scala:7:26 
+7 |    abstract override def foo: Unit
+  |                          ^
+  |             abstract override modifier only allowed for members of traits
+1 error found
+Error: Errors encountered during compilation
+```
+## E065 TraitsMayNotBeFinalID
+_Erroneous Code Example_
+```scala
+  final trait Foo
+```
+_Example Error Output_
+```
+-- [E065] Syntax Error: examples/065_TraitsMayNotBeFinalID.scala:3:14 
+3 |  final trait Foo
+  |              ^
+  |              trait Foo may not be final
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | A trait can never be final since it is abstract and must be extended to be useful.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
