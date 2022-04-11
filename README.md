@@ -1477,3 +1477,87 @@ _Example Error Output_
 1 error found
 Error: Errors encountered during compilation
 ```
+## E066 NativeMembersMayNotHaveImplementationID
+_Erroneous Code Example_
+```scala
+  class Foo:
+    @native def foo: Unit = ()
+```
+_Example Error Output_
+```
+-- [E066] Syntax Error: examples/066_NativeMembersMayNotHaveImplementationID.scala:4:16 
+4 |    @native def foo: Unit = ()
+  |                ^
+  |                @native members may not have an implementation
+1 error found
+Error: Errors encountered during compilation
+```
+## E067 OnlyClassesCanHaveDeclaredButUndefinedMembersID
+_Erroneous Code Example_
+```scala
+  object Foo:
+    def foo: Unit
+```
+_Example Error Output_
+```
+-- [E067] Syntax Error: examples/067_OnlyClassesCanHaveDeclaredButUndefinedMembersID.scala:4:8 
+4 |    def foo: Unit
+  |        ^
+  |Declaration of method foo not allowed here: only classes can have declared but undefined members
+1 error found
+Error: Errors encountered during compilation
+```
+## E068 CannotExtendAnyValID
+_Erroneous Code Example_
+```scala
+  trait Foo extends AnyVal
+```
+_Example Error Output_
+```
+-- [E068] Syntax Error: examples/068_CannotExtendAnyValID.scala:3:8 
+3 |  trait Foo extends AnyVal
+  |        ^
+  |        trait Foo cannot extend AnyVal
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | Only classes (not traits) are allowed to extend AnyVal, but traits may extend
+  | Any to become [32m"universal traits"[0m which may only have def members.
+  | Universal traits can be mixed into classes that extend AnyVal.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
+## E069 CannotHaveSameNameAsID
+_Erroneous Code Example_
+```scala
+  class Base:
+    class Inner
+
+  class Other extends Base:
+    class Inner
+```
+_Example Error Output_
+```
+-- [E069] Syntax Error: examples/069_CannotHaveSameNameAsID.scala:7:10 
+7 |    class Inner
+  |          ^
+  |class Inner cannot have the same name as class Inner in class Base -- class definitions cannot be overridden
+1 error found
+Error: Errors encountered during compilation
+```
+## E070 ValueClassesMayNotDefineInnerID
+_Erroneous Code Example_
+```scala
+class Foo(a: Int) extends AnyVal:
+  class Inner
+```
+_Example Error Output_
+```
+-- [E070] Syntax Error: examples/070_ValueClassesMayNotDefineInnerID.scala:5:8 
+5 |  class Inner
+  |  ^^^^^^^^^^^
+  |  Value classes may not define an inner class
+1 error found
+Error: Errors encountered during compilation
+```

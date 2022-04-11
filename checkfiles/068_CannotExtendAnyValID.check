@@ -1,0 +1,13 @@
+-- [E068] Syntax Error: examples/068_CannotExtendAnyValID.scala:3:8 
+3 |  trait Foo extends AnyVal
+  |        ^
+  |        trait Foo cannot extend AnyVal
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | Only classes (not traits) are allowed to extend AnyVal, but traits may extend
+  | Any to become [32m"universal traits"[0m which may only have def members.
+  | Universal traits can be mixed into classes that extend AnyVal.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
