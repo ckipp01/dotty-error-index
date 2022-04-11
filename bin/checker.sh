@@ -106,9 +106,30 @@ function handle_check() {
     fi
   else
     check_scala_version
+
+    # We make an associated array here to keep track of the PIDS and the file
+    # names we are running
+    declare -A PIDS
+
     for TARGET_FILE in $TARGET_FILES
     do
-      check_file $TARGET_FILE || exit 1
+      check_file $TARGET_FILE &
+      # $! gets the PID we just started and we store it with the file name
+      PIDS[$!]=$TARGET_FILE
+    done
+
+    echo -e "Running ${BOLD}all checks${END}..."
+
+    # ! here is looking only at the keys, which are the PIDs
+    for PID in ${!PIDS[*]};
+    do
+      # Here we wait for every PID to return
+      wait $PID
+      # If it's not successful we want to fail and exit 1
+      if [ $? -ne 0 ]; then
+        echo -e "${RED}Check ${BOLD}${PIDS[$PID]}${RED} failed.${END}"
+        exit 1
+      fi
     done
   fi
 }
