@@ -1,0 +1,6 @@
+-- [E064] Syntax Error: examples/064_AbstractOverrideOnlyInTraitsID.scala:7:26 
+7 |    abstract override def foo: Unit
+  |                          ^
+  |             abstract override modifier only allowed for members of traits
+1 error found
+Error: Errors encountered during compilation

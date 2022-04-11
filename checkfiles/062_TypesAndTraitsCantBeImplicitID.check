@@ -1,0 +1,6 @@
+-- [E062] Syntax Error: examples/062_TypesAndTraitsCantBeImplicitID.scala:3:15 
+3 |implicit trait Foo
+  |^^^^^^^^^^^^^^^^^^
+  |implicit modifier cannot be used for types or traits
+1 error found
+Error: Errors encountered during compilation
