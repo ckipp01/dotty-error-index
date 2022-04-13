@@ -2,11 +2,7 @@
 
 source bin/colors.sh
 
-# Nightlies were published wrong so there are some 3.2.0 that are incorrect for so for now
-# we can't do the below, but after the next release we should be able to so for now we look
-# only for the 3.1.3 ones
-#SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep NIGHTLY | tail -1)
-SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep 3.1.3 | tail -1)
+SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep NIGHTLY | tail -1)
 TARGET_FILES=$(ls examples/*.scala)
 COMMAND="$1"
 ERROR_MESSAGE_ID="$2"
