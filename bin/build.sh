@@ -4,7 +4,7 @@ source bin/colors.sh
 
 TARGET_FILES=$(ls examples/*.scala)
 OUTPUT=README.md
-SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep 3.1.3 | tail -1)
+SCALA_VERSION=$(cs complete-dep org.scala-lang:scala3-compiler_3: | grep NIGHTLY | tail -1)
 
 rm -f -- $OUTPUT
 
