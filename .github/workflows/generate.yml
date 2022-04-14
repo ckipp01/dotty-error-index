@@ -1,10 +1,9 @@
-name: CI
+name: generate
 
 on:
   push:
     branches:
       - main
-  pull_request:
   schedule:
     - cron: 0 9 * * *
 
