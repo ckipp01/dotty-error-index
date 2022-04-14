@@ -1410,7 +1410,14 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E061 TopLevelCantBeImplicitID
-*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
+**NOTE:** This error is no longer emitted by the compiler.
+
+ In the past top level implicit were not allowed. This is however no longer the case as of https://github.com/lampepfl/dotty/pull/5754
+
+_Erroneous Code Example_
+```scala
+implicit val foo: String = "foo"
+```
 ## E062 TypesAndTraitsCantBeImplicitID
 _Erroneous Code Example_
 ```scala
