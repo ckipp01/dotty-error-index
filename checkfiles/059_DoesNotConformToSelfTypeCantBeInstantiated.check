@@ -1,0 +1,21 @@
+-- [E058] Type Mismatch Error: examples/059_DoesNotConformToSelfTypeCantBeInstantiated.scala:7:8 
+7 |  class Foo extends Bar
+  |        ^
+  |illegal inheritance: self type Foo of class Foo does not conform to self type Baz
+  |of parent trait Bar
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | I tried to show that
+  |   Foo
+  | conforms to
+  |   Baz
+  | but the comparison trace ended with `false`:
+  |
+  |   ==> Foo  <:  Baz
+  |   <== Foo  <:  Baz = false
+  |
+  | The tests were made under the empty constraint
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
