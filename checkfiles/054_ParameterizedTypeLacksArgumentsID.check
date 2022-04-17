@@ -1,0 +1,12 @@
+-- [E054] Type Error: examples/054_ParameterizedTypeLacksArgumentsID.scala:4:16 
+4 |  val foo = new Foo {}
+  |                ^^^
+  |                Parameterized trait Foo lacks argument list
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | The trait Foo is declared with non-implicit parameters, you may not leave
+  | out the parameter list when extending it.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
