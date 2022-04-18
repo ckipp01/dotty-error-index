@@ -1288,7 +1288,26 @@ _Example Error Output_
 Error: Errors encountered during compilation
 ```
 ## E054 ParameterizedTypeLacksArgumentsID
-*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
+_Erroneous Code Example_
+```scala
+  trait Foo(x: Int)
+  val foo = new Foo {}
+```
+_Example Error Output_
+```
+-- [E054] Type Error: examples/054_ParameterizedTypeLacksArgumentsID.scala:4:16 
+4 |  val foo = new Foo {}
+  |                ^^^
+  |                Parameterized trait Foo lacks argument list
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | The trait Foo is declared with non-implicit parameters, you may not leave
+  | out the parameter list when extending it.
+   -----------------------------------------------------------------------------
+1 error found
+Error: Errors encountered during compilation
+```
 ## E055 VarValParametersMayNotBeCallByNameID
 _Erroneous Code Example_
 ```scala
