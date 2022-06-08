@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.2.0-RC1-bin-20220529-e05af52-NIGHTLY*
+*Generated with Scala 3.2.0-RC1-bin-20220607-76a0b29-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -352,7 +352,7 @@ _Example Error Output_
 ```
 -- [E013] Syntax Error: examples/013_ObjectMayNotHaveSelfTypeID.scala:4:15 
 4 |  object Foo { self: A => }
-  |               ^^^^^^^
+  |               ^^^^^^^^^^
   |               objects must not have a self type
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
