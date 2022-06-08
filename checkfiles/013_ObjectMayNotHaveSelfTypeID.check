@@ -1,6 +1,6 @@
 -- [E013] Syntax Error: examples/013_ObjectMayNotHaveSelfTypeID.scala:4:15 
 4 |  object Foo { self: A => }
-  |               ^^^^^^^
+  |               ^^^^^^^^^^
   |               objects must not have a self type
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
