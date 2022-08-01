@@ -10,4 +10,4 @@
   | Or, add an explicit () as a parameter list to Foo.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

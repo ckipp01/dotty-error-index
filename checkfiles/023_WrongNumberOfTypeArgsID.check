@@ -18,4 +18,4 @@
   | val list: List[(Int, String)] = List(tuple2)
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

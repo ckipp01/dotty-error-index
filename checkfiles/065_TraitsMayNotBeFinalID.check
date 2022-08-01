@@ -8,4 +8,4 @@
   | A trait can never be final since it is abstract and must be extended to be useful.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

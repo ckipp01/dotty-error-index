@@ -3,4 +3,4 @@
   |                                                     ^
   |                                   X.this.L cannot be used as a value type
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

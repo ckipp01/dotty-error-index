@@ -8,4 +8,4 @@
   | The definition of value factorial is recursive and you need to specify its type.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

@@ -31,4 +31,4 @@
   | Operators starting with a letter have lowest precedence, followed by operators starting with `|`, etc.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

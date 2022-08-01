@@ -3,4 +3,4 @@
   |        ^
   |Declaration of method foo not allowed here: only classes can have declared but undefined members
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
