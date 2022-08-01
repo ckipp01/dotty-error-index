@@ -44,4 +44,4 @@
   |     val foo: Int = 3
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

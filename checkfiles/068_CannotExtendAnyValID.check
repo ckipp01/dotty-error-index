@@ -10,4 +10,4 @@
   | Universal traits can be mixed into classes that extend AnyVal.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

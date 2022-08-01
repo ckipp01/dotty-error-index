@@ -3,4 +3,4 @@
   |               ^
   |abstract modifier can be used only for classes; it should be omitted for abstract members
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

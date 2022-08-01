@@ -15,4 +15,4 @@
   | - adding a type ascription as in instance.myMethod: String => Int
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

@@ -14,4 +14,4 @@
   | s"${new Point(0, 0)}"
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

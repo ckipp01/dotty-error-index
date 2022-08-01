@@ -3,4 +3,4 @@
   |                ^
   |                abstract method bar may not have `final` modifier
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

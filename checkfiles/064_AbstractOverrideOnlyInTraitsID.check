@@ -3,4 +3,4 @@
   |                          ^
   |             abstract override modifier only allowed for members of traits
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation

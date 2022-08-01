@@ -3,4 +3,4 @@
   |          ^
   |class Inner cannot have the same name as class Inner in class Base -- class definitions cannot be overridden
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
