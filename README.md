@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.2.1-RC1-bin-20220710-794e7c9-NIGHTLY*
+*Generated with Scala 3.2.1-RC1-bin-20220729-0f5b996-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -47,7 +47,7 @@ _Example Error Output_
   | correctly handles transfer functions like return.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E002 EmptyCatchAndFinallyBlockID
 _Erroneous Code Example_
@@ -125,7 +125,7 @@ _Example Error Output_
   | Or, add an explicit () as a parameter list to Foo.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E005 DuplicateBindID
 _Erroneous Code Example_
@@ -150,7 +150,7 @@ _Example Error Output_
   | num is not unique. Rename one of the bound variables!
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E006 MissingIdentID
 _Erroneous Code Example_
@@ -172,7 +172,7 @@ _Example Error Output_
   | misspelt or if an import is missing.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E007 TypeMismatchID
 _Erroneous Code Example_
@@ -207,7 +207,7 @@ _Example Error Output_
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E008 NotAMeberID
 _Erroneous Code Example_
@@ -222,7 +222,7 @@ _Example Error Output_
   |  ^^^^^^^^^^^^^^
   |  value iDontExist is not a member of object Foo
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E009 EarlyDefinitionsNotSupportedID
 _Erroneous Code Example_
@@ -286,7 +286,7 @@ _Example Error Output_
    |         ^^^^^^^^^
    |         end of statement expected but identifier found
 3 errors found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E010 TopLevelImplicitClassID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -316,7 +316,7 @@ _Example Error Output_
   | implicit class Foo...
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E012 ImplicitClassPrimaryConstructorArityID
 _Erroneous Code Example_
@@ -340,7 +340,7 @@ _Example Error Output_
   | such classes aren’t used during implicit lookup.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E013 ObjectMayNotHaveSelfTypeID
 _Erroneous Code Example_
@@ -366,7 +366,7 @@ _Example Error Output_
   |     object Foo extends A
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E014 TupleTooLongID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -402,7 +402,7 @@ _Example Error Output_
   | private final val Origin = Point(0, 0)
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E016 InterpolatedStringErrorID
 _Erroneous Code Example_
@@ -427,7 +427,7 @@ _Example Error Output_
   | s"${new Point(0, 0)}"
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E017 UnboundPlaceholderParameterID
 _Erroneous Code Example_
@@ -484,7 +484,7 @@ _Example Error Output_
   | trait A { this: B => ... 
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E018 IllegalStartSimpleExprID
 _Erroneous Code Example_
@@ -503,7 +503,7 @@ _Example Error Output_
   | An expression cannot start with [31m:[0m.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E019 MissingReturnTypeID
 _Erroneous Code Example_
@@ -526,7 +526,7 @@ _Example Error Output_
   |   def area: Double // abstract declaration returning a Double
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E020 YieldOrDoExpectedInForComprehensionID
 _Erroneous Code Example_
@@ -583,7 +583,7 @@ _Example Error Output_
   | misspelt or if an import is missing.
    -----------------------------------------------------------------------------
 3 errors found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E021 ProperDefinitionNotFoundID
 _Erroneous Code Example_
@@ -632,7 +632,7 @@ _Example Error Output_
    | only allowed to use defs when defining usecases.
     ----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E022 ByNameParameterNotSupportedID
 *This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
@@ -664,7 +664,7 @@ _Example Error Output_
   | val list: List[(Int, String)] = List(tuple2)
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E024 IllegalVariableInPatternAlternativeID
 _Erroneous Code Example_
@@ -722,7 +722,7 @@ _Example Error Output_
   | }
    -----------------------------------------------------------------------------
 2 errors found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E025 IdentifierExpectedID
 *This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
@@ -761,7 +761,7 @@ _Example Error Output_
   |Consider adding a @targetName annotation to one of the conflicting definitions
   |for disambiguation.
 2 errors found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E027 VarArgsParamMustComeLastID
 *This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
@@ -849,7 +849,7 @@ _Example Error Output_
   | List[?]
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E035 UnboundWildcardTypeID
 _Erroneous Code Example_
@@ -904,7 +904,7 @@ _Example Error Output_
   |     val foo: Int = 3
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E036 DanglingThisInPathID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -929,7 +929,7 @@ _Example Error Output_
   | Are you extending the right classes?
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E038 OverridesNothingButNameExistsID
 *This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
@@ -960,7 +960,7 @@ _Example Error Output_
   | or define foo as lazy.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E040 ExpectedTokenButFoundID
 _Erroneous Code Example_
@@ -980,7 +980,7 @@ _Example Error Output_
   | If you want to use '=' as identifier, you may put it in backticks: `=`.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E041 MixedLeftAndRightAssociativeOpsID
 _Erroneous Code Example_
@@ -1026,7 +1026,7 @@ _Example Error Output_
   | Operators starting with a letter have lowest precedence, followed by operators starting with `|`, etc.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E042 CantInstantiateAbstractClassOrTraitID
 _Erroneous Code Example_
@@ -1055,7 +1055,7 @@ _Example Error Output_
   | You need to implement any abstract members in both cases.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E043 UnreducibleApplicationID
 _Erroneous Code Example_
@@ -1079,7 +1079,7 @@ _Example Error Output_
   | supported in Scala 3.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E044 OverloadedOrRecursiveMethodNeedsResultTypeID
 _Erroneous Code Example_
@@ -1106,7 +1106,7 @@ _Example Error Output_
   | of method foo or of a definition it's mutually recursive with.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E045 RecursiveValueNeedsResultTypeID
 _Erroneous Code Example_
@@ -1125,7 +1125,7 @@ _Example Error Output_
   | The definition of value factorial is recursive and you need to specify its type.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E046 CyclicReferenceInvolvingID
 *This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
@@ -1153,7 +1153,7 @@ _Example Error Output_
   |   - Object
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E049 AmbiguousReferenceID
 _Erroneous Code Example_
@@ -1187,7 +1187,7 @@ _Example Error Output_
   |    import scala.{ foo => fooTick }
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E050 MethodDoesNotTakeParametersId
 _Erroneous Code Example_
@@ -1208,7 +1208,7 @@ _Example Error Output_
   | Nullary methods may not be called with parenthesis
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E051 AmbiguousOverloadID
 _Erroneous Code Example_
@@ -1238,7 +1238,7 @@ _Example Error Output_
   | - adding a type ascription as in instance.myMethod: String => Int
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E052 ReassignmentToValID
 _Erroneous Code Example_
@@ -1265,7 +1265,7 @@ _Example Error Output_
    |   var a = ...
     ----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E053 TypeDoesNotTakeParametersID
 _Erroneous Code Example_
@@ -1285,7 +1285,7 @@ _Example Error Output_
   | declared to take any.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E054 ParameterizedTypeLacksArgumentsID
 _Erroneous Code Example_
@@ -1306,7 +1306,7 @@ _Example Error Output_
   | out the parameter list when extending it.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E055 VarValParametersMayNotBeCallByNameID
 _Erroneous Code Example_
@@ -1330,7 +1330,7 @@ _Example Error Output_
   |   }
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E056 MissingTypeParameterForID
 _Erroneous Code Example_
@@ -1344,7 +1344,7 @@ _Example Error Output_
   |                                                     ^
   |                                   X.this.L cannot be used as a value type
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E057 DoesNotConformToBoundID
 _Erroneous Code Example_
@@ -1377,7 +1377,7 @@ _Example Error Output_
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E058 DoesNotConformToSelfTypeID
 _Erroneous Code Example_
@@ -1409,7 +1409,7 @@ _Example Error Output_
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E059 DoesNotConformToSelfTypeCantBeInstantiated
 *This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
@@ -1426,7 +1426,7 @@ _Example Error Output_
   |                ^
   |                abstract method bar may not have `final` modifier
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E061 TopLevelCantBeImplicitID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -1449,7 +1449,7 @@ _Example Error Output_
   |^^^^^^^^^^^^^^^^^^
   |implicit modifier cannot be used for types or traits
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E063 OnlyClassesCanBeAbstractID
 _Erroneous Code Example_
@@ -1464,7 +1464,7 @@ _Example Error Output_
   |               ^
   |abstract modifier can be used only for classes; it should be omitted for abstract members
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E064 AbstractOverrideOnlyInTraitsID
 _Erroneous Code Example_
@@ -1482,7 +1482,7 @@ _Example Error Output_
   |                          ^
   |             abstract override modifier only allowed for members of traits
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E065 TraitsMayNotBeFinalID
 _Erroneous Code Example_
@@ -1501,7 +1501,7 @@ _Example Error Output_
   | A trait can never be final since it is abstract and must be extended to be useful.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E066 NativeMembersMayNotHaveImplementationID
 _Erroneous Code Example_
@@ -1516,7 +1516,7 @@ _Example Error Output_
   |                ^
   |                @native members may not have an implementation
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E067 OnlyClassesCanHaveDeclaredButUndefinedMembersID
 _Erroneous Code Example_
@@ -1531,7 +1531,7 @@ _Example Error Output_
   |        ^
   |Declaration of method foo not allowed here: only classes can have declared but undefined members
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E068 CannotExtendAnyValID
 _Erroneous Code Example_
@@ -1552,7 +1552,7 @@ _Example Error Output_
   | Universal traits can be mixed into classes that extend AnyVal.
    -----------------------------------------------------------------------------
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E069 CannotHaveSameNameAsID
 _Erroneous Code Example_
@@ -1570,7 +1570,7 @@ _Example Error Output_
   |          ^
   |class Inner cannot have the same name as class Inner in class Base -- class definitions cannot be overridden
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
 ## E070 ValueClassesMayNotDefineInnerID
 _Erroneous Code Example_
@@ -1585,5 +1585,5 @@ _Example Error Output_
   |  ^^^^^^^^^^^
   |  Value classes may not define an inner class
 1 error found
-Error: Errors encountered during compilation
+Errors encountered during compilation
 ```
