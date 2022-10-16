@@ -1,5 +1,5 @@
--- [E171] Type Error: examples/054_ParameterizedTypeLacksArgumentsID.scala:5:16 
-5 |  val foo = new Foo {}
+-- [E171] Type Error: examples/171_MissingArgumentID.scala:4:16 
+4 |  val foo = new Foo {}
   |                ^^^
   |missing argument for parameter x of constructor Foo in trait Foo: (x: Int): Foo
 1 error found
