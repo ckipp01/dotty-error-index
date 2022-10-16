@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.2.2-RC1-bin-20220908-c11f5cb-NIGHTLY*
+*Generated with Scala 3.2.2-RC1-bin-20221015-92f6b8c-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -1288,25 +1288,12 @@ _Example Error Output_
 Errors encountered during compilation
 ```
 ## E054 ParameterizedTypeLacksArgumentsID
+**NOTE:** This error is no longer emitted by the compiler.
+
 _Erroneous Code Example_
 ```scala
   trait Foo(x: Int)
   val foo = new Foo {}
-```
-_Example Error Output_
-```
--- [E054] Type Error: examples/054_ParameterizedTypeLacksArgumentsID.scala:4:16 
-4 |  val foo = new Foo {}
-  |                ^^^
-  |                Parameterized trait Foo lacks argument list
-  |-----------------------------------------------------------------------------
-  | Explanation (enabled by `-explain`)
-  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  | The trait Foo is declared with non-implicit parameters, you may not leave
-  | out the parameter list when extending it.
-   -----------------------------------------------------------------------------
-1 error found
-Errors encountered during compilation
 ```
 ## E055 VarValParametersMayNotBeCallByNameID
 _Erroneous Code Example_
@@ -1584,6 +1571,21 @@ _Example Error Output_
 5 |  class Inner
   |  ^^^^^^^^^^^
   |  Value classes may not define an inner class
+1 error found
+Errors encountered during compilation
+```
+## E171 MissingArgumentID
+_Erroneous Code Example_
+```scala
+  trait Foo(x: Int)
+  val foo = new Foo {}
+```
+_Example Error Output_
+```
+-- [E171] Type Error: examples/171_MissingArgumentID.scala:4:16 
+4 |  val foo = new Foo {}
+  |                ^^^
+  |missing argument for parameter x of constructor Foo in trait Foo: (x: Int): Foo
 1 error found
 Errors encountered during compilation
 ```
