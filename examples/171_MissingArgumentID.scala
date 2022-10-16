@@ -1,4 +1,3 @@
-// LEGACY
 // START
 @main def ParameterizedTypeLacksArgumentsID =
   trait Foo(x: Int)
