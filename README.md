@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.2.2-RC1-bin-20221019-66c36e2-NIGHTLY*
+*Generated with Scala 3.2.2-RC1-bin-20221020-7919cb3-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
