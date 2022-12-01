@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.3.0-RC1-bin-20221123-c9ace66-NIGHTLY*
+*Generated with Scala 3.3.0-RC1-bin-20221130-72c4ffd-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -1552,7 +1552,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E069] Syntax Error: examples/069_CannotHaveSameNameAsID.scala:7:10 
+-- [E069] Naming Error: examples/069_CannotHaveSameNameAsID.scala:7:10 
 7 |    class Inner
   |          ^
   |class Inner cannot have the same name as class Inner in class Base -- class definitions cannot be overridden
