@@ -21,20 +21,20 @@
   | - Stable Identifier Patterns:
   |
   |   def f(x: Int, y: Int) = x match {
-  |           |  case `y` => ...
-  |           |}
-  |         
+  |         |  case `y` => ...
+  |         |}
+  |       
   |
   |   the match succeeds only if the x argument and the y argument of f are equal.
   |
   | - Constructor Patterns:
   |
   |   case class Person(name: String, age: Int)
-  |           |
-  |           |def test(p: Person) = p match {
-  |           |  case Person(name, age) => ...
-  |           |}
-  |         
+  |         |
+  |         |def test(p: Person) = p match {
+  |         |  case Person(name, age) => ...
+  |         |}
+  |       
   |
   |   The pattern binds all object's fields to the variable names (name and age, in this
   |   case).
@@ -42,9 +42,9 @@
   | - Tuple Patterns:
   |
   |   def swap(tuple: (String, Int)): (Int, String) = tuple match {
-  |           |  case (text, number) => (number, text)
-  |           |}
-  |         
+  |         |  case (text, number) => (number, text)
+  |         |}
+  |       
   |
   |   Calling:
   |
@@ -55,9 +55,9 @@
   | - Pattern Sequences:
   |
   |   def getSecondValue(list: List[Int]): Int = list match {
-  |           |  case List(_, second, x:_*) => second
-  |           |  case _ => 0
-  |           |}
+  |         |  case List(_, second, x:_*) => second
+  |         |  case _ => 0
+  |         |}
   |
   |   Calling:
   |
