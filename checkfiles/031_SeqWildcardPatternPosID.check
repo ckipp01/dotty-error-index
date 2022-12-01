@@ -10,9 +10,9 @@
    | Consider the following example:
    |
    | def sumOfTheFirstTwo(list: List[Int]): Int = list match {
-   |           |  case List(first, second, x*) => first + second
-   |           |  case _ => 0
-   |           |}
+   |         |  case List(first, second, x*) => first + second
+   |         |  case _ => 0
+   |         |}
    |
    | Calling:
    |
