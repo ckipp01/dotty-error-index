@@ -1,4 +1,4 @@
--- [E008] Not Found Error: examples/008_NotAMeberID.scala:4:6 
+-- [E008] Not Found Error: examples/008_NotAMemberID.scala:4:6 
 4 |  Foo.iDontExist
   |  ^^^^^^^^^^^^^^
   |  value iDontExist is not a member of object Foo
