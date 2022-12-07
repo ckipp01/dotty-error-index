@@ -45,7 +45,7 @@ function check_scala_version() {
 # NOTE: we also use ? instea of / since the PWD has / in it and screws up sed
 # because computers are dumb
 function relativize () {
-  sed -i "s?$SOURCE_ROOT/??g" $1
+  sed -e "s?$SOURCE_ROOT/??g"
 }
 
 function file_not_found() {
@@ -58,8 +58,7 @@ function file_not_found() {
 function update_file() {
   BASE=$(basename $1)
   NEW_NAME=${BASE%.scala}.check
-  cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1 &> checkfiles/$NEW_NAME
-  relativize checkfiles/$NEW_NAME
+  cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1 2>&1 | relativize > checkfiles/$NEW_NAME
   echo -e "Updated checkfile ${BLUE}checkfiles/$NEW_NAME${RESET}"
 }
 
@@ -84,8 +83,7 @@ function handle_update() {
 function check_file() {
   BASE=$(basename $1)
   NEW_NAME=${BASE%.scala}.check
-  cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1&> out/$NEW_NAME
-  relativize out/$NEW_NAME
+  cs launch scala:$SCALA_VERSION -- -color:never -explain -deprecation -source:future -Ycook-docs $1 2>&1 | relativize > out/$NEW_NAME
   diff out/$NEW_NAME checkfiles/$NEW_NAME && \
     echo -e "${BLUE}$NEW_NAME${RESET} matches the expected output" || \
     (echo -e "${RED}${UNDERLINE}$NEW_NAME${RED} doesn't match expected output${RESET}" && exit 1)
