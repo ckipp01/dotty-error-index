@@ -209,7 +209,7 @@ _Example Error Output_
 1 error found
 Errors encountered during compilation
 ```
-## E008 NotAMeberID
+## E008 NotAMemberID
 _Erroneous Code Example_
 ```scala
   object Foo
@@ -217,7 +217,7 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E008] Not Found Error: examples/008_NotAMeberID.scala:4:6 
+-- [E008] Not Found Error: examples/008_NotAMemberID.scala:4:6 
 4 |  Foo.iDontExist
   |  ^^^^^^^^^^^^^^
   |  value iDontExist is not a member of object Foo
