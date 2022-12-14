@@ -1,0 +1,6 @@
+-- [E033] Naming Error: examples/033_PkgDuplicateSymbolID.scala:5:12 
+5 |package foo.bar {}
+  |        ^^^^^^^
+  |        Trying to define package with same name as class bar
+1 error found
+Errors encountered during compilation

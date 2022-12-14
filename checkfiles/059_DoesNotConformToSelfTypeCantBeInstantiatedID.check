@@ -1,0 +1,20 @@
+-- [E059] Type Mismatch Error: examples/059_DoesNotConformToSelfTypeCantBeInstantiatedID.scala:9:14 
+9 |  val b = new B
+  |              ^
+  |             B does not conform to its self type A; cannot be instantiated
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | I tried to show that
+  |   B
+  | conforms to
+  |   A
+  | but the comparison trace ended with `false`:
+  |
+  |   ==> B  <:  A
+  |   <== B  <:  A = false
+  |
+  | The tests were made under the empty constraint
+   -----------------------------------------------------------------------------
+1 error found
+Errors encountered during compilation

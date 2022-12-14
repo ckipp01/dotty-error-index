@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.3.0-RC1-bin-20221209-231f9ab-NIGHTLY*
+*Generated with Scala 3.3.0-RC1-bin-20221213-5929a50-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -817,7 +817,21 @@ _Example Error Output_
 ## E032 IllegalStartOfSimplePatternID
 *This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E033 PkgDuplicateSymbolID
-*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
+_Erroneous Code Example_
+```scala
+package foo { object bar }
+
+package foo.bar {}
+```
+_Example Error Output_
+```
+-- [E033] Naming Error: examples/033_PkgDuplicateSymbolID.scala:5:12 
+5 |package foo.bar {}
+  |        ^^^^^^^
+  |        Trying to define package with same name as class bar
+1 error found
+Errors encountered during compilation
+```
 ## E034 ExistentialTypesNoLongerSupportedID
 _Erroneous Code Example_
 ```scala
@@ -932,7 +946,35 @@ _Example Error Output_
 Errors encountered during compilation
 ```
 ## E038 OverridesNothingButNameExistsID
-*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
+_Erroneous Code Example_
+```scala
+trait Foo1:
+  def bar(i: Int) = ???
+
+trait Foo2 extends Foo1:
+  override def bar(s: String) = ???
+```
+_Example Error Output_
+```
+-- [E038] Declaration Error: examples/038_OverridesNothingButNameExistsID.scala:7:15 
+7 |  override def bar(s: String) = ???
+  |               ^
+  |      method bar has a different signature than the overridden declaration
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | There must be a non-final field or method with the name bar and the
+  | same parameter list in a super class of trait Foo2 to override it.
+  |
+  |   override def bar(s: String): Nothing
+  |
+  | The super classes of trait Foo2 contain the following members
+  | named bar:
+  |   def bar(i: Int): Nothing
+   -----------------------------------------------------------------------------
+1 error found
+Errors encountered during compilation
+```
 ## E039 ForwardReferenceExtendsOverDefinitionID
 _Erroneous Code Example_
 ```scala
@@ -1398,8 +1440,40 @@ _Example Error Output_
 1 error found
 Errors encountered during compilation
 ```
-## E059 DoesNotConformToSelfTypeCantBeInstantiated
-*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
+## E059 DoesNotConformToSelfTypeCantBeInstantiatedID
+_Erroneous Code Example_
+```scala
+  trait A
+
+  class B {
+    self: A =>
+  }
+
+  val b = new B
+```
+_Example Error Output_
+```
+-- [E059] Type Mismatch Error: examples/059_DoesNotConformToSelfTypeCantBeInstantiatedID.scala:9:14 
+9 |  val b = new B
+  |              ^
+  |             B does not conform to its self type A; cannot be instantiated
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | I tried to show that
+  |   B
+  | conforms to
+  |   A
+  | but the comparison trace ended with `false`:
+  |
+  |   ==> B  <:  A
+  |   <== B  <:  A = false
+  |
+  | The tests were made under the empty constraint
+   -----------------------------------------------------------------------------
+1 error found
+Errors encountered during compilation
+```
 ## E060 AbstractMemberMayNotHaveModifierID
 _Erroneous Code Example_
 ```scala

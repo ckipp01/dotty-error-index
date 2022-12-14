@@ -49,11 +49,8 @@ hasn't been figure out, or is it because the code that references the specific
       one.
   - [ ] 032 IllegalStartOfSimplePattern - I have a reproduction of this, but I
       feel like it should be 0031 not 0032.
-  - [ ] 033 PkgDuplicateSymbolID - Need to reproduce this
-  - [ ] 038 OverridesNothingButNameExistsID - See notes in the file
   - [ ] 046 CyclicReferenceInvolvingID - See notes in the file
   - [ ] 047 CyclicReferenceInvolvingImplicitID - See notes in the file
-  - [ ] 059 DoesNotConformToSelfTypeCantBeInstantiated
 
 ## Getting Started
 

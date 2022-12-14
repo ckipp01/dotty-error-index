@@ -1,2 +1,0 @@
-// INCOMPLETE
-@main def DoesNotConformToSelfTypeCantBeInstantiated = ()
