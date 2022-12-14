@@ -1,0 +1,18 @@
+-- [E038] Declaration Error: examples/038_OverridesNothingButNameExistsID.scala:7:15 
+7 |  override def bar(s: String) = ???
+  |               ^
+  |      method bar has a different signature than the overridden declaration
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | There must be a non-final field or method with the name bar and the
+  | same parameter list in a super class of trait Foo2 to override it.
+  |
+  |   override def bar(s: String): Nothing
+  |
+  | The super classes of trait Foo2 contain the following members
+  | named bar:
+  |   def bar(i: Int): Nothing
+   -----------------------------------------------------------------------------
+1 error found
+Errors encountered during compilation

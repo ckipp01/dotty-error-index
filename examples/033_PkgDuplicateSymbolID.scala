@@ -1,7 +1,6 @@
-// Need to figure out how to reproduce this one
-
-// INCOMPLETE
 // START
 @main def PkgDuplicateSymbolID = ()
-// END
+package foo { object bar }
 
+package foo.bar {}
+// END
