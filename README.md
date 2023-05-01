@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.3.1-RC1-bin-20230216-2507577-NIGHTLY*
+*Generated with Scala 3.3.1-RC1-bin-20230428-a89fbf5-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -1211,22 +1211,28 @@ _Example Error Output_
 -- [E049] Reference Error: examples/049_AmbiguousReferenceID.scala:4:2 
 4 |  foo
   |  ^^^
-  |  Reference to foo is ambiguous,
-  |  it is both defined in package <empty>
+  |  Reference to foo is ambiguous.
+  |  It is both defined in package <empty>
   |  and imported subsequently by import foo._
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  | The compiler can't decide which of the possible choices you
-  | are referencing with foo: A definition of lower precedence
-  | in an inner scope, or a definition with higher precedence in
+  | The identifier foo is ambiguous because a name binding of lower precedence
+  | in an inner scope cannot shadow a binding with higher precedence in
   | an outer scope.
+  |
+  | The precedence of the different kinds of name bindings, from highest to lowest, is:
+  |  - Definitions in an enclosing scope
+  |  - Inherited definitions and top-level definitions in packages
+  |  - Names introduced by import of a specific name
+  |  - Names introduced by wildcard import
+  |  - Definitions from packages in other files
   | Note:
-  |  - Definitions in an enclosing scope take precedence over inherited definitions
-  |  - Definitions take precedence over imports
-  |  - Named imports take precedence over wildcard imports
-  |  - You may replace a name when imported using
-  |    import scala.{ foo => fooTick }
+  |  - As a rule, definitions take precedence over imports.
+  |  - Definitions in an enclosing scope take precedence over inherited definitions,
+  |    which can result in ambiguities in nested classes.
+  |  - When importing, you can avoid naming conflicts by renaming:
+  |    import scala.{foo => fooTick}
    -----------------------------------------------------------------------------
 1 error found
 Errors encountered during compilation
