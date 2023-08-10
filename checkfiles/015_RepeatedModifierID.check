@@ -1,7 +1,7 @@
--- [E015] Syntax Error: examples/015_RepeatedModifierID.scala:3:14 
+-- [E015] Syntax Error: examples/015_RepeatedModifierID.scala:3:8 
 3 |  final final val foo = ???
-  |              ^^^
-  |              Repeated modifier final
+  |        ^^^^^
+  |        Repeated modifier final
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -15,5 +15,14 @@
   |
   | private final val Origin = Point(0, 0)
    -----------------------------------------------------------------------------
-1 error found
+-- [E088] Syntax Error: examples/015_RepeatedModifierID.scala:3:14 
+3 |  final final val foo = ???
+  |              ^^^
+  |              Expected start of definition
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | You have to provide either class, trait, object, or enum definitions after qualifiers
+   -----------------------------------------------------------------------------
+2 errors found
 Errors encountered during compilation
