@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.3.2-RC1-bin-20230615-916d4e7-NIGHTLY*
+*Generated with Scala 3.4.0-RC1-bin-20230809-c5adafc-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -384,10 +384,10 @@ _Erroneous Code Example_
 ```
 _Example Error Output_
 ```
--- [E015] Syntax Error: examples/015_RepeatedModifierID.scala:3:14 
+-- [E015] Syntax Error: examples/015_RepeatedModifierID.scala:3:8 
 3 |  final final val foo = ???
-  |              ^^^
-  |              Repeated modifier final
+  |        ^^^^^
+  |        Repeated modifier final
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -401,7 +401,16 @@ _Example Error Output_
   |
   | private final val Origin = Point(0, 0)
    -----------------------------------------------------------------------------
-1 error found
+-- [E088] Syntax Error: examples/015_RepeatedModifierID.scala:3:14 
+3 |  final final val foo = ???
+  |              ^^^
+  |              Expected start of definition
+  |-----------------------------------------------------------------------------
+  | Explanation (enabled by `-explain`)
+  |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  | You have to provide either class, trait, object, or enum definitions after qualifiers
+   -----------------------------------------------------------------------------
+2 errors found
 Errors encountered during compilation
 ```
 ## E016 InterpolatedStringErrorID
