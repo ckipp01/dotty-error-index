@@ -1,6 +1,6 @@
--- [E040] Syntax Error: examples/027_VarArgsParamMustComeLastID.scala:18:17 
+-- Error: examples/027_VarArgsParamMustComeLastID.scala:18:16 
 18 |  def foo(a: Int*, b: Int) = b
-   |                 ^
-   |                 an identifier expected, but ',' found
+   |                ^
+   |spread operator `*` not allowed here; must come last in a parameter list
 1 error found
 Errors encountered during compilation

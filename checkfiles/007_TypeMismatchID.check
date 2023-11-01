@@ -12,14 +12,10 @@
   |   (1 : Int)
   | conforms to
   |   String
-  | but the comparison trace ended with `false`:
+  | but none of the attempts shown below succeeded:
   |
   |   ==> (1 : Int)  <:  String
-  |     ==> (1 : Int)  <:  String
-  |       ==> Int  <:  String (left is approximated)
-  |       <== Int  <:  String (left is approximated) = false
-  |     <== (1 : Int)  <:  String = false
-  |   <== (1 : Int)  <:  String = false
+  |     ==> Int  <:  String  = false
   |
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------

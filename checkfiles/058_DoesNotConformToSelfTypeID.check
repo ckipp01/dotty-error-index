@@ -10,10 +10,9 @@
   |   Brand
   | conforms to
   |   User
-  | but the comparison trace ended with `false`:
+  | but none of the attempts shown below succeeded:
   |
-  |   ==> Brand  <:  User
-  |   <== Brand  <:  User = false
+  |   ==> Brand  <:  User  = false
   |
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------

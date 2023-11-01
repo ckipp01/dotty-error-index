@@ -9,10 +9,9 @@
   |   B
   | conforms to
   |   A
-  | but the comparison trace ended with `false`:
+  | but none of the attempts shown below succeeded:
   |
-  |   ==> B  <:  A
-  |   <== B  <:  A = false
+  |   ==> B  <:  A  = false
   |
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------

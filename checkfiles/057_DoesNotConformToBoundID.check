@@ -9,10 +9,9 @@
   |   Cup
   | conforms to
   |   Animal
-  | but the comparison trace ended with `false`:
+  | but none of the attempts shown below succeeded:
   |
-  |   ==> Cup  <:  Animal
-  |   <== Cup  <:  Animal = false
+  |   ==> Cup  <:  Animal  = false
   |
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------

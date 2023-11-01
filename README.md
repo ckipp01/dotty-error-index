@@ -2,7 +2,7 @@
 
 *NOTE*: This file is auto-generated, so please don't edit manually. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how to update it.
 
-*Generated with Scala 3.4.0-RC1-bin-20231024-15033c7-NIGHTLY*
+*Generated with Scala 3.4.0-RC1-bin-20231031-58810fd-NIGHTLY*
 
 ## E000 EmptyCatchOrFinallyBlockID
 **NOTE:** This error is no longer emitted by the compiler.
@@ -166,10 +166,17 @@ _Example Error Output_
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  | The identifier for `a` is not bound, that is,
-  | no declaration for this identifier can be found.
-  | That can happen, for example, if `a` or its declaration has either been
-  | misspelt or if an import is missing.
+  | Each identifier in Scala needs a matching declaration. There are two kinds of
+  | identifiers: type identifiers and value identifiers. Value identifiers are introduced
+  | by `val`, `def`, or `object` declarations. Type identifiers are introduced by `type`,
+  | `class`, `enum`, or `trait` declarations.
+  |
+  | Identifiers refer to matching declarations in their environment, or they can be
+  | imported from elsewhere.
+  |
+  | Possible reasons why no matching declaration was found:
+  |  - The declaration or the use is mis-spelt.
+  |  - An import is missing.
    -----------------------------------------------------------------------------
 1 error found
 Errors encountered during compilation
@@ -195,14 +202,10 @@ _Example Error Output_
   |   (1 : Int)
   | conforms to
   |   String
-  | but the comparison trace ended with `false`:
+  | but none of the attempts shown below succeeded:
   |
   |   ==> (1 : Int)  <:  String
-  |     ==> (1 : Int)  <:  String
-  |       ==> Int  <:  String (left is approximated)
-  |       <== Int  <:  String (left is approximated) = false
-  |     <== (1 : Int)  <:  String = false
-  |   <== (1 : Int)  <:  String = false
+  |     ==> Int  <:  String  = false
   |
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------
@@ -586,10 +589,17 @@ _Example Error Output_
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  | The identifier for `i` is not bound, that is,
-  | no declaration for this identifier can be found.
-  | That can happen, for example, if `i` or its declaration has either been
-  | misspelt or if an import is missing.
+  | Each identifier in Scala needs a matching declaration. There are two kinds of
+  | identifiers: type identifiers and value identifiers. Value identifiers are introduced
+  | by `val`, `def`, or `object` declarations. Type identifiers are introduced by `type`,
+  | `class`, `enum`, or `trait` declarations.
+  |
+  | Identifiers refer to matching declarations in their environment, or they can be
+  | imported from elsewhere.
+  |
+  | Possible reasons why no matching declaration was found:
+  |  - The declaration or the use is mis-spelt.
+  |  - An import is missing.
    -----------------------------------------------------------------------------
 3 errors found
 Errors encountered during compilation
@@ -822,8 +832,6 @@ _Example Error Output_
 1 warning found
 ```
 ## E031 SeqWildcardPatternPosID
-*This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
-## E032 IllegalStartOfSimplePatternID
 *This ErrorMessageID has no valid example yet. See the [CONTRIBUTING guide](CONTRIBUTING.md) to see how you can help.*
 ## E033 PkgDuplicateSymbolID
 _Erroneous Code Example_
@@ -1413,10 +1421,9 @@ _Example Error Output_
   |   Cup
   | conforms to
   |   Animal
-  | but the comparison trace ended with `false`:
+  | but none of the attempts shown below succeeded:
   |
-  |   ==> Cup  <:  Animal
-  |   <== Cup  <:  Animal = false
+  |   ==> Cup  <:  Animal  = false
   |
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------
@@ -1445,10 +1452,9 @@ _Example Error Output_
   |   Brand
   | conforms to
   |   User
-  | but the comparison trace ended with `false`:
+  | but none of the attempts shown below succeeded:
   |
-  |   ==> Brand  <:  User
-  |   <== Brand  <:  User = false
+  |   ==> Brand  <:  User  = false
   |
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------
@@ -1479,10 +1485,9 @@ _Example Error Output_
   |   B
   | conforms to
   |   A
-  | but the comparison trace ended with `false`:
+  | but none of the attempts shown below succeeded:
   |
-  |   ==> B  <:  A
-  |   <== B  <:  A = false
+  |   ==> B  <:  A  = false
   |
   | The tests were made under the empty constraint
    -----------------------------------------------------------------------------

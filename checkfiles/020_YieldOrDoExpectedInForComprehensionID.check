@@ -40,10 +40,17 @@
   |-----------------------------------------------------------------------------
   | Explanation (enabled by `-explain`)
   |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  | The identifier for `i` is not bound, that is,
-  | no declaration for this identifier can be found.
-  | That can happen, for example, if `i` or its declaration has either been
-  | misspelt or if an import is missing.
+  | Each identifier in Scala needs a matching declaration. There are two kinds of
+  | identifiers: type identifiers and value identifiers. Value identifiers are introduced
+  | by `val`, `def`, or `object` declarations. Type identifiers are introduced by `type`,
+  | `class`, `enum`, or `trait` declarations.
+  |
+  | Identifiers refer to matching declarations in their environment, or they can be
+  | imported from elsewhere.
+  |
+  | Possible reasons why no matching declaration was found:
+  |  - The declaration or the use is mis-spelt.
+  |  - An import is missing.
    -----------------------------------------------------------------------------
 3 errors found
 Errors encountered during compilation
